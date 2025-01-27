@@ -3450,6 +3450,115 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2025-01-27T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuYay.webp',
+                wide: true,
+            },
+            {
+                type: 'title',
+                text: 'i\'m back! karaoke!',
+            },
+        ]
+    },
+    {
+        time: "2025-01-28T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuRage.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'mariosunshine.webp',
+            },
+            {
+                type: 'comment',
+                text: 'actual final???',
+            },
+        ]
+    },
+    {
+        time: "2025-01-29T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'yippee!!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'postal2.webp',
+            },
+            {
+                type: 'rEmote',
+                image: 'nepuPeek.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-01-30T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.webp',
+            },
+            {
+                type: 'comment',
+                text: 'is real?',
+            },
+        ]
+    },
+    {
+        time: "2025-01-31T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'bloodborne.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-01-31T00:00:00.000+00:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ff14.webp',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="kikiColour">kiki</span> & <span class="chaiColour">chai</span>',
+            },
+        ]
+    },
+    {
+        time: "2025-02-01T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'title',
+                text: 'undecided!',
+            },
+        ]
+    },
+    {
+        time: "2025-02-01T21:00:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuBlanky.webp',
+            },
+            {
+                type: 'title',
+                text: 'Godzilla watchalong*',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;

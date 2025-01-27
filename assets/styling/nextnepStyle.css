@@ -690,7 +690,7 @@ header > div > p {
     }
 
     .nepClock-streamComment, .nepClock-streamComment span {
-        font-size: calc(100% + 0.9vh);
+        font-size: calc(80% + 0.9vh);
     }
     
     .nepClock-streamTitle, .nepClock-streamTitle span {
