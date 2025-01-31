@@ -174,7 +174,12 @@ class Stream {
         }
         
         streamWrapper.appendChild(this.streamElement);
-        document.querySelector("#nepClock-" + this.weekDay + " > .nepClock-weekDaySchedule > .nepClock-scheduleContent").appendChild(streamWrapper);
+        let dayToShow = this.weekDay;
+        if (this.streamDate.getUTCHours() <= 2) {
+            let newDay = this.streamDate.getUTCDay() - 1;
+            dayToShow = weekDays[newDay < 0 ? 6 : newDay];
+        }
+        document.querySelector("#nepClock-" + dayToShow + " > .nepClock-weekDaySchedule > .nepClock-scheduleContent").appendChild(streamWrapper);
         this.streamElement.parentNode.insertBefore(this.timeElement, this.streamElement.nextSibling);
     }
 
