@@ -3563,7 +3563,7 @@ const schedule = [
             },
             {
                 type: 'hover',
-                text: 'Godzilla Agasint Mechagodzilla (2002) & Godzilla: Tokyo S. O. S. (2003)',
+                text: 'Godzilla Against Mechagodzilla (2002) & Godzilla: Tokyo S. O. S. (2003)',
             },
         ]
     },
