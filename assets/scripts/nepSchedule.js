@@ -3452,6 +3452,7 @@ const schedule = [
     },
     {
         time: "2025-01-27T17:00:00.000+00:00",
+        canceled: true,
         layout: [
             {
                 type: 'lEmote',
@@ -3483,6 +3484,7 @@ const schedule = [
     },
     {
         time: "2025-01-29T17:00:00.000+00:00",
+        canceled: true,
         layout: [
             {
                 type: 'comment',
@@ -3539,6 +3541,7 @@ const schedule = [
     },
     {
         time: "2025-02-01T17:00:00.000+00:00",
+        canceled: true,
         layout: [
             {
                 type: 'title',
@@ -3556,6 +3559,23 @@ const schedule = [
             {
                 type: 'title',
                 text: 'Godzilla watchalong*',
+            },
+        ]
+    },
+    {
+        time: "2025-02-02T17:00:00.000+00:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: 'nepuMurder.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'postal2.webp',
+            },
+            {
+                type: 'comment',
+                text: 'a taste of America!',
             },
         ]
     },
