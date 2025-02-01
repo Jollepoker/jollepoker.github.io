@@ -51,6 +51,11 @@
  * Used to display a text comment
  * type: 'comment',
  * text: 'text comment',
+ * 
+ * Hover
+ * Used to enable a hover box for the stream that can show additional information that might not fit on the schedule
+ * type: 'hover',
+ * text: 'hover box text content. Can be html',
  *
  */
 
