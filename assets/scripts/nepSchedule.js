@@ -3561,6 +3561,10 @@ const schedule = [
                 type: 'title',
                 text: 'Godzilla watchalong*',
             },
+            {
+                type: 'hover',
+                text: 'Godzilla Agasint Mechagodzilla (2002) & Godzilla: Tokyo S. O. S. (2003)',
+            },
         ]
     },
     {

@@ -64,6 +64,18 @@ class Stream {
     }
 
     initElements() {
+        let streamWrapper = document.createElement('div');
+        streamWrapper.classList.add("nepClock-streamWrapper");
+        if (this.streamConfig.discord) {
+            streamWrapper.classList.add("nepClock-discordStream");
+        }
+        if (this.streamConfig.glitter) {
+            streamWrapper.classList.add("nepClock-glitter");
+        }
+        if (this.streamConfig.canceled) {
+            streamWrapper.classList.add("nepClock-canceledStream");
+        }
+
         this.streamElement = document.createElement("div");
         this.streamElement.classList.add("nepClock-stream");
 
@@ -150,10 +162,17 @@ class Stream {
                     comment.innerHTML = layoutConfig.text;
                     this.streamElement.appendChild(comment);
                     break;
+                case 'hover':
+                    let hover = document.createElement('div');
+                    hover.classList.add("nepClock-streamHover");
+                    hover.innerHTML = layoutConfig.text;
+                    streamWrapper.appendChild(hover);
                 default:
                     break;
             }
         });
+
+        streamWrapper.appendChild(this.streamElement);
 
         if (this.streamConfig.hideDate) {
             this.hideDate = true;
@@ -161,19 +180,6 @@ class Stream {
         this.timeElement = document.createElement("div");
         this.timeElement.classList.add("nepClock-streamTime");
 
-        let streamWrapper = document.createElement('div');
-        streamWrapper.classList.add("nepClock-streamWrapper");
-        if (this.streamConfig.discord) {
-            streamWrapper.classList.add("nepClock-discordStream");
-        }
-        if (this.streamConfig.glitter) {
-            streamWrapper.classList.add("nepClock-glitter");
-        }
-        if (this.streamConfig.canceled) {
-            streamWrapper.classList.add("nepClock-canceledStream");
-        }
-        
-        streamWrapper.appendChild(this.streamElement);
         let dayToShow = this.weekDay;
         if (this.streamDate.getUTCHours() <= 2) {
             let newDay = this.streamDate.getUTCDay() - 1;
