@@ -734,6 +734,16 @@ header > div > p {
     .nepClock-streamTitle, .nepClock-streamTitle span {
         font-size: calc(100% + 1vh);
     }
+
+    .nepClock-stream:has(> *:first-child:nth-last-child(1)) .nepClock-streamTitleImage {
+        max-width: 100%;
+    }
+
+    .nepClock-scheduleContent:has(> div:first-child:nth-last-child(2)) .nepClock-stream:has(> *:first-child:nth-last-child(2)) .nepClock-streamTitleImage,
+    .nepClock-stream:has(> *:first-child:nth-last-child(4)) .nepClock-streamTitleImage
+    {
+        max-width: 50%;
+    }
 }
 
 @media screen and (min-width: 1440px) {

@@ -620,7 +620,7 @@ class NepSweeper {
             const nepSweeperStyle  = document.createElement('link');
             nepSweeperStyle.id   = 'nepSweeperStyle';
             nepSweeperStyle.rel  = 'stylesheet';
-            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.73';
+            nepSweeperStyle.href = './assets/styling/nepSweeperStyle.css?v=2.74';
             document.head.appendChild(nepSweeperStyle);
         }
 
