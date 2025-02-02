@@ -3572,23 +3572,6 @@ const schedule = [
             },
         ]
     },
-    {
-        time: "2025-02-02T17:00:00.000+00:00",
-        layout: [
-            {
-                type: 'lEmote',
-                image: 'nepuMurder.webp',
-            },
-            {
-                type: 'titleLogo',
-                image: 'postal2.webp',
-            },
-            {
-                type: 'comment',
-                text: 'a taste of America!',
-            },
-        ]
-    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
