@@ -3585,7 +3585,7 @@ const schedule = [
             },
             {
                 type: 'lEmote',
-                text: 'nepuYay.webp',
+                image: 'nepuYay.webp',
             },
         ]
     },
