@@ -3572,6 +3572,25 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2025-02-11T16:00:00.000+00:00",
+        canceled: true,
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuYay.webp',
+            },
+            {
+                type: 'title',
+                text: 'Birthday Party!!',
+            },
+            {
+                type: 'lEmote',
+                text: 'nepuYay.webp',
+                effect: 'mirror',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
