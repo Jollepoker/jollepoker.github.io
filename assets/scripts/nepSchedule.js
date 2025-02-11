@@ -3556,7 +3556,6 @@ const schedule = [
     },
     {
         time: "2025-02-01T21:00:00.000+00:00",
-        canceled: true,
         layout: [
             {
                 type: 'rEmote',
@@ -3587,7 +3586,6 @@ const schedule = [
             {
                 type: 'lEmote',
                 text: 'nepuYay.webp',
-                effect: 'mirror',
             },
         ]
     },
