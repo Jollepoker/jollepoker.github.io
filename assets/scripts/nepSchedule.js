@@ -3589,6 +3589,23 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2025-02-11T12:30:00.000+00:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuPog.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'ff14.webp',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="kikiColour">kiki</span> & <span class="chaiColour">chai</span>',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
