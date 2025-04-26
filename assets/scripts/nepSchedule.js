@@ -3606,6 +3606,23 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2025-05-02T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: 'nepuCheer.webp',
+            },
+            {
+                type: 'title',
+                text: '3.0 DEBUT!!',
+            },
+            {
+                type: 'lEmote',
+                image: 'nepu30New.webp',
+            },
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
