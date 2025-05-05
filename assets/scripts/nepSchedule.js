@@ -3648,6 +3648,10 @@ const schedule = [
                 type: 'title',
                 text: 'Discord Movie Night (Godzilla)',
             },
+            {
+                type: 'hover',
+                text: 'Godzilla Against Mechagodzilla (2002) & Godzilla: Tokyo S. O. S. (2003)',
+            },
         ]
     },
     {
@@ -3664,6 +3668,106 @@ const schedule = [
             {
                 type: 'lEmote',
                 image: '30/nepuHeart.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-06T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: '30/nepuHeart.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'undertale.webp',
+            },
+            {
+                type: 'comment',
+                text: 'finish?',
+            }
+        ]
+    },
+    {
+        time: "2025-05-07T12:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'stardewvalley.webp',
+            },
+            {
+                type: 'lEmote',
+                image: '30/nepuLyna.webp',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="kikiColour">kiki</span>',
+            },
+        ]
+    },
+    {
+        time: "2025-05-08T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: '30/nepuGun.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'metroidprimeremastered.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-09T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'elderscrollsoblivion.webp',
+            },
+            {
+                type: 'comment',
+                text: '(the original!)',
+            },
+            {
+                type: 'lEmote',
+                image: '30/nepuKuru.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-10T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: '30/nepuCheer.webp',
+            },
+            {
+                type: 'title',
+                text: 'KARAOKE !!!!',
+            },
+        ]
+    },
+    {
+        time: "2025-05-10T19:00:00.000+01:00",
+        discord: true,
+        layout: [
+            {
+                type: 'title',
+                text: 'Discord Movie Night (Godzilla)',
+            },
+            {
+                type: 'hover',
+                text: 'Godzilla Raids Again (1955) & King Kong vs. Godzilla (1962)',
+            },
+        ]
+    },
+    {
+        time: "2025-05-11T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'utawarerumonopreludetothefallen.webp',
             },
         ]
     },
