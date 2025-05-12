@@ -3646,7 +3646,7 @@ const schedule = [
         layout: [
             {
                 type: 'title',
-                text: 'Discord Movie Night (Godzilla)',
+                text: 'Discord Movie Night (Godzilla)*',
             },
             {
                 type: 'hover',
@@ -3754,7 +3754,7 @@ const schedule = [
         layout: [
             {
                 type: 'title',
-                text: 'Discord Movie Night (Godzilla)',
+                text: 'Discord Movie Night (Godzilla)*',
             },
             {
                 type: 'hover',
@@ -3768,6 +3768,112 @@ const schedule = [
             {
                 type: 'titleLogo',
                 image: 'utawarerumonopreludetothefallen.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-12T12:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'stardewvalley.webp',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="kikiColour">kiki</span>',
+            },
+        ]
+    },
+    {
+        time: "2025-05-12T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'undertale.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-13T12:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: '30/nepuKuru.webp',
+            },
+            {
+                type: 'comment',
+                text: 'PC98',
+            },
+            {
+                type: 'titleLogo',
+                image: 'madoumonogatari123.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-14T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                reverse: true,
+                image: '30/nepuGun.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'metroidprimeremastered.webp',
+            },
+            {
+                type: 'lEmote',
+                image: '30/nepuGun.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-15T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'psychopompgold.webp',
+            },
+            {
+                type: 'rEmote',
+                image: '30/nepuSweat.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-16T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'The adventures of Storpy Stevens',
+            },
+            {
+                type: 'titleLogo',
+                image: 'elderscrollsoblivion.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-17T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'utawarerumonopreludetothefallen.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-17T20:00:00.000+01:00",
+        discord: true,
+        layout: [
+            {
+                type: 'title',
+                text: 'Discord Movie Night (Godzilla)*',
+            },
+            {
+                type: 'hover',
+                text: 'Mothra (1961) & Mothra vs. Godzilla (1964)',
             },
         ]
     },
