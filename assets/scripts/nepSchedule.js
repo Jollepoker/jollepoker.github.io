@@ -3773,6 +3773,7 @@ const schedule = [
     },
     {
         time: "2025-05-12T12:00:00.000+01:00",
+        canceled: true,
         layout: [
             {
                 type: 'titleLogo',
@@ -3786,6 +3787,7 @@ const schedule = [
     },
     {
         time: "2025-05-12T18:00:00.000+01:00",
+        canceled: true,
         layout: [
             {
                 type: 'titleLogo',
@@ -3794,7 +3796,7 @@ const schedule = [
         ]
     },
     {
-        time: "2025-05-13T12:00:00.000+01:00",
+        time: "2025-05-13T16:00:00.000+01:00",
         layout: [
             {
                 type: 'rEmote',
