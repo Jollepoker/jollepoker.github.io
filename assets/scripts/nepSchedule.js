@@ -3858,6 +3858,7 @@ const schedule = [
     },
     {
         time: "2025-05-17T16:00:00.000+01:00",
+        canceled: true,
         layout: [
             {
                 type: 'titleLogo',
