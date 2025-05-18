@@ -25,18 +25,18 @@
  * Title Logo
  * Used to show a dedicated logo for the stream
  * type: 'titleLogo',
- * image: '20/name of image in titleimages folder, including filetype',
+ * image: 'name of image in titleimages folder, including filetype',
  * 
  * Title Logo Text
  * Used to save space in case the schedule is too large by placing a text row underneath the image logo
  * type: 'titleLogoText',
- * image: '20/name of image in titleimages folder, including filetype',
+ * image: 'name of image in titleimages folder, including filetype',
  * text: 'text to accompany the image'
  * 
  * rEmote
  * Used to show a twitch emote slightly leaning to the right
  * type: 'rEmote',
- * image: '20/name of image in twitchEmote folder, including filetype',
+ * image: 'name of image in twitchEmote folder, including filetype',
  * wide: true, (optional, will make the emote wide if space allows it)
  * big: true, (optional, will render the emote a bit bigger if space allows it)
  * 
@@ -3877,6 +3877,94 @@ const schedule = [
             {
                 type: 'hover',
                 text: 'Mothra (1961) & Mothra vs. Godzilla (1964)',
+            },
+        ]
+    },
+    {
+        time: "2025-05-19T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'undertale.webp',
+            },
+            {
+                type: 'lEmote',
+                image: '30/nepuLove.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-20T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'i love my wife and daughter',
+            },
+            {
+                type: 'titleLogo',
+                image: 'utawarerumonopreludetothefallen.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-21T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'metroidprimeremastered.webp',
+            },
+            {
+                type: 'lEmote',
+                image: '30/nepuGun.webp',
+            },
+            {
+                type: 'rEmote',
+                image: '30/nepuGun.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-23T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: '30/nepuCheer.webp',
+            },
+            {
+                type: 'title',
+                text: 'karaoke!',
+            },
+        ]
+    },
+    {
+        time: "2025-05-23T22:00:00.000+01:00",
+        discord: true,
+        hideDate: true,
+        layout: [
+            {
+                type: 'title',
+                text: 'and then discord movie night!*',
+            },
+            {
+                type: 'hover',
+                text: 'Mothra vs. Godzilla (1964)',
+            },
+        ]
+    },
+    {
+        time: "2025-05-24T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: '30/nepuCool.webp',
+            },
+            {
+                type: 'comment',
+                text: 'lizardman',
+            },
+            {
+                type: 'titleLogo',
+                image: 'elderscrollsoblivion.webp',
             },
         ]
     },
