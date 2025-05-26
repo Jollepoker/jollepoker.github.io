@@ -3973,6 +3973,7 @@ const schedule = [
         layout: [
             {
                 type: 'rEmote',
+                reverse: true,
                 image: '30/nepuGun.webp',
             },
             {
