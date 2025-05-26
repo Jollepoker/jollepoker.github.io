@@ -3968,6 +3968,59 @@ const schedule = [
             },
         ]
     },
+    {
+        time: "2025-05-26T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'rEmote',
+                image: '30/nepuGun.webp',
+            },
+            {
+                type: 'titleLogo',
+                image: 'metroidprimeremastered.webp',
+            },
+            {
+                type: 'lEmote',
+                image: '30/nepuGun.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-27T18:00:00.000+01:00",
+        layout: [
+            
+            {
+                type: 'comment',
+                text: 'opening hololive cards!',
+            },
+            {
+                type: 'title',
+                text: 'Handcam stream',
+            },
+            {
+                type: 'rEmote',
+                image: '30/nepuThumbsup.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-05-28T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: '30/nepuHug.webp',
+            },
+            {
+                type: 'title',
+                text: 'Game together!',
+            },
+            {
+                type: 'comment',
+                text: 'Pangya reborn/Roblox/Skribbl.io',
+            },
+            
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
