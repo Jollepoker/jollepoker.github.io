@@ -4022,6 +4022,103 @@ const schedule = [
             
         ]
     },
+    {
+        time: "2025-06-16T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'a new adventure!!',
+            },
+            {
+                type: 'titleLogo',
+                image: 'finalfantasy2-pr.webp',
+            },
+            {
+                type: 'rEmote',
+                image: '30/nepuSalute.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-06-17T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'utawarerumonopreludetothefallen.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-06-18T16:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'ds.webp',
+            },
+            {
+                type: 'comment',
+                text: 'w/ <span class="chaiColour">chai</span> & <span class="kikiColour">kiki</span>',
+            },
+        ]
+    },
+    {
+        time: "2025-06-19T20:00:00.000+01:00",
+        layout: [
+            {
+                type: 'comment',
+                text: 'w/ <span class="chaiColour">chai</span>, <span class="mikanColour">mikan</span> & <span class="kikiColour">kiki</span>',
+            },
+            {
+                type: 'titleLogo',
+                image: 'stardewvalley.webp',
+            },
+        ]
+    },
+    {
+        time: "2025-06-20T17:00:00.000+01:00",
+        layout: [
+            {
+                type: 'titleLogo',
+                image: 'elderscrollsoblivion.webp',
+            },
+            {
+                type: 'lEmote',
+                image: '30/nepuHug.webp',
+            },
+            {
+                type: 'comment',
+                text: 'i have a new family now!',
+            },
+        ]
+    },
+    {
+        time: "2025-06-21T18:00:00.000+01:00",
+        layout: [
+            {
+                type: 'lEmote',
+                image: '30/nepuCheer.webp',
+            },
+            {
+                type: 'title',
+                text: 'KARAOKE !!!',
+            },
+        ]
+    },
+    {
+        time: "2025-06-21T22:00:00.000+01:00",
+        hideDate: true,
+        discord: true,
+        layout: [
+            {
+                type: 'title',
+                text: 'after: watchalong*',
+            },
+            {
+                type: 'hover',
+                text: 'Rodan (1956) & The Mysterians (1957)',
+            }
+        ]
+    },
 ].sort((streamA, streamB) => {
     if (streamA[0] === streamB[0]) {
         return 0;
