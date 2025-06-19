@@ -4062,15 +4062,15 @@ const schedule = [
         ]
     },
     {
-        time: "2025-06-19T20:00:00.000+01:00",
+        time: "2025-06-19T19:00:00.000+01:00",
         layout: [
             {
                 type: 'comment',
-                text: 'w/ <span class="chaiColour">chai</span>, <span class="mikanColour">mikan</span> & <span class="kikiColour">kiki</span>',
+                text: 'w/ <span class="chaiColour">chai</span> & <span class="kikiColour">kiki</span>',
             },
             {
                 type: 'titleLogo',
-                image: 'stardewvalley.webp',
+                image: 'ds.webp',
             },
         ]
     },
