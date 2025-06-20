@@ -4076,6 +4076,7 @@ const schedule = [
     },
     {
         time: "2025-06-20T17:00:00.000+01:00",
+        canceled: true,
         layout: [
             {
                 type: 'titleLogo',
