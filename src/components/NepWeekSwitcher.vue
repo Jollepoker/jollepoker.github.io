@@ -1,7 +1,9 @@
 <template>
-    <span class="nepSchedule-weekSwitcherArrow" @click="minusOneWeek"><</span>
-    <span class="nepSchedule-weekSwitcherWeek">Week: {{ targetDate.week() }}</span>
-    <span class="nepSchedule-weekSwitcherArrow" @click="plusOneWeek">></span>
+    <div class="nepSchedule-WeekSwitcherWrapper">
+        <span class="nepSchedule-weekSwitcherArrow" @click="minusOneWeek"><</span>
+        <span class="nepSchedule-weekSwitcherWeek">Week: {{ targetDate.week() }}</span>
+        <span class="nepSchedule-weekSwitcherArrow" @click="plusOneWeek">></span>
+    </div>
 </template>
 
 <script lang="ts">
