@@ -37,7 +37,6 @@ export default defineComponent({
     },
     data() {
         return {
-            todaysDate: this.$dayjs(),
             targetDate: this.$dayjs(),
         } as NepScheduleData
     },

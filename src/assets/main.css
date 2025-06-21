@@ -1,8 +1,15 @@
+.nepSchedule-weekSwitcherWrapper {
+    user-select: none;
+}
+
 .nepSchedule-weekSwitcherArrow {
     cursor: pointer;
 }
 
 .nepSchedule-weekSwitcherArrow-disabled {
-    color: gray;
-    cursor: not-allowed;
+    display: none;
+}
+
+.nepSchedule-weekSwitcherToday {
+    cursor: pointer;
 }
