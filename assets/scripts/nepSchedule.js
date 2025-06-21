@@ -4108,7 +4108,6 @@ const schedule = [
     {
         time: "2025-06-21T22:00:00.000+01:00",
         hideDate: true,
-        discord: true,
         canceled: true,
         layout: [
             {
