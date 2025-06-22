@@ -9,13 +9,15 @@
     >
         <div class="nepSchedule-stream">
             <template v-for="(element, index) in streamData.layout" :key="index">
-                <h4 v-if="element.type === 'title'" class="nepSchedule-streamTitle">
-                    {{ getTitleText(element) }}
-                </h4>
+                <h4
+                    v-if="element.type === 'title'"
+                    class="nepSchedule-streamTitle"
+                    v-html="getTitleText(element)"
+                ></h4>
                 <img
                     v-if="element.type === 'titleLogo'"
                     class="nepSchedule-streamTitleImage"
-                    :src="getImageSrc('titleimages', element.image)"
+                    :src="getImageSrc('titleimages', element.image ?? '')"
                     :style="getTitleLogoStyle(element)"
                 />
                 <div
@@ -24,12 +26,12 @@
                 >
                     <img
                         class="nepSchedule-streamTitleImageText-image"
-                        :src="getImageSrc('titleimages', element.image)"
+                        :src="getImageSrc('titleimages', element.image ?? '')"
                     />
                     <h4 class="nepSchedule-streamTitleImageText-text">{{ element.text }}</h4>
                 </div>
                 <img
-                    v-if="element.type in ['lEmote', 'rEmote']"
+                    v-if="['lEmote', 'rEmote'].includes(element.type)"
                     :class="{
                         'nepSchedule-emote-left': element.type === 'lEmote',
                         'nepSchedule-emote-right': element.type === 'rEmote',
@@ -37,7 +39,7 @@
                         'nepSchedule-bigEmote': element.big,
                         'nepSchedule-reverse': element.reverse,
                     }"
-                    :src="getImageSrc('twitchemotes', element.image)"
+                    :src="getImageSrc('twitchemotes', element.image ?? '')"
                 />
                 <div
                     v-if="element.type === 'comment'"
@@ -55,18 +57,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import type {
-    NepScheduleJsonData,
-    NepScheduleJsonLayoutData,
-    TitleLogoStyling,
-} from '@/interfaces/data';
+import { defineComponent, type CSSProperties, type PropType } from 'vue';
+import type { NepScheduleJsonData, NepScheduleJsonLayoutData } from '@/interfaces/data';
 
 export default defineComponent({
     name: 'NepStream',
     props: {
         streamData: {
-            type: {} as NepScheduleJsonData,
+            type: {} as PropType<NepScheduleJsonData>,
             required: true,
         },
     },
@@ -84,10 +82,10 @@ export default defineComponent({
             return (output || element.text) ?? '';
         },
         getImageSrc(location: string, imageName: string): string {
-            return `../assets/images/${location}/${imageName}`;
+            return `/assets/images/${location}/${imageName}`;
         },
-        getTitleLogoStyle(element: NepScheduleJsonLayoutData): TitleLogoStyling {
-            const styling = {} as TitleLogoStyling;
+        getTitleLogoStyle(element: NepScheduleJsonLayoutData): CSSProperties {
+            const styling = {} as CSSProperties;
             if (element.filter) {
                 styling.filter = element.filter;
             }

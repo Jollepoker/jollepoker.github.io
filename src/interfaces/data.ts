@@ -30,8 +30,3 @@ export interface NepScheduleJsonLayoutData {
     big?: boolean;
     reverse?: boolean;
 }
-
-export interface TitleLogoStyling {
-    filter?: string;
-    alignSelf?: string;
-}
