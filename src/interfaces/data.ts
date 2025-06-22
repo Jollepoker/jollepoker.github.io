@@ -21,8 +21,17 @@ export interface NepScheduleJsonData {
 
 export interface NepScheduleJsonLayoutData {
     type: string;
+    effect?: string;
+    filter?: string;
+    alignSelf?: string;
     text?: string;
     image?: string;
     wide?: boolean;
     big?: boolean;
+    reverse?: boolean;
+}
+
+export interface TitleLogoStyling {
+    filter?: string;
+    alignSelf?: string;
 }
