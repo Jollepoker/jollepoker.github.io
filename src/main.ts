@@ -1,7 +1,7 @@
-import './assets/main.css'
+import './assets/main.css';
 
-import { createApp } from 'vue'
-import NepSchedule from './NepSchedule.vue'
+import { createApp } from 'vue';
+import NepSchedule from './NepSchedule.vue';
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
@@ -18,7 +18,7 @@ app.config.globalProperties.$dayjs = dayjs;
 
 declare module 'vue' {
     interface ComponentCustomProperties {
-        $dayjs: typeof dayjs
+        $dayjs: typeof dayjs;
     }
 }
 

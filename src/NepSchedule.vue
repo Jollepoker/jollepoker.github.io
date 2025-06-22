@@ -1,18 +1,20 @@
 <template>
     <NepHeader />
     <main>
-        <span class="nepSchedule-streamMonth">{{ targetDate.startOf('w').format('MMM').toLowerCase() }}</span>
+        <span class="nepSchedule-streamMonth">{{
+            targetDate.startOf('w').format('MMM').toLowerCase()
+        }}</span>
         <span class="nepSchedule-streamDay">{{ targetDate.startOf('w').date() }}</span>
         <span class="nepSchedule-dateSeparator"> - </span>
-        <span class="nepSchedule-streamMonth">{{ targetDate.endOf('w').format('MMM').toLowerCase() }}</span>
+        <span class="nepSchedule-streamMonth">{{
+            targetDate.endOf('w').format('MMM').toLowerCase()
+        }}</span>
         <span class="nepSchedule-streamDay">{{ targetDate.endOf('w').date() }}</span>
         <div class="nepSchedule-scheduleWrapper">
-            <NepWeekSwitcher
-                :targetDate="targetDate"
-                @changeTargetDate="changeTargetDate"
-            />
+            <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
             <NepStream
                 v-for="stream in getStreamsForTargetDate()"
+                :key="stream.time"
                 :streamData="stream"
             />
         </div>
@@ -38,17 +40,20 @@ export default defineComponent({
     data() {
         return {
             targetDate: this.$dayjs(),
-        } as NepScheduleData
+        } as NepScheduleData;
     },
     methods: {
         getStreamsForTargetDate(): NepScheduleJsonData[] {
-            return scheduleData.filter(stream => {
-                return this.targetDate.startOf('w').isBefore(stream.time) && this.targetDate.endOf('w').isAfter(stream.time);
+            return scheduleData.filter((stream) => {
+                return (
+                    this.targetDate.startOf('w').isBefore(stream.time) &&
+                    this.targetDate.endOf('w').isAfter(stream.time)
+                );
             });
         },
         changeTargetDate(newDate: Dayjs): void {
             this.targetDate = newDate;
-        }
-    }
+        },
+    },
 });
 </script>
