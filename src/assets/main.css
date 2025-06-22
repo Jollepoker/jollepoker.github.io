@@ -15,7 +15,7 @@
 }
 
 #nepSchedule {
-    padding: 84px;
+    padding: 57px 84px 57px 84px;
 }
 
 #nepSchedule::before {
@@ -32,4 +32,17 @@
     border-image-repeat: round;
     border-width: 84px;
     border-style: solid;
+}
+
+#nepSchedule-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 57px 84px 57px 84px;
+    height: 100%;
+    width: 133.33333333vh;
+    min-width: 100%;
+    min-height: 75vw;
 }
