@@ -26,9 +26,9 @@
     top: 0;
     bottom: 0;
     z-index: 1000;
-    border-image-source: url(/public/assets/images/site/mainframe.png);
-    border-image-slice: 321 321 65 325;
-    border-image-width: 321px 321px 65px 325px;
+    border-image-source: url(/public/assets/images/site/frame.png);
+    border-image-slice: 321 321 106 325;
+    border-image-width: 321px 321px 106px 325px;
     border-image-repeat: round;
     border-width: 84px;
     border-style: solid;
