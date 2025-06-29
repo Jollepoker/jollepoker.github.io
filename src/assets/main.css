@@ -1,3 +1,29 @@
+:root {
+    --checker-background-height: 100px;
+    --checker-background-width: 100px;
+}
+
+@-webkit-keyframes checker-bg-scrolling {
+    0% {
+        background-position: var(--checker-background-width) var(--checker-background-height);
+    }
+}
+@-moz-keyframes checker-bg-scrolling {
+    0% {
+        background-position: var(--checker-background-width) var(--checker-background-height);
+    }
+}
+@-o-keyframes checker-bg-scrolling {
+    0% {
+        background-position: var(--checker-background-width) var(--checker-background-height);
+    }
+}
+@keyframes checker-bg-scrolling {
+    0% {
+        background-position: var(--checker-background-width) var(--checker-background-height);
+    }
+}
+
 .nepSchedule-weekSwitcherWrapper {
     user-select: none;
 }
@@ -26,12 +52,23 @@
     top: 0;
     bottom: 0;
     z-index: 1000;
-    border-image-source: url(/public/assets/images/site/frame.png);
+    border-image-source: url(/assets/images/site/frame.webp);
     border-image-slice: 321 321 106 325;
     border-image-width: 321px 321px 106px 325px;
     border-image-repeat: round;
     border-width: 84px;
     border-style: solid;
+}
+
+#nepSchedule::after {
+    content: '';
+    position: fixed;
+    right: -130px;
+    bottom: -130px;
+    z-index: 1001;
+    background-image: url(/assets/images/site/sunflower.webp);
+    width: 422px;
+    height: 415px;
 }
 
 #nepSchedule-background {
@@ -45,4 +82,19 @@
     width: 133.33333333vh;
     min-width: 100%;
     min-height: 75vw;
+}
+
+.checker-background {
+    background: repeating-conic-gradient(from 45deg, #1c0803 0% 25%, #461911 0% 50%);
+    background-size: var(--checker-background-width) var(--checker-background-height);
+    background-color: #461911;
+
+    -webkit-animation: checker-bg-scrolling 1.2s infinite; /* Safari 4+ */
+    -moz-animation: checker-bg-scrolling 1.2s infinite; /* Fx 5+ */
+    -o-animation: checker-bg-scrolling 1.2s infinite; /* Opera 12+ */
+    animation: checker-bg-scrolling 1.2s infinite; /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
 }
