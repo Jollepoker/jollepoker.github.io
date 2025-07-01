@@ -89,10 +89,10 @@
     background-size: var(--checker-background-width) var(--checker-background-height);
     background-color: #461911;
 
-    -webkit-animation: checker-bg-scrolling 1.2s infinite; /* Safari 4+ */
-    -moz-animation: checker-bg-scrolling 1.2s infinite; /* Fx 5+ */
-    -o-animation: checker-bg-scrolling 1.2s infinite; /* Opera 12+ */
-    animation: checker-bg-scrolling 1.2s infinite; /* IE 10+ */
+    -webkit-animation: checker-bg-scrolling 1.2s infinite;
+    -moz-animation: checker-bg-scrolling 1.2s infinite;
+    -o-animation: checker-bg-scrolling 1.2s infinite;
+    animation: checker-bg-scrolling 1.2s infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
     -o-animation-timing-function: linear;
