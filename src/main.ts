@@ -2,7 +2,7 @@ import './assets/main.css';
 
 import { createApp } from 'vue';
 import dayjs from 'dayjs';
-import NepApp from '@/apps/nepApp.vue';
+import NepApp from '@/apps/NepApp.vue';
 import router from '@/router/NepRouter';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
