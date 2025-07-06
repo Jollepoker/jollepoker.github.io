@@ -44,6 +44,7 @@
     right: 0;
     z-index: 1001;
     overflow: hidden;
+    pointer-events: none;
 }
 
 #nep-eye {
@@ -51,6 +52,7 @@
     min-height: 110px;
     object-fit: none;
     object-position: top center;
+    pointer-events: none;
 }
 
 .nepSchedule-weekSwitcherWrapper {
