@@ -12,7 +12,12 @@
         <span class="nepSchedule-streamDay">{{ targetDate.endOf('w').date() }}</span>
         <div class="nepSchedule-scheduleWrapper">
             <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
-            <NepStream v-for="stream in streamsThisWeek" :key="stream.time" :streamData="stream" />
+            <NepStream
+                v-for="stream in streamsThisWeek"
+                :key="stream.time"
+                :now="now"
+                :streamData="stream"
+            />
         </div>
     </main>
 </template>

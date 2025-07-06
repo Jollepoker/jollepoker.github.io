@@ -52,20 +52,59 @@
                     v-html="element.text"
                 ></div>
             </template>
+            <div v-if="!streamData.hideDate" class="nepSchedule-streamTime">
+                {{ streamTime }}
+            </div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
+import { Dayjs } from 'dayjs';
 import { defineComponent, type CSSProperties, type PropType } from 'vue';
-import type { NepScheduleJsonData, NepScheduleJsonLayoutData } from '@/interfaces/data';
+import type {
+    NepScheduleJsonData,
+    NepScheduleJsonLayoutData,
+    NepStreamData,
+} from '@/interfaces/data';
 
 export default defineComponent({
     name: 'NepStream',
     props: {
+        now: {
+            type: Dayjs,
+            required: true,
+        },
         streamData: {
             type: {} as PropType<NepScheduleJsonData>,
             required: true,
+        },
+    },
+    data() {
+        return {
+            streamUrl: 'https://twitch.tv/neppienep',
+        } as NepStreamData;
+    },
+    computed: {
+        streamTime(): string {
+            let timeString = '';
+            const streamTime = this.$dayjs(this.streamData.time);
+
+            if (this.streamData.canceled) {
+                timeString = streamTime.format('HH:mm');
+            } else if (this.$dayjs.isDayjs(this.streamData.liveDate)) {
+                timeString = `<a href=${this.streamUrl}>${this.$dayjs.duration(this.streamData.liveDate.diff(this.now)).format('HH:mm:ss')}</a>`;
+            } else if (Math.abs(streamTime.diff(this.now, 'd')) > 0) {
+                timeString = streamTime.format('HH:mm');
+            } else if (this.now.isBefore(streamTime)) {
+                timeString = `${this.$dayjs.duration(streamTime.diff(this.now)).format('HH:mm:ss')} (${streamTime.format('HH:mm')})`;
+            } else if (this.now.isAfter(streamTime) && this.now.isBefore(streamTime.add(1, 'h'))) {
+                timeString = `<a href=${this.streamUrl}>[any minute now...]</a>`;
+            } else {
+                timeString = streamTime.format('HH:mm');
+            }
+
+            return timeString;
         },
     },
     methods: {

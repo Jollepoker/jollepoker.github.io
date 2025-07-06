@@ -7,6 +7,10 @@ export interface NepScheduleData {
     streamsThisWeek: NepScheduleJsonData[];
 }
 
+export interface NepStreamData {
+    streamUrl: string;
+}
+
 export interface NepWeekSwitcher {
     targetDate: Dayjs;
 }
