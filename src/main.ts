@@ -1,8 +1,8 @@
 import './assets/main.css';
 
 import { createApp } from 'vue';
-import NepSchedule from './NepSchedule.vue';
 import dayjs from 'dayjs';
+import NepSchedule from '@/components/NepSchedule.vue';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 import weekOfYear from 'dayjs/plugin/weekOfYear';

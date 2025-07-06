@@ -1,10 +1,11 @@
 import type { Dayjs } from 'dayjs';
 
 export interface NepScheduleData {
+    now: Dayjs;
     targetDate: Dayjs;
+    liveDate?: Dayjs;
+    streamsThisWeek: NepScheduleJsonData[];
 }
-
-export interface NepStreamData {}
 
 export interface NepWeekSwitcher {
     targetDate: Dayjs;
@@ -12,6 +13,7 @@ export interface NepWeekSwitcher {
 
 export interface NepScheduleJsonData {
     time: string;
+    liveDate?: Dayjs;
     discord?: boolean;
     canceled?: boolean;
     hideDate?: boolean;

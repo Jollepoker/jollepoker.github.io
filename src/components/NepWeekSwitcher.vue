@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import dayjs, { Dayjs } from 'dayjs';
+import { Dayjs } from 'dayjs';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -26,10 +26,10 @@ export default defineComponent({
     },
     computed: {
         canPlusOneWeek(): boolean {
-            return !this.targetDate.add(1, 'week').isAfter(dayjs());
+            return !this.targetDate.add(1, 'week').isAfter(this.$dayjs());
         },
         isThisWeek(): boolean {
-            return this.targetDate.week() === dayjs().week();
+            return this.targetDate.week() === this.$dayjs().week();
         },
     },
     methods: {
@@ -37,12 +37,12 @@ export default defineComponent({
             this.$emit('changeTargetDate', this.targetDate.subtract(1, 'week'));
         },
         plusOneWeek(): void {
-            if (this.targetDate.add(1, 'week').isBefore(dayjs())) {
+            if (this.targetDate.add(1, 'week').isBefore(this.$dayjs())) {
                 this.$emit('changeTargetDate', this.targetDate.add(1, 'week'));
             }
         },
         goToToday(): void {
-            this.$emit('changeTargetDate', dayjs());
+            this.$emit('changeTargetDate', this.$dayjs());
         },
     },
 });
