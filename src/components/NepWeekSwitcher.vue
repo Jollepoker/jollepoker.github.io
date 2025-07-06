@@ -2,11 +2,7 @@
     <div class="nepSchedule-weekSwitcherWrapper">
         <span class="nepSchedule-weekSwitcherArrow" @click="minusOneWeek">&lt;</span>
         <span class="nepSchedule-weekSwitcherWeek">Week: {{ targetDate.week() }}</span>
-        <span
-            class="nepSchedule-weekSwitcherArrow"
-            :class="{ 'nepSchedule-weekSwitcherArrow-disabled': canPlusOneWeek }"
-            @click="plusOneWeek"
-        >
+        <span v-if="canPlusOneWeek" class="nepSchedule-weekSwitcherArrow" @click="plusOneWeek">
             &gt;
         </span>
         <span v-if="!isThisWeek" class="nepSchedule-weekSwitcherToday" @click="goToToday">
@@ -30,7 +26,7 @@ export default defineComponent({
     },
     computed: {
         canPlusOneWeek(): boolean {
-            return this.targetDate.add(1, 'week').isAfter(dayjs());
+            return !this.targetDate.add(1, 'week').isAfter(dayjs());
         },
         isThisWeek(): boolean {
             return this.targetDate.week() === dayjs().week();

@@ -19,10 +19,15 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <video autoplay muted loop id="nepSchedule-background">
+    <video autoplay muted loop id="nep-background">
       <source src="/assets/images/site/background.mp4" type="video/mp4" />
     </video>
-    <div id="nepSchedule"></div>
+    <div id="contentWrapper">
+      <div id="nep-eyeWrapper">
+        <img id="nep-eye" src="/assets/images/site/eye.webp" />
+      </div>
+      <div id="nepSchedule"></div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

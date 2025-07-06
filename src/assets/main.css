@@ -24,54 +24,7 @@
     }
 }
 
-.nepSchedule-weekSwitcherWrapper {
-    user-select: none;
-}
-
-.nepSchedule-weekSwitcherArrow {
-    cursor: pointer;
-}
-
-.nepSchedule-weekSwitcherArrow-disabled {
-    display: none;
-}
-
-.nepSchedule-weekSwitcherToday {
-    cursor: pointer;
-}
-
-#nepSchedule {
-    padding: 57px 84px 57px 84px;
-}
-
-#nepSchedule::before {
-    content: '';
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1000;
-    border-image-source: url(/assets/images/site/frame.webp);
-    border-image-slice: 321 321 106 325;
-    border-image-width: 321px 321px 106px 325px;
-    border-image-repeat: round;
-    border-width: 84px;
-    border-style: solid;
-}
-
-#nepSchedule::after {
-    content: '';
-    position: fixed;
-    right: -130px;
-    bottom: -130px;
-    z-index: 1001;
-    background-image: url(/assets/images/site/sunflower.webp);
-    width: 422px;
-    height: 415px;
-}
-
-#nepSchedule-background {
+#nep-background {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -82,6 +35,34 @@
     width: 133.33333333vh;
     min-width: 100%;
     min-height: 75vw;
+}
+
+#nep-eyeWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+#nep-eye {
+    width: 100%;
+    min-height: 110px;
+    object-fit: none;
+    object-position: top center;
+}
+
+.nepSchedule-weekSwitcherWrapper {
+    user-select: none;
+}
+
+.nepSchedule-weekSwitcherArrow {
+    cursor: pointer;
+}
+
+.nepSchedule-weekSwitcherToday {
+    cursor: pointer;
 }
 
 .checker-background {
@@ -97,4 +78,54 @@
     -moz-animation-timing-function: linear;
     -o-animation-timing-function: linear;
     animation-timing-function: linear;
+}
+
+#contentWrapper {
+    padding-top: 84px;
+}
+
+#contentWrapper::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    border-image-source: url(/assets/images/site/frameJustTop.webp);
+    border-image-slice: 65 0 0 0;
+    border-image-width: 65px 0 0 0;
+    border-image-repeat: repeat;
+    border-style: solid;
+    pointer-events: none;
+}
+
+@media screen and (min-width: 780px) and (min-height: 780px) {
+    #contentWrapper {
+        padding: 57px 84px;
+        overflow: hidden;
+    }
+
+    #contentWrapper::before {
+        border-image-source: url(/assets/images/site/frameNoTopDecor.webp);
+        border-image-slice: 321 321 106 325;
+        border-image-width: 321px 321px 106px 325px;
+    }
+
+    #contentWrapper::after {
+        content: '';
+        position: fixed;
+        right: -130px;
+        bottom: -130px;
+        z-index: 1001;
+        background-image: url(/assets/images/site/sunflower.webp);
+        width: 422px;
+        height: 415px;
+    }
+}
+
+@media screen and (min-width: 1420px) and (min-height: 780px) {
+    #contentWrapper::before {
+        border-image-source: url(/assets/images/site/frame.webp);
+    }
 }
