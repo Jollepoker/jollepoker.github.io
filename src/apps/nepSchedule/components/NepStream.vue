@@ -66,7 +66,7 @@ import type {
     NepScheduleJsonData,
     NepScheduleJsonLayoutData,
     NepStreamData,
-} from '@/interfaces/data';
+} from '@/apps/nepSchedule/interfaces/data';
 
 export default defineComponent({
     name: 'NepStream',

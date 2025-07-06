@@ -2,7 +2,8 @@ import './assets/main.css';
 
 import { createApp } from 'vue';
 import dayjs from 'dayjs';
-import NepSchedule from '@/components/NepSchedule.vue';
+import NepApp from '@/apps/nepApp.vue';
+import router from '@/router/NepRouter';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
@@ -15,7 +16,7 @@ dayjs.extend(weekOfYear);
 dayjs.extend(duration);
 dayjs.locale(locale);
 
-const app = createApp(NepSchedule);
+const app = createApp(NepApp).use(router);
 app.config.globalProperties.$dayjs = dayjs;
 
 declare module 'vue' {
@@ -24,4 +25,4 @@ declare module 'vue' {
     }
 }
 
-app.mount('#nepSchedule');
+app.mount('#nepApp');

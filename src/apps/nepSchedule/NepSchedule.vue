@@ -1,40 +1,35 @@
 <template>
-    <NepHeader />
-    <main>
-        <span class="nepSchedule-streamMonth">{{
-            targetDate.startOf('w').format('MMM').toLowerCase()
-        }}</span>
-        <span class="nepSchedule-streamDay">{{ targetDate.startOf('w').date() }}</span>
-        <span class="nepSchedule-dateSeparator"> - </span>
-        <span class="nepSchedule-streamMonth">{{
-            targetDate.endOf('w').format('MMM').toLowerCase()
-        }}</span>
-        <span class="nepSchedule-streamDay">{{ targetDate.endOf('w').date() }}</span>
-        <div class="nepSchedule-scheduleWrapper">
-            <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
-            <NepStream
-                v-for="stream in streamsThisWeek"
-                :key="stream.time"
-                :now="now"
-                :streamData="stream"
-            />
-        </div>
-    </main>
+    <span class="nepSchedule-streamMonth">{{
+        targetDate.startOf('w').format('MMM').toLowerCase()
+    }}</span>
+    <span class="nepSchedule-streamDay">{{ targetDate.startOf('w').date() }}</span>
+    <span class="nepSchedule-dateSeparator"> - </span>
+    <span class="nepSchedule-streamMonth">{{
+        targetDate.endOf('w').format('MMM').toLowerCase()
+    }}</span>
+    <span class="nepSchedule-streamDay">{{ targetDate.endOf('w').date() }}</span>
+    <div class="nepSchedule-scheduleWrapper">
+        <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
+        <NepStream
+            v-for="stream in streamsThisWeek"
+            :key="stream.time"
+            :now="now"
+            :streamData="stream"
+        />
+    </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { NepScheduleData, NepScheduleJsonData } from '@/interfaces/data';
-import scheduleData from '@/data/schedule.json';
-import NepHeader from '@/components/NepHeader.vue';
-import NepStream from '@/components/NepStream.vue';
-import NepWeekSwitcher from '@/components/NepWeekSwitcher.vue';
+import type { NepScheduleData, NepScheduleJsonData } from '@/apps/nepSchedule/interfaces/data';
+import scheduleData from '@/apps/nepSchedule/data/schedule.json';
+import NepStream from '@/apps/nepSchedule/components/NepStream.vue';
+import NepWeekSwitcher from '@/apps/nepSchedule/components/NepWeekSwitcher.vue';
 import { Dayjs } from 'dayjs';
 
 export default defineComponent({
     name: 'NepSchedule',
     components: {
-        NepHeader,
         NepStream,
         NepWeekSwitcher,
     },
