@@ -8,52 +8,57 @@
         }"
     >
         <div class="nepSchedule-stream">
-            <template v-for="(element, index) in streamData.layout" :key="index">
-                <h4
-                    v-if="element.type === 'title'"
-                    class="nepSchedule-streamTitle"
-                    v-html="getTitleText(element)"
-                ></h4>
-                <img
-                    v-if="element.type === 'titleLogo'"
-                    class="nepSchedule-streamTitleImage"
-                    :src="getImageSrc('titleimages', element.image ?? '')"
-                    :style="getTitleLogoStyle(element)"
-                />
-                <div
-                    v-if="element.type === 'titleLogoText'"
-                    class="nepSchedule-streamTitleImageText"
-                >
-                    <img
-                        class="nepSchedule-streamTitleImageText-image"
-                        :src="getImageSrc('titleimages', element.image ?? '')"
-                    />
-                    <h4 class="nepSchedule-streamTitleImageText-text">{{ element.text }}</h4>
+            <div class="nepSchedule-streamHeaderWrapper">
+                <h3 class="nepSchedule-streamDay">{{ streamDay }}</h3>
+                <div class="nepSchedule-streamTime">
+                    {{ streamTime }}
                 </div>
-                <img
-                    v-if="['lEmote', 'rEmote'].includes(element.type)"
-                    :class="{
-                        'nepSchedule-emote-left': element.type === 'lEmote',
-                        'nepSchedule-emote-right': element.type === 'rEmote',
-                        'nepSchedule-wideEmote': element.wide,
-                        'nepSchedule-bigEmote': element.big,
-                        'nepSchedule-reverse': element.reverse,
-                    }"
-                    :src="getImageSrc('twitchemotes', element.image ?? '')"
-                />
-                <div
-                    v-if="element.type === 'comment'"
-                    class="nepSchedule-streamComment"
-                    v-html="element.text"
-                ></div>
-                <div
-                    v-if="element.type === 'hover'"
-                    class="nepSchedule-streamHover"
-                    v-html="element.text"
-                ></div>
-            </template>
-            <div v-if="!streamData.hideDate" class="nepSchedule-streamTime">
-                {{ streamTime }}
+            </div>
+            <div class="nepSchedule-streamContentWrapper">
+                <template v-for="(element, index) in streamData.layout" :key="index">
+                    <h4
+                        v-if="element.type === 'title'"
+                        class="nepSchedule-streamTitle"
+                        v-html="getTitleText(element)"
+                    ></h4>
+                    <img
+                        v-if="element.type === 'titleLogo'"
+                        class="nepSchedule-streamTitleImage"
+                        :src="getImageSrc('titleimages', element.image ?? '')"
+                        :style="getTitleLogoStyle(element)"
+                    />
+                    <div
+                        v-if="element.type === 'titleLogoText'"
+                        class="nepSchedule-streamTitleImageText"
+                    >
+                        <img
+                            class="nepSchedule-streamTitleImageText-image"
+                            :src="getImageSrc('titleimages', element.image ?? '')"
+                        />
+                        <h4 class="nepSchedule-streamTitleImageText-text">{{ element.text }}</h4>
+                    </div>
+                    <img
+                        v-if="['lEmote', 'rEmote'].includes(element.type)"
+                        :class="{
+                            'nepSchedule-emote-left': element.type === 'lEmote',
+                            'nepSchedule-emote-right': element.type === 'rEmote',
+                            'nepSchedule-wideEmote': element.wide,
+                            'nepSchedule-bigEmote': element.big,
+                            'nepSchedule-reverse': element.reverse,
+                        }"
+                        :src="getImageSrc('twitchemotes', element.image ?? '')"
+                    />
+                    <div
+                        v-if="element.type === 'comment'"
+                        class="nepSchedule-streamComment"
+                        v-html="element.text"
+                    ></div>
+                    <div
+                        v-if="element.type === 'hover'"
+                        class="nepSchedule-streamHover"
+                        v-html="element.text"
+                    ></div>
+                </template>
             </div>
         </div>
     </div>
@@ -87,6 +92,9 @@ export default defineComponent({
     },
     computed: {
         streamTime(): string {
+            if (this.streamData.hideDate) {
+                return '';
+            }
             let timeString = '';
             const streamTime = this.$dayjs(this.streamData.time);
 
@@ -105,6 +113,9 @@ export default defineComponent({
             }
 
             return timeString;
+        },
+        streamDay(): string {
+            return this.$dayjs(this.streamData.time).format('ddd');
         },
     },
     methods: {

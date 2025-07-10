@@ -8,8 +8,8 @@
         targetDate.endOf('w').format('MMM').toLowerCase()
     }}</span>
     <span class="nepSchedule-streamDay">{{ targetDate.endOf('w').date() }}</span>
+    <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
     <div class="nepSchedule-scheduleWrapper">
-        <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
         <NepStream
             v-for="stream in streamsThisWeek"
             :key="stream.time"
