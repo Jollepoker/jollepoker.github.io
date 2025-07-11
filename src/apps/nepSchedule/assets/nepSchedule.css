@@ -206,6 +206,16 @@
 
 @media screen and (min-width: 1420px) and (min-height: 780px) {
     .nepSchedule-weekWrapper {
+        margin: 0 auto 3% auto;
+    }
+
+    .nepSchedule-scheduleWrapper {
+        grid-template-rows: 28.5% 28.5% 28.5%;
+    }
+}
+
+@media screen and (min-width: 1620px) and (min-height: 780px) {
+    .nepSchedule-weekWrapper {
         margin: 0 auto 2% auto;
     }
 
