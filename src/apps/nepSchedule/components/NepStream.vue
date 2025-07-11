@@ -10,7 +10,7 @@
         <div class="nepSchedule-stream">
             <div class="nepSchedule-streamHeaderWrapper">
                 <h3 class="nepSchedule-streamDay">{{ streamDay }}</h3>
-                <div class="nepSchedule-streamTime">
+                <div v-if="streamTime" class="nepSchedule-streamTime">
                     {{ streamTime }}
                 </div>
             </div>

@@ -2,13 +2,20 @@
     <div class="nepSchedule-weekSwitcherWrapper">
         <span class="nepSchedule-weekSwitcherArrow" @click="minusOneWeek">&lt;</span>
         <span class="nepSchedule-weekSwitcherWeek">Week: {{ targetDate.week() }}</span>
-        <span v-if="canPlusOneWeek" class="nepSchedule-weekSwitcherArrow" @click="plusOneWeek">
+        <span
+            class="nepSchedule-weekSwitcherArrow"
+            :style="{ visibility: isThisWeek ? 'hidden' : 'visible' }"
+            @click="plusOneWeek"
+        >
             &gt;
         </span>
-        <span v-if="!isThisWeek" class="nepSchedule-weekSwitcherToday" @click="goToToday">
-            Today
-        </span>
     </div>
+    <span
+        class="nepSchedule-weekSwitcherToday"
+        :style="{ visibility: isThisWeek ? 'hidden' : 'visible' }"
+        @click="goToToday"
+        >Today</span
+    >
 </template>
 
 <script lang="ts">

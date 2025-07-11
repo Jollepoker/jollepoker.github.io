@@ -1,14 +1,18 @@
 <template>
-    <span class="nepSchedule-streamMonth">{{
-        targetDate.startOf('w').format('MMM').toLowerCase()
-    }}</span>
-    <span class="nepSchedule-streamDay">{{ targetDate.startOf('w').date() }}</span>
-    <span class="nepSchedule-dateSeparator"> - </span>
-    <span class="nepSchedule-streamMonth">{{
-        targetDate.endOf('w').format('MMM').toLowerCase()
-    }}</span>
-    <span class="nepSchedule-streamDay">{{ targetDate.endOf('w').date() }}</span>
-    <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
+    <div class="nepSchedule-weekWrapper">
+        <div class="nepSchedule-currentWeek">
+            <span class="nepSchedule-streamMonth">{{
+                targetDate.startOf('w').format('MMM').toLowerCase()
+            }}</span>
+            <span class="nepSchedule-streamDay">{{ targetDate.startOf('w').date() }}</span>
+            <span class="nepSchedule-dateSeparator"> - </span>
+            <span class="nepSchedule-streamMonth">{{
+                targetDate.endOf('w').format('MMM').toLowerCase()
+            }}</span>
+            <span class="nepSchedule-streamDay">{{ targetDate.endOf('w').date() }}</span>
+        </div>
+        <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
+    </div>
     <div class="nepSchedule-scheduleWrapper">
         <NepStream
             v-for="stream in streamsThisWeek"
