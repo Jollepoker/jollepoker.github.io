@@ -1,13 +1,13 @@
 .nepSchedule-weekSwitcherWrapper {
     user-select: none;
-}
 
-.nepSchedule-weekSwitcherArrow {
-    cursor: pointer;
-}
+    .nepSchedule-weekSwitcherArrow {
+        cursor: pointer;
+    }
 
-.nepSchedule-weekSwitcherToday {
-    cursor: pointer;
+    .nepSchedule-weekSwitcherToday {
+        cursor: pointer;
+    }
 }
 
 .nepSchedule-streamWrapper,
@@ -37,7 +37,6 @@
     -moz-animation-timing-function: linear;
     -o-animation-timing-function: linear;
     animation-timing-function: linear;
-
     box-sizing: border-box;
     border-image-source: url(/assets/images/site/ornamentbordervertical.webp);
     border-image-slice: 0 58;
@@ -46,6 +45,52 @@
     border-image-outset: 17px;
     border-style: solid;
     padding: 0 40px;
+    display: grid;
+    grid-template-rows: minmax(auto, 1fr) auto;
+
+    .nepSchedule-streamContentHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .nepSchedule-streamTitle {
+            font-size: 2vw;
+            text-align: center;
+        }
+
+        .nepSchedule-streamTitleImage {
+            display: inline;
+            max-width: 100%;
+            margin: 0 auto;
+            max-height: 10vh;
+            background: radial-gradient(
+                ellipse at center,
+                rgba(255, 255, 255, 1) 0%,
+                rgba(255, 255, 255, 0) 70%
+            );
+            vertical-align: bottom;
+        }
+    }
+
+    .nepSchedule-streamContentSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        & > * {
+            margin: 1em;
+        }
+
+        .nepSchedule-emote-left,
+        .nepSchedule-emote-right {
+            max-width: 4vw;
+            max-height: 4vw;
+        }
+
+        .nepSchedule-streamComment {
+            align-content: center;
+        }
+    }
 }
 
 @media screen and (min-width: 780px) and (min-height: 780px) {
@@ -58,27 +103,10 @@
         max-width: 97%;
         height: 94%;
         margin: 0 1%;
-    }
 
-    .nepSchedule-streamWrapper {
-        height: 100%;
-    }
-
-    .nepSchedule-streamTitleImage {
-        display: block;
-        max-width: 100%;
-        margin: 0 auto;
-        max-height: 100px;
-        background: radial-gradient(
-            ellipse at center,
-            rgba(255, 255, 255, 1) 0%,
-            rgba(255, 255, 255, 0) 70%
-        );
-    }
-
-    .nepSchedule-emote-left,
-    .nepSchedule-emote-right {
-        max-width: 50px;
+        .nepSchedule-streamWrapper {
+            height: 100%;
+        }
     }
 }
 

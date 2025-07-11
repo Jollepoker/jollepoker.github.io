@@ -9,8 +9,8 @@ export interface NepScheduleData {
 
 export interface NepStreamData {
     streamUrl: string;
-    titleLogoContent?: NepScheduleJsonLayoutData;
-    titleContent?: NepScheduleJsonLayoutData;
+    titleLogoContent?: NepScheduleJsonLayoutData[];
+    titleContent?: NepScheduleJsonLayoutData[];
     leftEmotes?: NepScheduleJsonLayoutData[];
     rightEmotes?: NepScheduleJsonLayoutData[];
     comments?: NepScheduleJsonLayoutData[];

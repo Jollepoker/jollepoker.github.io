@@ -15,42 +15,49 @@
                 </div>
             </div>
             <div class="nepSchedule-streamContentWrapper">
-                <img
-                    v-if="titleLogoContent"
-                    class="nepSchedule-streamTitleImage"
-                    :src="getImageSrc('titleimages', titleLogoContent.image ?? '')"
-                    :style="getTitleLogoStyle(titleLogoContent)"
-                />
-                <h4
-                    v-if="titleContent"
-                    class="nepSchedule-streamTitle"
-                    v-html="getTitleText(titleContent)"
-                ></h4>
-                <template v-for="(emote, index) in leftEmotes" :key="index">
-                    <img
-                        class="nepSchedule-emote-left"
-                        :class="{
-                            'nepSchedule-wideEmote': emote.wide,
-                            'nepSchedule-bigEmote': emote.big,
-                            'nepSchedule-reverse': emote.reverse,
-                        }"
-                        :src="getImageSrc('twitchemotes', emote.image ?? '')"
-                    />
-                </template>
-                <template v-for="(comment, index) in comments" :key="index">
-                    <div class="nepSchedule-streamComment" v-html="comment.text"></div>
-                </template>
-                <template v-for="(emote, index) in rightEmotes" :key="index">
-                    <img
-                        class="nepSchedule-emote-right"
-                        :class="{
-                            'nepSchedule-wideEmote': emote.wide,
-                            'nepSchedule-bigEmote': emote.big,
-                            'nepSchedule-reverse': emote.reverse,
-                        }"
-                        :src="getImageSrc('twitchemotes', emote.image ?? '')"
-                    />
-                </template>
+                <div class="nepSchedule-streamContentHeader">
+                    <template v-for="(titleLogo, index) in titleLogoContent" :key="index">
+                        <img
+                            class="nepSchedule-streamTitleImage"
+                            :src="getImageSrc('titleimages', titleLogo.image ?? '')"
+                            :style="getTitleLogoStyle(titleLogo)"
+                        />
+                    </template>
+                    <template v-for="(title, index) in titleContent" :key="index">
+                        <h4
+                            v-if="title"
+                            class="nepSchedule-streamTitle"
+                            v-html="getTitleText(title)"
+                        ></h4>
+                    </template>
+                </div>
+                <div class="nepSchedule-streamContentSection">
+                    <template v-for="(emote, index) in leftEmotes" :key="index">
+                        <img
+                            class="nepSchedule-emote-left"
+                            :class="{
+                                'nepSchedule-wideEmote': emote.wide,
+                                'nepSchedule-bigEmote': emote.big,
+                                'nepSchedule-reverse': emote.reverse,
+                            }"
+                            :src="getImageSrc('twitchemotes', emote.image ?? '')"
+                        />
+                    </template>
+                    <template v-for="(comment, index) in comments" :key="index">
+                        <div class="nepSchedule-streamComment" v-html="comment.text"></div>
+                    </template>
+                    <template v-for="(emote, index) in rightEmotes" :key="index">
+                        <img
+                            class="nepSchedule-emote-right"
+                            :class="{
+                                'nepSchedule-wideEmote': emote.wide,
+                                'nepSchedule-bigEmote': emote.big,
+                                'nepSchedule-reverse': emote.reverse,
+                            }"
+                            :src="getImageSrc('twitchemotes', emote.image ?? '')"
+                        />
+                    </template>
+                </div>
                 <div
                     v-if="hoverContent"
                     class="nepSchedule-streamHover"
@@ -151,8 +158,10 @@ export default defineComponent({
             return styling;
         },
         loadContent() {
-            this.titleLogoContent = this.streamData.layout.find(({ type }) => type === 'titleLogo');
-            this.titleContent = this.streamData.layout.find(({ type }) => type === 'title');
+            this.titleLogoContent = this.streamData.layout.filter(
+                ({ type }) => type === 'titleLogo',
+            );
+            this.titleContent = this.streamData.layout.filter(({ type }) => type === 'title');
             this.leftEmotes = this.streamData.layout.filter(({ type }) => type === 'lEmote');
             this.rightEmotes = this.streamData.layout.filter(({ type }) => type === 'rEmote');
             this.comments = this.streamData.layout.filter(({ type }) => type === 'comment');

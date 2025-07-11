@@ -85,6 +85,26 @@
     pointer-events: none;
 }
 
+.mikanColour {
+    color: #de9056;
+}
+
+.maikaColour {
+    color: #81c9cf;
+}
+
+.kikiColour {
+    color: #678b63;
+}
+
+.chaiColour {
+    color: #cf3946;
+}
+
+.irinaColour {
+    color: #f3a6aa;
+}
+
 @media screen and (min-width: 780px) and (min-height: 780px) {
     #nep-siteWrapper {
         padding: 57px 84px;
