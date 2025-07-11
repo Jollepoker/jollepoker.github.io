@@ -1,0 +1,86 @@
+.nepSchedule-weekSwitcherWrapper {
+    user-select: none;
+}
+
+.nepSchedule-weekSwitcherArrow {
+    cursor: pointer;
+}
+
+.nepSchedule-weekSwitcherToday {
+    cursor: pointer;
+}
+
+.nepSchedule-streamWrapper,
+.nepSchedule-stream,
+.nepSchedule-streamContentWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.nepSchedule-stream {
+    display: flex;
+    flex-direction: column;
+}
+
+.nepSchedule-streamContentWrapper {
+    background: repeating-conic-gradient(
+        from 45deg,
+        rgba(28, 8, 3, 0.85) 0% 25%,
+        rgba(70, 25, 17, 0.85) 0% 50%
+    );
+    background-size: var(--checker-background-width) var(--checker-background-height);
+    -webkit-animation: checker-bg-scrolling 1.2s infinite;
+    -moz-animation: checker-bg-scrolling 1.2s infinite;
+    -o-animation: checker-bg-scrolling 1.2s infinite;
+    animation: checker-bg-scrolling 1.2s infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+
+    box-sizing: border-box;
+    border-image-source: url(/assets/images/site/ornamentbordervertical.webp);
+    border-image-slice: 0 58;
+    border-image-width: 0 60px;
+    border-image-repeat: stretch;
+    border-image-outset: 17px;
+    border-style: solid;
+    padding: 0 40px;
+}
+
+@media screen and (min-width: 780px) and (min-height: 780px) {
+    .nepSchedule-scheduleWrapper {
+        display: grid;
+        grid-template-rows: 31% 31% 31%;
+        grid-template-columns: 31.5% 31.5% 31.5%;
+        column-gap: 3%;
+        row-gap: 2%;
+        max-width: 97%;
+        height: 94%;
+        margin: 0 1%;
+    }
+
+    .nepSchedule-streamWrapper {
+        height: 100%;
+    }
+
+    .nepSchedule-streamTitleImage {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        max-height: 100px;
+        background: radial-gradient(
+            ellipse at center,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 70%
+        );
+    }
+
+    .nepSchedule-emote-left,
+    .nepSchedule-emote-right {
+        max-width: 50px;
+    }
+}
+
+@media screen and (min-width: 1420px) and (min-height: 780px) {
+}

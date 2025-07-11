@@ -26,6 +26,7 @@ import scheduleData from '@/apps/nepSchedule/data/schedule.json';
 import NepStream from '@/apps/nepSchedule/components/NepStream.vue';
 import NepWeekSwitcher from '@/apps/nepSchedule/components/NepWeekSwitcher.vue';
 import { Dayjs } from 'dayjs';
+import '@/apps/nepSchedule/assets/nepSchedule.css';
 
 export default defineComponent({
     name: 'NepSchedule',

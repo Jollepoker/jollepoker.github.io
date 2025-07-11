@@ -161,8 +161,11 @@
     "time": "2024-04-26T16:00:00.000+01:00",
     "layout": [
       {
-        "type": "titleLogoText",
-        "image": "20/warhammer40k.webp",
+        "type": "titleLogo",
+        "image": "warhammer40k.webp"
+      },
+      {
+        "type": "title",
         "text": "handcam"
       },
       {
@@ -328,8 +331,11 @@
     "time": "2024-05-05T17:00:00.000+01:00",
     "layout": [
       {
-        "type": "titleLogoText",
-        "image": "20/duolingo.svg",
+        "type": "titleLogo",
+        "image": "duolingo.svg"
+      },
+      {
+        "type": "title",
         "text": "nihongo!"
       },
       {
@@ -414,8 +420,11 @@
     "time": "2024-05-10T16:00:00.000+01:00",
     "layout": [
       {
-        "type": "titleLogoText",
-        "image": "20/warhammer40k.webp",
+        "type": "titleLogo",
+        "image": "warhammer40k.webp"
+      },
+      {
+        "type": "title",
         "text": "handcam!"
       }
     ]
@@ -2456,7 +2465,7 @@
       {
         "type": "titleLogo",
         "alignSelf": "end",
-        "image": "20/finalfantasy-pr.webp"
+        "image": "finalfantasy-pr.webp"
       },
       {
         "type": "comment",
@@ -2569,7 +2578,7 @@
       {
         "type": "titleLogo",
         "alignSelf": "end",
-        "image": "20/finalfantasy-pr.webp"
+        "image": "finalfantasy-pr.webp"
       }
     ]
   },
@@ -2653,7 +2662,7 @@
       {
         "type": "titleLogo",
         "alignSelf": "end",
-        "image": "20/finalfantasy-pr.webp"
+        "image": "finalfantasy-pr.webp"
       },
       {
         "type": "comment",
@@ -2758,7 +2767,7 @@
       {
         "type": "titleLogo",
         "alignSelf": "end",
-        "image": "20/finalfantasy-pr.webp"
+        "image": "finalfantasy-pr.webp"
       },
       {
         "type": "comment",
@@ -2829,7 +2838,7 @@
       {
         "type": "titleLogo",
         "alignSelf": "end",
-        "image": "20/finalfantasy-pr.webp"
+        "image": "finalfantasy-pr.webp"
       }
     ]
   },
@@ -2956,7 +2965,7 @@
       {
         "type": "titleLogo",
         "alignSelf": "end",
-        "image": "20/finalfantasy-pr.webp"
+        "image": "finalfantasy-pr.webp"
       },
       {
         "type": "comment",
@@ -3244,7 +3253,7 @@
       {
         "type": "titleLogo",
         "filter": "drop-shadow(0px 4px 4px #333)",
-        "image": "20/l4d2.webp"
+        "image": "l4d2.webp"
       }
     ]
   },

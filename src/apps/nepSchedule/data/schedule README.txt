@@ -1,5 +1,5 @@
 There are six different types of layout copmonents:
-title, titleLogo, titleLogoText, lEmote, rEmote and comment, 
+title, titleLogo, lEmote, rEmote and comment, 
 These can be used to fill the schedule.
 Rules:
 A schedule layout HAS to include ONLY ONE of the "title" types
@@ -25,12 +25,6 @@ Title Logo
 Used to show a dedicated logo for the stream
 type: 'titleLogo',
 image: 'name of image in titleimages folder, including filetype',
-
-Title Logo Text
-Used to save space in case the schedule is too large by placing a text row underneath the image logo
-type: 'titleLogoText',
-image: 'name of image in titleimages folder, including filetype',
-text: 'text to accompany the image'
 
 rEmote
 Used to show a twitch emote slightly leaning to the right
