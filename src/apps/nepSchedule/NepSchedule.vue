@@ -1,14 +1,10 @@
 <template>
     <div class="nepSchedule-weekWrapper">
         <div class="nepSchedule-currentWeek">
-            <span class="nepSchedule-streamMonth">{{
-                targetDate.startOf('w').format('MMM').toLowerCase()
-            }}</span>
+            <span class="nepSchedule-streamMonth">{{ targetDate.startOf('w').format('MMM') }}</span>
             <span class="nepSchedule-streamDay">{{ targetDate.startOf('w').date() }}</span>
             <span class="nepSchedule-dateSeparator"> - </span>
-            <span class="nepSchedule-streamMonth">{{
-                targetDate.endOf('w').format('MMM').toLowerCase()
-            }}</span>
+            <span class="nepSchedule-streamMonth">{{ targetDate.endOf('w').format('MMM') }}</span>
             <span class="nepSchedule-streamDay">{{ targetDate.endOf('w').date() }}</span>
         </div>
         <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
@@ -43,12 +39,16 @@ export default defineComponent({
             now: this.$dayjs(),
             targetDate: this.$dayjs(),
             liveDate: undefined,
+            nepTimezone: 'Europe/London',
             streamsThisWeek: [],
         } as NepScheduleData;
     },
     watch: {
         now(newValue) {
-            if (newValue.week() === this.targetDate.week()) {
+            if (
+                newValue.week() === this.targetDate.week() &&
+                newValue.year() === this.targetDate.year()
+            ) {
                 this.targetDate = newValue;
             }
         },
@@ -71,10 +71,12 @@ export default defineComponent({
     methods: {
         getStreamsForTargetDate(): NepScheduleJsonData[] {
             return scheduleData.filter((stream) => {
-                return (
-                    this.targetDate.startOf('w').isBefore(stream.time) &&
-                    this.targetDate.endOf('w').isAfter(stream.time)
-                );
+                return this.$dayjs(stream.time)
+                    .tz(this.nepTimezone)
+                    .isBetween(
+                        this.targetDate.tz(this.nepTimezone).startOf('w').add(2, 'h'),
+                        this.targetDate.tz(this.nepTimezone).endOf('w').add(2, 'h'),
+                    );
             });
         },
         changeTargetDate(newDate: Dayjs): void {

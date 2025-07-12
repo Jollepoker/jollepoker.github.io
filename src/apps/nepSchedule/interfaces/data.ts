@@ -4,6 +4,7 @@ export interface NepScheduleData {
     now: Dayjs;
     targetDate: Dayjs;
     liveDate?: Dayjs;
+    nepTimezone: string;
     streamsThisWeek: NepScheduleJsonData[];
 }
 

@@ -7,7 +7,9 @@
             <img id="nep-eye" src="/assets/images/site/eye.webp" />
         </div>
         <div id="nep-contentWrapper">
-            <header></header>
+            <header>
+                <img id="nep-logo" src="/assets/images/site/logo.webp" />
+            </header>
             <main>
                 <RouterView />
             </main>

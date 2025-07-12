@@ -1,7 +1,9 @@
 <template>
     <div class="nepSchedule-weekSwitcherWrapper">
         <span class="nepSchedule-weekSwitcherArrow" @click="minusOneWeek">&lt;</span>
-        <span class="nepSchedule-weekSwitcherWeek">Week: {{ targetDate.week() }}</span>
+        <span class="nepSchedule-weekSwitcherWeek"
+            >Week: {{ targetDate.week() }}, {{ targetDate.endOf('w').year() }}</span
+        >
         <span
             class="nepSchedule-weekSwitcherArrow"
             :style="{ visibility: isThisWeek ? 'hidden' : 'visible' }"
@@ -10,12 +12,14 @@
             &gt;
         </span>
     </div>
-    <span
-        class="nepSchedule-weekSwitcherToday"
-        :style="{ visibility: isThisWeek ? 'hidden' : 'visible' }"
-        @click="goToToday"
-        >Today</span
-    >
+    <div class="nepSchedule-weekSwitcherTodayWrapper">
+        <span
+            class="nepSchedule-weekSwitcherToday"
+            :style="{ visibility: isThisWeek ? 'hidden' : 'visible' }"
+            @click="goToToday"
+            >Today</span
+        >
+    </div>
 </template>
 
 <script lang="ts">
@@ -33,10 +37,13 @@ export default defineComponent({
     },
     computed: {
         canPlusOneWeek(): boolean {
-            return !this.targetDate.add(1, 'week').isAfter(this.$dayjs());
+            return this.targetDate.add(1, 'week').isBefore(this.$dayjs());
         },
         isThisWeek(): boolean {
-            return this.targetDate.week() === this.$dayjs().week();
+            return (
+                this.targetDate.week() === this.$dayjs().week() &&
+                this.targetDate.year() === this.$dayjs().year()
+            );
         },
     },
     methods: {

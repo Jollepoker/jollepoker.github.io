@@ -55,34 +55,34 @@
     z-index: 1001;
     overflow: hidden;
     pointer-events: none;
-}
 
-#nep-eye {
-    width: 100%;
-    min-height: 110px;
-    object-fit: none;
-    object-position: top center;
-    pointer-events: none;
+    #nep-eye {
+        width: 100%;
+        min-height: 110px;
+        object-fit: none;
+        object-position: top center;
+        pointer-events: none;
+    }
 }
 
 #nep-siteWrapper {
     padding-top: 84px;
-}
 
-#nep-siteWrapper::before {
-    content: '';
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1000;
-    border-image-source: url(/assets/images/site/frameJustTop.webp);
-    border-image-slice: 65 0 0 0;
-    border-image-width: 65px 0 0 0;
-    border-image-repeat: repeat;
-    border-style: solid;
-    pointer-events: none;
+    &::before {
+        content: '';
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        border-image-source: url(/assets/images/site/frameJustTop.webp);
+        border-image-slice: 65 0 0 0;
+        border-image-width: 65px 0 0 0;
+        border-image-repeat: repeat;
+        border-style: solid;
+        pointer-events: none;
+    }
 }
 
 .mikanColour {
@@ -109,40 +109,47 @@
     #nep-siteWrapper {
         padding: 57px 84px;
         overflow: hidden;
-    }
 
-    #nep-siteWrapper::before {
-        border-image-source: url(/assets/images/site/frameNoTopDecor.webp);
-        border-image-slice: 321 321 106 325;
-        border-image-width: 321px 321px 106px 325px;
-    }
+        &::before {
+            border-image-source: url(/assets/images/site/frameNoTopDecor.webp);
+            border-image-slice: 321 321 106 325;
+            border-image-width: 321px 321px 106px 325px;
+        }
 
-    #nep-siteWrapper::after {
-        content: '';
-        position: fixed;
-        right: -130px;
-        bottom: -130px;
-        z-index: 1001;
-        background-image: url(/assets/images/site/sunflower.webp);
-        width: 422px;
-        height: 415px;
+        &::after {
+            content: '';
+            position: fixed;
+            right: -130px;
+            bottom: -130px;
+            z-index: 1001;
+            background-image: url(/assets/images/site/sunflower.webp);
+            width: 422px;
+            height: 415px;
+        }
     }
 
     #nep-contentWrapper {
         display: grid;
         grid-template-rows: 10% 90%;
-    }
 
-    #nep-contentWrapper header {
-        grid-row-start: 1;
-        grid-row-end: 2;
-        height: 10vh;
-    }
+        header {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            height: 10vh;
 
-    #nep-contentWrapper main {
-        height: calc(90vh - 115px);
-        grid-row-start: 2;
-        grid-row-end: 3;
+            #nep-logo {
+                margin-top: 0.5em;
+                max-height: 150%;
+                max-width: 25%;
+                aspect-ratio: 1.98 / 1;
+            }
+        }
+
+        main {
+            height: calc(90vh - 115px);
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
     }
 }
 

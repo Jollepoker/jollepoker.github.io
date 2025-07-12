@@ -1,3 +1,11 @@
+.nepSchedule-streamDay {
+    margin-left: 0.25em;
+}
+
+.nepSchedule-streamYear {
+    margin-left: 0.5em;
+}
+
 .nepSchedule-weekWrapper {
     display: flex;
     flex-direction: row;
@@ -11,24 +19,39 @@
     border: 3px solid #dcbb89;
 
     .nepSchedule-currentWeek {
-        width: 33%;
+        width: 25%;
     }
 
     .nepSchedule-weekSwitcherWrapper {
+        position: relative;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: 33%;
+        justify-content: center;
+        width: 50%;
 
         .nepSchedule-weekSwitcherArrow {
+            position: absolute;
+            right: 0;
+            padding: 0 2vw;
             cursor: pointer;
+            font-size: 2em;
+            align-self: center;
+
+            &:first-of-type {
+                left: 0;
+                right: unset;
+            }
         }
     }
 
-    .nepSchedule-weekSwitcherToday {
-        cursor: pointer;
-        width: 33%;
+    .nepSchedule-weekSwitcherTodayWrapper {
+        width: 25%;
         text-align: right;
+
+        .nepSchedule-weekSwitcherToday {
+            cursor: pointer;
+            padding-left: 2vw;
+        }
     }
 }
 
