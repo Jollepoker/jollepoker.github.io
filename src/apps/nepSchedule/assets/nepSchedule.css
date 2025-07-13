@@ -1,11 +1,3 @@
-.nepSchedule-streamDay {
-    margin-left: 0.25em;
-}
-
-.nepSchedule-streamYear {
-    margin-left: 0.5em;
-}
-
 .nepSchedule-weekWrapper {
     display: flex;
     flex-direction: row;
@@ -22,6 +14,14 @@
 
     .nepSchedule-currentWeek {
         width: 25%;
+
+        .nepSchedule-streamDay {
+            margin-left: 0.25em;
+        }
+
+        .nepSchedule-streamYear {
+            margin-left: 0.5em;
+        }
     }
 
     .nepSchedule-weekSwitcherWrapper {

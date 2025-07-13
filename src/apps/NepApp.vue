@@ -10,18 +10,14 @@
             <header>
                 <img id="nep-logo" src="/assets/images/site/logo.webp" />
                 <div class="nep-linkWrapper">
-                    <a class="nep-twitter" title="twitter" href="https://x.com/neppie_nep">
-                        <img class="nep-twitter-logo" src="/assets/images/site/twitterlogo.webp" />
-                    </a>
-                    <a class="nep-twitch" title="twitch" href="https://twitch.tv/neppienep">
-                        <img class="nep-twitch-logo" src="/assets/images/site/twitchlogo.webp" />
-                    </a>
-                    <a class="nep-youtube" title="youtube" href="https://youtube.com/@neppienep">
-                        <img class="nep-youtube-logo" src="/assets/images/site/youtubelogo.webp" />
-                    </a>
-                    <a class="nep-discord" title="discord" href="https://discord.gg/SbHQGPppqb">
-                        <img class="nep-discord-logo" src="/assets/images/site/discordlogo.webp" />
-                    </a>
+                    <a class="nep-twitter" title="twitter" href="https://x.com/neppie_nep"></a>
+                    <a class="nep-twitch" title="twitch" href="https://twitch.tv/neppienep"></a>
+                    <a
+                        class="nep-youtube"
+                        title="youtube"
+                        href="https://youtube.com/@neppienep"
+                    ></a>
+                    <a class="nep-discord" title="discord" href="https://discord.gg/SbHQGPppqb"></a>
                 </div>
             </header>
             <main>
