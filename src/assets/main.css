@@ -45,6 +45,7 @@
     width: 133.33333333vh;
     min-width: 100%;
     min-height: 75vw;
+    filter: blur(5px);
 }
 
 #nep-eyeWrapper {
@@ -133,15 +134,34 @@
         grid-template-rows: 10% 90%;
 
         header {
+            display: grid;
+            grid-template-columns: 25% minmax(50%, 600px) 25%;
             grid-row-start: 1;
             grid-row-end: 2;
             height: 10vh;
 
             #nep-logo {
-                margin-top: 0.5em;
-                max-height: 150%;
-                max-width: 25%;
+                align-self: baseline;
+                justify-self: right;
+                margin-top: 1vh;
+                max-height: 14vh;
+                max-width: 100%;
                 aspect-ratio: 1.98 / 1;
+            }
+
+            .nep-linkWrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                justify-self: center;
+                align-items: end;
+                width: 100%;
+                max-width: 600px;
+                max-height: 10vh;
+
+                img {
+                    max-height: 5vh;
+                }
             }
         }
 

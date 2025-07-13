@@ -2,18 +2,17 @@ There are six different types of layout copmonents:
 title, titleLogo, lEmote, rEmote and comment, 
 These can be used to fill the schedule.
 Rules:
-A schedule layout HAS to include ONLY ONE of the "title" types
 A schedule layout HAS to be accompanied with the scheduled time (Format example: 2024-04-08T16:00:00.000+01:00)
-The components gets put on the schedule in the order specified
+The order of the specified components is not important for the current layout
 A schedule can also have different settings set to true for additional display effects
 However, only one setting can be used at a time.
 
 These are the settings:
-discord, glitter, canceled
+discord, glitter, canceled, hideDate
 
 There are no issues in saving mutliple weeks worth of schedule, no matter if the weeks are in the past or the future.
 
-More than 2 streams a day is currently NOT supported.
+More than 9 streams a week is currently NOT supported.
 
 Examples components:
 Title
