@@ -11,8 +11,8 @@
     </div>
     <div class="nepSchedule-scheduleWrapper">
         <NepStream
-            v-for="stream in streamsThisWeek"
-            :key="stream.time"
+            v-for="(stream, index) in streamsThisWeek"
+            :key="index"
             :now="now"
             :streamData="stream"
         />
@@ -55,8 +55,10 @@ export default defineComponent({
         liveDate(newValue) {
             this.updateLiveStream(newValue);
         },
-        targetDate() {
-            this.streamsThisWeek = this.getStreamsForTargetDate();
+        targetDate(newValue, oldValue) {
+            if (newValue.week() !== oldValue.week()) {
+                this.streamsThisWeek = this.getStreamsForTargetDate();
+            }
         },
         streamsThisWeek() {
             this.updateLiveStream(this.liveDate);

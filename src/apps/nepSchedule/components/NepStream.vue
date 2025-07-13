@@ -9,7 +9,12 @@
     >
         <div class="nepSchedule-stream">
             <div class="nepSchedule-streamHeaderWrapper">
-                <h3 class="nepSchedule-streamDay">{{ streamDay }}</h3>
+                <h3 class="nepSchedule-streamDay">{{ getStreamDay() }}</h3>
+                <NepStreamCountdown
+                    v-if="(soonLive || streamData.liveDate) && !streamData.hideDate"
+                    :now="now"
+                    :streamData="streamData"
+                />
                 <div v-if="streamTime" class="nepSchedule-streamTime">
                     {{ streamTime }}
                 </div>
@@ -71,6 +76,7 @@
 <script lang="ts">
 import { Dayjs } from 'dayjs';
 import { defineComponent, type CSSProperties, type PropType } from 'vue';
+import NepStreamCountdown from '@/apps/nepSchedule/components/NepStreamCountdown.vue';
 import type {
     NepScheduleJsonData,
     NepScheduleJsonLayoutData,
@@ -79,6 +85,9 @@ import type {
 
 export default defineComponent({
     name: 'NepStream',
+    components: {
+        NepStreamCountdown,
+    },
     props: {
         now: {
             type: Dayjs,
@@ -98,34 +107,18 @@ export default defineComponent({
             rightEmotes: undefined,
             comments: undefined,
             hoverContent: undefined,
+            streamTime: undefined,
         } as NepStreamData;
     },
     computed: {
-        streamTime(): string {
-            if (this.streamData.hideDate) {
-                return '';
+        soonLive(): boolean {
+            if (this.streamData.hideDate || this.streamData.liveDate) {
+                return false;
             }
-            let timeString = '';
+
             const streamTime = this.$dayjs(this.streamData.time);
 
-            if (this.streamData.canceled) {
-                timeString = streamTime.format('HH:mm');
-            } else if (this.$dayjs.isDayjs(this.streamData.liveDate)) {
-                timeString = `<a href=${this.streamUrl}>${this.$dayjs.duration(this.streamData.liveDate.diff(this.now)).format('HH:mm:ss')}</a>`;
-            } else if (Math.abs(streamTime.diff(this.now, 'd')) > 0) {
-                timeString = streamTime.format('HH:mm');
-            } else if (this.now.isBefore(streamTime)) {
-                timeString = `${this.$dayjs.duration(streamTime.diff(this.now)).format('HH:mm:ss')} (${streamTime.format('HH:mm')})`;
-            } else if (this.now.isAfter(streamTime) && this.now.isBefore(streamTime.add(1, 'h'))) {
-                timeString = `<a href=${this.streamUrl}>[any minute now...]</a>`;
-            } else {
-                timeString = streamTime.format('HH:mm');
-            }
-
-            return timeString;
-        },
-        streamDay(): string {
-            return this.$dayjs(this.streamData.time).format('ddd');
+            return this.now.isBetween(streamTime.subtract(1, 'd'), streamTime.add(1, 'h'));
         },
     },
     beforeMount() {
@@ -166,6 +159,12 @@ export default defineComponent({
             this.rightEmotes = this.streamData.layout.filter(({ type }) => type === 'rEmote');
             this.comments = this.streamData.layout.filter(({ type }) => type === 'comment');
             this.hoverContent = this.streamData.layout.find(({ type }) => type === 'hover');
+            this.streamTime = this.streamData.hideDate
+                ? undefined
+                : this.$dayjs(this.streamData.time).format('HH:mm');
+        },
+        getStreamDay(): string {
+            return this.$dayjs(this.streamData.time).format('ddd');
         },
     },
 });

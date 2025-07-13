@@ -16,6 +16,7 @@ export interface NepStreamData {
     rightEmotes?: NepScheduleJsonLayoutData[];
     comments?: NepScheduleJsonLayoutData[];
     hoverContent?: NepScheduleJsonLayoutData;
+    streamTime?: string;
 }
 
 export interface NepWeekSwitcher {
