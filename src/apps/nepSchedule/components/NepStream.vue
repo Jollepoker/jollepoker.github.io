@@ -7,7 +7,13 @@
             'nepSchedule-streamWrapper-canceled': streamData.canceled,
         }"
     >
-        <div class="nepSchedule-stream">
+        <div
+            class="nepSchedule-stream"
+            :class="{
+                'nepSchedule-live': streamData.liveDate,
+                'nepSchedule-canceled': streamData.canceled,
+            }"
+        >
             <div class="nepSchedule-streamHeaderWrapper">
                 <h3 class="nepSchedule-streamDay">{{ getStreamDay() }}</h3>
                 <NepStreamCountdown
@@ -19,7 +25,10 @@
                     {{ streamTime }}
                 </div>
             </div>
-            <div class="nepSchedule-streamContentWrapper">
+            <div
+                class="nepSchedule-streamContentWrapper"
+                :class="{ 'nepSchedule-canceled': streamData.canceled }"
+            >
                 <div class="nepSchedule-streamContentHeader">
                     <template v-for="(titleLogo, index) in titleLogoContent" :key="index">
                         <img

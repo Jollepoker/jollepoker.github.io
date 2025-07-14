@@ -102,7 +102,8 @@ export default defineComponent({
                         this.targetDate.isBetween(
                             streamTime.subtract(1, 'h'),
                             streamTime.add(24, 'h'),
-                        )
+                        ) &&
+                        !this.streamsThisWeek[i].canceled
                     ) {
                         this.streamsThisWeek[i].liveDate = newLiveDate;
                         break;
