@@ -1,5 +1,8 @@
 <template>
-    <div class="nepSchedule-liveBox">{{ boxText }}</div>
+    <fieldset class="nepSchedule-liveBox">
+        <legend v-if="streamData.liveDate" class="nepSchedule-live">LIVE</legend>
+        <span class="nepSchedule-liveBoxContent">{{ boxText }}</span>
+    </fieldset>
 </template>
 
 <script lang="ts">
@@ -26,7 +29,7 @@ export default defineComponent({
 
             if (this.$dayjs.isDayjs(this.streamData.liveDate)) {
                 boxText = this.$dayjs
-                    .duration(this.streamData.liveDate.diff(this.now))
+                    .duration(this.now.diff(this.streamData.liveDate))
                     .format('HH:mm:ss');
             } else if (this.$dayjs().isBefore(streamTime)) {
                 boxText = this.$dayjs.duration(streamTime.diff(this.now)).format('HH:mm:ss');

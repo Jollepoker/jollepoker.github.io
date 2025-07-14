@@ -91,8 +91,10 @@ export default defineComponent({
             });
 
             if (this.$dayjs.isDayjs(newLiveDate) && newLiveDate.week() === this.targetDate.week()) {
+                // Find stream most likely being the live stream
                 for (let i = this.streamsThisWeek.length - 1; i >= 0; i -= 1) {
-                    if (newLiveDate.isAfter(this.streamsThisWeek[i].time)) {
+                    const streamTime = this.$dayjs(this.streamsThisWeek[i].time);
+                    if (this.now.isBetween(streamTime.subtract(1, 'h'), streamTime.add(24, 'h'))) {
                         this.streamsThisWeek[i].liveDate = newLiveDate;
                         break;
                     }
@@ -119,7 +121,7 @@ export default defineComponent({
                 });
 
                 const data = await response.json();
-                if (data.data.user.stream?.createdAt && this.liveDate) {
+                if (data.data.user.stream?.createdAt && !this.liveDate) {
                     this.liveDate = this.$dayjs(data.data.user.stream?.createdAt);
                 } else if (!data.data.user.stream?.createdAt) {
                     this.liveDate = undefined;

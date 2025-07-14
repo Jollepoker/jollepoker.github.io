@@ -69,6 +69,7 @@
                     v-html="hoverContent.text"
                 ></div>
             </div>
+            <a v-if="streamData.liveDate" target="_blank" :href="streamUrl"></a>
         </div>
     </div>
 </template>
