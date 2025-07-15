@@ -200,6 +200,10 @@
                 width: 100%;
                 max-width: 600px;
                 max-height: 9vh;
+
+                & a:hover {
+                    filter: drop-shadow(0px 0px 10px #f9eca1);
+                }
             }
         }
 

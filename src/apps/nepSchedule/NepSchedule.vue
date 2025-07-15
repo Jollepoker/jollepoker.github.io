@@ -11,7 +11,7 @@
     </div>
     <div v-if="streamsThisWeek.length" class="nepSchedule-scheduleWrapper">
         <NepStream
-            v-for="(stream, index) in streamsThisWeek"
+            v-for="stream in streamsThisWeek"
             :key="stream.time"
             :now="now"
             :streamData="stream"
