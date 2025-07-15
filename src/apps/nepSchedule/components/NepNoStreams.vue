@@ -39,7 +39,7 @@ export default defineComponent({
         clearInterval(this.switchInterval);
     },
     methods: {
-        animateNep() {
+        async animateNep(): Promise<void> {
             this.isLeaving = true;
             setTimeout(() => {
                 this.randomizeNepImg();
@@ -48,14 +48,14 @@ export default defineComponent({
                 }, 100);
             }, 1500);
         },
-        randomizeNepImg() {
+        async randomizeNepImg(): Promise<void> {
             let newImage = this.nepImage;
             while (newImage === this.nepImage) {
                 newImage = `assets/images/site/nep${Math.floor(Math.random() * 9) + 1}.webp`;
             }
             this.nepImage = newImage;
         },
-        preloadImages() {
+        async preloadImages(): Promise<void> {
             for (let i = 1; i < 10; i++) {
                 const img = new Image();
                 img.src = `assets/images/site/nep${i}.webp`;

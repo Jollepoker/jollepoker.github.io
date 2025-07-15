@@ -160,7 +160,7 @@ export default defineComponent({
             }
             return styling;
         },
-        loadContent() {
+        async loadContent(): Promise<void> {
             this.titleLogoContent = this.streamData.layout.filter(
                 ({ type }) => type === 'titleLogo',
             );

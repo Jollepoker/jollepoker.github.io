@@ -24,7 +24,7 @@
 import { defineComponent } from 'vue';
 import type {
     NepScheduleData,
-    NepScheduleJsonData,
+    NepScheduleJsonLayoutData,
 } from '@/apps/nepSchedule/interfaces/interfaces';
 import scheduleData from '@/apps/nepSchedule/data/schedule.json';
 import NepStream from '@/apps/nepSchedule/components/NepStream.vue';
@@ -47,6 +47,7 @@ export default defineComponent({
             liveDate: undefined,
             nepTimezone: 'Europe/London',
             streamsThisWeek: [],
+            preLoadedAssets: new Map<string, HTMLImageElement>(),
         } as NepScheduleData;
     },
     watch: {
@@ -63,7 +64,7 @@ export default defineComponent({
         },
         targetDate(newValue, oldValue) {
             if (newValue.week() !== oldValue.week()) {
-                this.streamsThisWeek = this.getStreamsForTargetDate();
+                this.loadStreamsForTargetDate();
             }
         },
         streamsThisWeek() {
@@ -71,26 +72,65 @@ export default defineComponent({
         },
     },
     beforeMount() {
-        this.streamsThisWeek = this.getStreamsForTargetDate();
+        this.loadStreamsForTargetDate();
         setInterval(this.checkIfLive, 120000);
         setInterval(this.appTick, 1000);
         this.checkIfLive();
     },
     methods: {
-        getStreamsForTargetDate(): NepScheduleJsonData[] {
-            return scheduleData.filter((stream) => {
-                return this.$dayjs(stream.time)
-                    .tz(this.nepTimezone)
-                    .isBetween(
-                        this.targetDate.tz(this.nepTimezone).startOf('w').add(2, 'h'),
-                        this.targetDate.tz(this.nepTimezone).endOf('w').add(2, 'h'),
-                    );
+        async loadStreamsForTargetDate(): Promise<void> {
+            const timeZonedDateStartOfWeek = this.targetDate
+                .tz(this.nepTimezone)
+                .startOf('w')
+                .add(2, 'h');
+            const timeZonedDateEndOfWeek = this.targetDate
+                .tz(this.nepTimezone)
+                .endOf('w')
+                .add(2, 'h');
+            this.streamsThisWeek = scheduleData.filter((stream) => {
+                return this.$dayjs(stream.time).isBetween(
+                    timeZonedDateStartOfWeek,
+                    timeZonedDateEndOfWeek,
+                );
+            });
+            this.preLoadAssets();
+        },
+        async preLoadAssets(): Promise<void> {
+            const timeZonedDateStartOfWeek = this.targetDate
+                .tz(this.nepTimezone)
+                .subtract(1, 'w')
+                .startOf('w')
+                .add(2, 'h');
+            const timeZonedDateEndOfWeek = this.targetDate
+                .tz(this.nepTimezone)
+                .subtract(1, 'w')
+                .endOf('w')
+                .add(2, 'h');
+            const streamsToPreload = scheduleData.filter((stream) => {
+                return this.$dayjs(stream.time).isBetween(
+                    timeZonedDateStartOfWeek,
+                    timeZonedDateEndOfWeek,
+                );
+            });
+
+            streamsToPreload.forEach((streamConfig) => {
+                streamConfig.layout.forEach((layoutConfig: NepScheduleJsonLayoutData) => {
+                    if (
+                        ['lEmote', 'rEmote', 'titleLogo'].includes(layoutConfig.type) &&
+                        layoutConfig.image !== undefined &&
+                        !this.preLoadedAssets.has(layoutConfig.image)
+                    ) {
+                        const img = new Image();
+                        img.src = `assets/images/${layoutConfig.type === 'titleLogo' ? 'titleImages' : 'twitchemotes'}/${layoutConfig.image}`;
+                        this.preLoadedAssets.set(layoutConfig.image, img);
+                    }
+                });
             });
         },
-        changeTargetDate(newDate: Dayjs): void {
+        async changeTargetDate(newDate: Dayjs): Promise<void> {
             this.targetDate = newDate;
         },
-        updateLiveStream(newLiveDate: Dayjs | undefined): void {
+        async updateLiveStream(newLiveDate: Dayjs | undefined): Promise<void> {
             this.streamsThisWeek.map((stream) => {
                 stream.liveDate = undefined;
                 return stream;
@@ -146,7 +186,7 @@ export default defineComponent({
                 console.error('Error checking stream status: ', error);
             }
         },
-        appTick(): void {
+        async appTick(): Promise<void> {
             this.now = this.$dayjs();
         },
     },

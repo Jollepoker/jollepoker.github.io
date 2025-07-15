@@ -47,15 +47,15 @@ export default defineComponent({
         },
     },
     methods: {
-        minusOneWeek(): void {
+        async minusOneWeek(): Promise<void> {
             this.$emit('changeTargetDate', this.targetDate.subtract(1, 'week'));
         },
-        plusOneWeek(): void {
+        async plusOneWeek(): Promise<void> {
             if (this.targetDate.add(1, 'week').isBefore(this.$dayjs())) {
                 this.$emit('changeTargetDate', this.targetDate.add(1, 'week'));
             }
         },
-        goToToday(): void {
+        async goToToday(): Promise<void> {
             this.$emit('changeTargetDate', this.$dayjs());
         },
     },
