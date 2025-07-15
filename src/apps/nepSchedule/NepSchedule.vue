@@ -9,22 +9,27 @@
         </div>
         <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
     </div>
-    <div class="nepSchedule-scheduleWrapper">
+    <div v-if="streamsThisWeek.length" class="nepSchedule-scheduleWrapper">
         <NepStream
             v-for="(stream, index) in streamsThisWeek"
-            :key="index"
+            :key="stream.time"
             :now="now"
             :streamData="stream"
         />
     </div>
+    <NepNoStreams v-else :targetDate="targetDate" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import type { NepScheduleData, NepScheduleJsonData } from '@/apps/nepSchedule/interfaces/data';
+import type {
+    NepScheduleData,
+    NepScheduleJsonData,
+} from '@/apps/nepSchedule/interfaces/interfaces';
 import scheduleData from '@/apps/nepSchedule/data/schedule.json';
 import NepStream from '@/apps/nepSchedule/components/NepStream.vue';
 import NepWeekSwitcher from '@/apps/nepSchedule/components/NepWeekSwitcher.vue';
+import NepNoStreams from '@/apps/nepSchedule/components/NepNoStreams.vue';
 import { Dayjs } from 'dayjs';
 import '@/apps/nepSchedule/assets/nepSchedule.css';
 
@@ -33,6 +38,7 @@ export default defineComponent({
     components: {
         NepStream,
         NepWeekSwitcher,
+        NepNoStreams,
     },
     data() {
         return {

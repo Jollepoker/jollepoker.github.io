@@ -44,3 +44,9 @@ export interface NepScheduleJsonLayoutData {
     big?: boolean;
     reverse?: boolean;
 }
+
+export interface NoStreamNepData {
+    switchInterval?: number;
+    nepImgNumber: number;
+    isLeaving: boolean;
+}

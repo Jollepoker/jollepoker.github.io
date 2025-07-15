@@ -30,7 +30,7 @@
                 :class="{ 'nepSchedule-canceled': streamData.canceled }"
             >
                 <div class="nepSchedule-streamContentHeader">
-                    <template v-for="(titleLogo, index) in titleLogoContent" :key="index">
+                    <template v-for="(titleLogo, index) in titleLogoContent" :key="titleLogo.image">
                         <img
                             class="nepSchedule-streamTitleImage"
                             :src="getImageSrc('titleimages', titleLogo.image ?? '')"
@@ -46,7 +46,7 @@
                     </template>
                 </div>
                 <div class="nepSchedule-streamContentSection">
-                    <template v-for="(emote, index) in leftEmotes" :key="index">
+                    <template v-for="(emote, index) in leftEmotes" :key="emote.image">
                         <img
                             class="nepSchedule-emote-left"
                             :class="{
@@ -60,7 +60,7 @@
                     <template v-for="(comment, index) in comments" :key="index">
                         <div class="nepSchedule-streamComment" v-html="comment.text"></div>
                     </template>
-                    <template v-for="(emote, index) in rightEmotes" :key="index">
+                    <template v-for="(emote, index) in rightEmotes" :key="emote.image">
                         <img
                             class="nepSchedule-emote-right"
                             :class="{
@@ -91,7 +91,7 @@ import type {
     NepScheduleJsonData,
     NepScheduleJsonLayoutData,
     NepStreamData,
-} from '@/apps/nepSchedule/interfaces/data';
+} from '@/apps/nepSchedule/interfaces/interfaces';
 
 export default defineComponent({
     name: 'NepStream',

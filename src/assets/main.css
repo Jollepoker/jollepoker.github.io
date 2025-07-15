@@ -57,7 +57,7 @@
     overflow: hidden;
     pointer-events: none;
 
-    #nep-eye {
+    & #nep-eye {
         width: 100%;
         min-height: 110px;
         object-fit: none;
@@ -87,7 +87,7 @@
 }
 
 .nep-linkWrapper {
-    a {
+    & a {
         width: 100%;
         height: 5vh;
         background-repeat: no-repeat;
@@ -95,7 +95,7 @@
         background-size: contain;
     }
 
-    .nep-twitter {
+    & .nep-twitter {
         background-image: url(/assets/images/site/twitterlogo.webp);
 
         &:hover {
@@ -103,7 +103,7 @@
         }
     }
 
-    .nep-twitch {
+    & .nep-twitch {
         background-image: url(/assets/images/site/twitchlogo.webp);
 
         &:hover {
@@ -111,7 +111,7 @@
         }
     }
 
-    .nep-youtube {
+    & .nep-youtube {
         background-image: url(/assets/images/site/youtubelogo.webp);
 
         &:hover {
@@ -119,7 +119,7 @@
         }
     }
 
-    .nep-discord {
+    & .nep-discord {
         background-image: url(/assets/images/site/discordlogo.webp);
 
         &:hover {
@@ -175,14 +175,14 @@
         display: grid;
         grid-template-rows: 10% 90%;
 
-        header {
+        & header {
             display: grid;
             grid-template-columns: 25% minmax(50%, 600px) 25%;
             grid-row-start: 1;
             grid-row-end: 2;
             height: 10vh;
 
-            #nep-logo {
+            & #nep-logo {
                 align-self: baseline;
                 justify-self: right;
                 margin-top: 1vh;
@@ -191,7 +191,7 @@
                 aspect-ratio: 1.98 / 1;
             }
 
-            .nep-linkWrapper {
+            & .nep-linkWrapper {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -203,7 +203,7 @@
             }
         }
 
-        main {
+        & main {
             height: calc(90vh - 115px);
             grid-row-start: 2;
             grid-row-end: 3;

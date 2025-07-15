@@ -8,7 +8,7 @@
 <script lang="ts">
 import { Dayjs } from 'dayjs';
 import { defineComponent, type PropType } from 'vue';
-import type { NepScheduleJsonData } from '@/apps/nepSchedule/interfaces/data';
+import type { NepScheduleJsonData } from '@/apps/nepSchedule/interfaces/interfaces';
 
 export default defineComponent({
     name: 'NepStreamCountdown',
