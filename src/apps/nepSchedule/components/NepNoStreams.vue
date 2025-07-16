@@ -1,5 +1,8 @@
 <template>
     <div class="nepSchedule-noStreamsWrapper">
+        <div class="nepSchedule-noStreamsMessageWrapper">
+            <span class="nepSchedule-noStreamsMessage">{{ noStreamsMessage }}</span>
+        </div>
         <div class="nepSchedule-noStreamsNep">
             <img :class="{ 'nepSchedule-leaving': isLeaving }" :src="nepImage" :key="nepImage" />
         </div>
@@ -27,6 +30,14 @@ export default defineComponent({
             nepImage: undefined,
             preloadedImages: [],
         } as NoStreamNepData;
+    },
+    computed: {
+        noStreamsMessage(): string {
+            return this.targetDate.week() === this.$dayjs().week() &&
+                this.targetDate.year() === this.$dayjs().year()
+                ? 'No schedule added for this week yet!'
+                : 'No schedule was recorded for this week';
+        },
     },
     beforeMount() {
         this.randomizeNepImg();

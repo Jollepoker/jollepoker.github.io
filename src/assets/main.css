@@ -128,6 +128,45 @@
     }
 }
 
+#nep-contentWrapper {
+    & header {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 15vh;
+
+        & #nep-logo {
+            max-height: 15vh;
+            max-width: 100%;
+            aspect-ratio: 1.98 / 1;
+            justify-self: center;
+            align-self: center;
+        }
+
+        & .nep-linkWrapper {
+            display: grid;
+            grid-template-rows: 50% 50%;
+            grid-template-columns: 50% 50%;
+            width: 100%;
+            height: 100%;
+
+            & a {
+                justify-self: center;
+                align-self: center;
+            }
+
+            & a:hover {
+                filter: drop-shadow(0px 0px 10px #f9eca1);
+            }
+        }
+    }
+
+    & main {
+        height: calc(90vh - 115px);
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
+
 .mikanColour {
     color: #de9056;
 }
@@ -176,7 +215,6 @@
         grid-template-rows: 10% 90%;
 
         & header {
-            display: grid;
             grid-template-columns: 25% minmax(50%, 600px) 25%;
             grid-row-start: 1;
             grid-row-end: 2;
@@ -187,8 +225,6 @@
                 justify-self: right;
                 margin-top: 1vh;
                 max-height: 14vh;
-                max-width: 100%;
-                aspect-ratio: 1.98 / 1;
             }
 
             & .nep-linkWrapper {
@@ -197,12 +233,11 @@
                 justify-content: space-between;
                 justify-self: center;
                 align-items: end;
-                width: 100%;
                 max-width: 600px;
                 max-height: 9vh;
 
-                & a:hover {
-                    filter: drop-shadow(0px 0px 10px #f9eca1);
+                & a {
+                    align-self: auto;
                 }
             }
         }
