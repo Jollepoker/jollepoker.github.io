@@ -167,7 +167,6 @@
     & main {
         grid-row-start: 2;
         grid-row-end: 3;
-        margin-bottom: 2em;
     }
 }
 
@@ -238,7 +237,7 @@
                 align-self: baseline;
                 justify-self: right;
                 margin-top: 1vh;
-                max-height: 14vh;
+                max-height: min(14vh, 200px);
             }
 
             & .nep-linkWrapper {
