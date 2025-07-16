@@ -1,11 +1,11 @@
 <template>
     <div class="nepSchedule-weekWrapper">
         <div class="nepSchedule-currentWeek">
-            <span class="nepSchedule-streamMonth">{{ targetDate.startOf('w').format('MMM') }}</span>
-            <span class="nepSchedule-streamDay">{{ targetDate.startOf('w').date() }}</span>
+            <span class="nepSchedule-streamDate">{{
+                targetDate.startOf('w').format('MMM DD')
+            }}</span>
             <span class="nepSchedule-dateSeparator"> - </span>
-            <span class="nepSchedule-streamMonth">{{ targetDate.endOf('w').format('MMM') }}</span>
-            <span class="nepSchedule-streamDay">{{ targetDate.endOf('w').date() }}</span>
+            <span class="nepSchedule-streamDate">{{ targetDate.endOf('w').format('MMM DD') }}</span>
         </div>
         <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
     </div>

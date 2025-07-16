@@ -132,10 +132,12 @@
     & header {
         display: grid;
         grid-template-columns: 50% 50%;
+        min-height: 100px;
         height: 15vh;
 
         & #nep-logo {
             max-height: 15vh;
+            min-height: 100px;
             max-width: 100%;
             aspect-ratio: 1.98 / 1;
             justify-self: center;
@@ -152,6 +154,8 @@
             & a {
                 justify-self: center;
                 align-self: center;
+                height: 85%;
+                width: 85%;
             }
 
             & a:hover {
@@ -187,6 +191,15 @@
     color: #f3a6aa;
 }
 
+@media screen and (min-width: 600px) {
+    #nep-contentWrapper {
+        & header {
+            margin: 0 auto;
+            width: 600px;
+        }
+    }
+}
+
 @media screen and (min-width: 920px) and (min-height: 780px) {
     #nep-siteWrapper {
         padding: 57px 84px;
@@ -219,6 +232,8 @@
             grid-row-start: 1;
             grid-row-end: 2;
             height: 10vh;
+            width: auto;
+            margin: 0;
 
             & #nep-logo {
                 align-self: baseline;
@@ -238,6 +253,8 @@
 
                 & a {
                     align-self: auto;
+                    height: 50%;
+                    width: 50%;
                 }
             }
         }

@@ -15,14 +15,18 @@
     flex-direction: row;
     justify-content: space-between;
     user-select: none;
-    margin: 0 auto 4% auto;
-    padding: 0.5em 1em;
+    margin: 0 5% 4% 5%;
+    padding: 0.5em 0.5em;
     border-radius: 1em;
     background-color: #2c1406;
     border: 3px solid #dcbb89;
 
     & .nepSchedule-currentWeek {
-        width: 25%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        width: 20%;
 
         & .nepSchedule-streamDay {
             margin-left: 0.25em;
@@ -38,7 +42,8 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 50%;
+        align-items: center;
+        width: 65%;
 
         & .nepSchedule-weekSwitcherArrow {
             position: absolute;
@@ -46,7 +51,6 @@
             padding: 0 2vw;
             cursor: pointer;
             font-size: 2em;
-            align-self: center;
 
             &:first-of-type {
                 left: 0;
@@ -60,8 +64,10 @@
     }
 
     & .nepSchedule-weekSwitcherTodayWrapper {
-        width: 25%;
-        text-align: right;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        width: 15%;
 
         & .nepSchedule-weekSwitcherToday {
             cursor: pointer;
@@ -319,13 +325,30 @@
     }
 }
 
-@media screen and (min-width: 920px) and (min-height: 780px) {
+@media screen and (min-width: 600px) {
     .nepSchedule-weekWrapper {
         width: 50%;
         min-width: 511px;
         max-width: 600px;
-    }
+        margin: 0 auto 4% auto;
+        padding: 0.5em 1em;
 
+        & .nepSchedule-currentWeek {
+            flex-direction: row;
+            width: 25%;
+        }
+
+        & .nepSchedule-weekSwitcherWrapper {
+            width: 50%;
+        }
+
+        & .nepSchedule-weekSwitcherTodayWrapper {
+            width: 25%;
+        }
+    }
+}
+
+@media screen and (min-width: 920px) and (min-height: 780px) {
     .nepSchedule-scheduleWrapper {
         display: grid;
         grid-template-rows: 28% 28% 28%;
