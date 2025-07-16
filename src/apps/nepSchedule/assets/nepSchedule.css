@@ -142,7 +142,7 @@
     width: 80%;
     margin-left: 10%;
 
-    & > * {
+    & > *:not(img) {
         align-self: center;
         align-content: center;
         text-align: center;
@@ -156,6 +156,16 @@
         background-color: #2c1406;
         border: 3px solid #dcbb89;
         user-select: none;
+    }
+
+    & img {
+        align-self: center;
+        align-content: center;
+        max-height: 50px;
+        max-width: min(33%, 100px);
+        min-height: 35.5px;
+        min-width: min(33%, 75px);
+        aspect-ratio: 132/100;
     }
 
     & fieldset {

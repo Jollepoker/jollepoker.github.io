@@ -2,7 +2,6 @@
     <div
         class="nepSchedule-streamWrapper"
         :class="{
-            'nepSchedule-streamWrapper-discord': streamData.discord,
             'nepSchedule-streamWrapper-glitter': streamData.glitter,
             'nepSchedule-streamWrapper-canceled': streamData.canceled,
         }"
@@ -21,6 +20,7 @@
                     :now="now"
                     :streamData="streamData"
                 />
+                <img v-else-if="streamData.discord" src="/assets/images/site/discordlogo.webp" />
                 <div v-if="streamTime" class="nepSchedule-streamTime">
                     {{ streamTime }}
                 </div>

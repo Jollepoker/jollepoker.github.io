@@ -237,7 +237,7 @@
                 align-self: baseline;
                 justify-self: right;
                 margin-top: 1vh;
-                max-height: min(14vh, 200px);
+                max-height: min(14vh, 9vw, 200px);
             }
 
             & .nep-linkWrapper {
