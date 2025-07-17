@@ -6,7 +6,7 @@ export interface NepScheduleData {
     liveDate?: Dayjs;
     nepTimezone: string;
     streamsThisWeek: NepScheduleJsonData[];
-    preLoadedAssets: HTMLImageElement[];
+    preLoadedAssets: Map<string, HTMLImageElement>;
 }
 
 export interface NepStreamData {

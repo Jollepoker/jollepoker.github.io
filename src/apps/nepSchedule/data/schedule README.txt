@@ -26,16 +26,18 @@ type: 'titleLogo',
 image: 'name of image in titleimages folder, including filetype',
 
 rEmote
-Used to show a twitch emote slightly leaning to the right
+Used to show a twitch emote on the left of comments
 type: 'rEmote',
-image: 'name of image in twitchEmote folder, including filetype',
+image: 'name of image in twitchEmote folder, including filetype and folder (20/30)',
+reverse: true, (optional, will flip the emote)
 wide: true, (optional, will make the emote wide if space allows it)
 big: true, (optional, will render the emote a bit bigger if space allows it)
 
 lEmote
-Used to show a twitch emote slightly leaning to the left
+Used to show a twitch emote on the right of comments
 type: 'lEmote',
-image: '20/name of image in twitchEmote folder, including filetype',
+image: 'name of image in twitchEmote folder, including filetype and folder (20/30)',
+reverse: true, (optional, will flip the emote)
 wide: true, (optional, will make the emote wide if space allows it)
 big: true, (optional, will render the emote a bit bigger if space allows it)
 
