@@ -68,17 +68,20 @@
             <div :class="gameSpriteClass" class="topRightCornerBorder"></div>
             <div :class="gameSpriteClass" class="longVerticalBorder"></div>
             <div :class="mineContainerClass">
-                <div v-for="n in 3" :key="n" :class="gameSpriteClass" class="counter0"></div>
+                <div :class="[gameSpriteClass, firstMineNumberClass]"></div>
+                <div :class="[gameSpriteClass, secondMineNumberClass]"></div>
+                <div :class="[gameSpriteClass, thirdMineNumberClass]"></div>
             </div>
             <div
-                :class="gameSpriteClass"
+                :class="[gameSpriteClass, masterButtonClass]"
                 :style="{ margin: masterButtonMargin }"
-                class="masterButton"
                 @mousedown="handleMasterButtonMouseDown"
                 @mouseup="handleMasterButtonMouseUp"
             ></div>
             <div :class="timeContainerClass">
-                <div v-for="n in 3" :key="n" :class="gameSpriteClass" class="counter0"></div>
+                <div :class="[gameSpriteClass, firstTimeNumberClass]"></div>
+                <div :class="[gameSpriteClass, secondTimeNumberClass]"></div>
+                <div :class="[gameSpriteClass, thirdTimeNumberClass]"></div>
             </div>
             <div :class="gameSpriteClass" class="longVerticalBorder"></div>
             <div :class="gameSpriteClass" class="rightConnectionBorder"></div>
@@ -89,21 +92,25 @@
                 class="horizontalBorder"
             ></div>
             <div :class="gameSpriteClass" class="leftConnectionBorder"></div>
-            <template v-for="y in yLength" :key="y">
-                <div :class="gameSpriteClass" class="verticalBorder"></div>
+            <template v-for="(tile, index) in shownBoard" :key="index">
+                <template v-if="index % xLength === 0">
+                    <div :class="gameSpriteClass" class="verticalBorder"></div>
+                    <div v-if="index !== 0" :class="gameSpriteClass" class="verticalBorder"></div>
+                </template>
                 <div
-                    v-for="x in xLength"
-                    :key="x"
-                    :tile="(y - 1) * xLength + (x - 1)"
-                    :class="gameSpriteClass"
-                    class="hiddenTile"
+                    :class="[gameSpriteClass, `tile${tile}`]"
+                    :tile="index"
                     @mousedown="handleTileMouseDown"
                     @mouseup="handleTileMouseUp"
                     @mouseout="handleTileMouseOut"
                     @mouseover="handleTileMouseOver"
                     @contextmenu="handleTileContextMenu"
                 ></div>
-                <div :class="gameSpriteClass" class="verticalBorder"></div>
+                <div
+                    v-if="index === xLength * yLength - 1"
+                    :class="gameSpriteClass"
+                    class="verticalBorder"
+                ></div>
             </template>
             <div :class="gameSpriteClass" class="bottomLeftCornerBorder"></div>
             <div
@@ -229,6 +236,51 @@ export default defineComponent({
                 horizontalMargin * this.currentSpriteSheetZoomScale +
                 'px'
             );
+        },
+        firstMineNumberClass(): string {
+            if (this.minesLeft >= 0) {
+                return `counter${Math.floor((this.minesLeft / 10 / 10) % 10)}`;
+            }
+            return 'counter-';
+        },
+        secondMineNumberClass(): string {
+            if (this.minesLeft >= 0) {
+                return `counter${Math.floor((this.minesLeft / 10) % 10)}`;
+            }
+            return `counter${Math.floor(((this.minesLeft * -1) / 10) % 10)}`;
+        },
+        thirdMineNumberClass(): string {
+            if (this.minesLeft >= 0) {
+                return `counter${Math.floor(this.minesLeft % 10)}`;
+            }
+            return `counter${Math.floor((this.minesLeft * -1) % 10)}`;
+        },
+        firstTimeNumberClass(): string {
+            if (this.firstClickTime) {
+                if (this.secondsSinceStart < 999) {
+                    return `counter${Math.floor((this.secondsSinceStart / 10 / 10) % 10)}`;
+                }
+                return 'counter9';
+            }
+            return 'counter0';
+        },
+        secondTimeNumberClass(): string {
+            if (this.firstClickTime) {
+                if (this.secondsSinceStart < 999) {
+                    return `counter${Math.floor((this.secondsSinceStart / 10) % 10)}`;
+                }
+                return 'counter9';
+            }
+            return 'counter0';
+        },
+        thirdTimeNumberClass(): string {
+            if (this.firstClickTime) {
+                if (this.secondsSinceStart < 999) {
+                    return `counter${Math.floor(this.secondsSinceStart % 10)}`;
+                }
+                return 'counter9';
+            }
+            return 'counter0';
         },
     },
     beforeMount() {
@@ -388,7 +440,7 @@ export default defineComponent({
             target.blur();
         },
         handleMasterButtonMouseDown(): void {
-            this.masterButtonClass += ' masterButtonpressed';
+            this.masterButtonClass = 'masterButtonPressed';
         },
         handleMasterButtonMouseUp(): void {
             this.resetBoard();
@@ -400,6 +452,8 @@ export default defineComponent({
             this.ctrlPressed = false;
         },
         initBoardArrays(): void {
+            this.hiddenBoard = new Array(this.xLength * this.yLength).fill('') as string[];
+            this.shownBoard = new Array(this.xLength * this.yLength).fill('') as string[];
             for (let i = 0; i < this.hiddenBoard.length; i++) {
                 this.hiddenBoard[i] = i < this.mines ? 'M' : '0';
                 this.shownBoard[i] = 'H';
@@ -418,8 +472,10 @@ export default defineComponent({
                 this.currentDifficulty = newDifficulty.name;
                 this.$cookies.set('nepSweeperDifficulty', newDifficulty.name);
             }
+            this.resetBoard();
         },
         setZoomLevel(zoomLevel: string, spriteSheetName: string): void {
+            console.log(zoomLevel);
             if (!zoomLevel) {
                 zoomLevel = this.currentZoomLevel;
             }
@@ -445,7 +501,7 @@ export default defineComponent({
                         'scale(2) translate(25%, -25%)',
                     );
                 }
-                this.$cookies.set('nepSweeperZoom', encodeURIComponent(newZoomLevel.name));
+                this.$cookies.set('nepSweeperZoom', newZoomLevel.name);
                 this.resetBoard();
             }
         },
@@ -459,7 +515,10 @@ export default defineComponent({
             if (newSpriteSheet) {
                 const root = document.querySelector<HTMLElement>(':root') as HTMLElement;
                 const closestSprite = this.getClosestSpriteSheet(newSpriteSheet);
-                root.style.setProperty('--nepSweeper-sprite-sheet', 'url()');
+                root.style.setProperty(
+                    '--nepSweeper-sprite-sheet',
+                    `url(/assets/images/nepsweeper/${closestSprite})`,
+                );
                 root.style.setProperty('--nepSweeper-sprite-sheet-color', newSpriteSheet.color);
                 this.currentSpriteSheet = newSpriteSheet.name;
                 this.$cookies.set('nepSweeperSpriteSheet', newSpriteSheet.name);
@@ -525,8 +584,7 @@ export default defineComponent({
             this.firstClickTime = this.$dayjs();
             // Make sure the timer always starts on 1
             this.firstClickTime.subtract(1, 's');
-            this.timeInterval = setInterval(this.printTime, 1000);
-            this.printTime();
+            this.timeInterval = setInterval(this.recordSeconds, 1000);
         },
         replaceStuckMine(tileIndex: number): void {
             const surroundingIndices = this.getSurroundingIndices(tileIndex);
@@ -576,8 +634,8 @@ export default defineComponent({
             }
         },
         getRandomEmptyIndex(skipIndices: number[] = []): number | null {
-            let emptyIndices = this.hiddenBoard.reduce((indices: number[], element, index) => {
-                if (element !== 'M') {
+            let emptyIndices = this.hiddenBoard.reduce((indices: number[], tile, index) => {
+                if (tile !== 'M') {
                     indices.push(index);
                 }
 
@@ -633,11 +691,6 @@ export default defineComponent({
         revealTile(tileIndex: number): void {
             if (this.shownBoard[tileIndex] === 'H') {
                 this.shownBoard[tileIndex] = this.hiddenBoard[tileIndex];
-                const tileElement = document.querySelector<HTMLDivElement>(
-                    `[tile="${tileIndex}"]`,
-                ) as HTMLDivElement;
-                tileElement.classList.remove('hiddenTile');
-                tileElement.classList.add(`tile${this.hiddenBoard[tileIndex]}`);
                 if (this.hiddenBoard[tileIndex] === '0') {
                     const surroundingIndices = this.getSurroundingIndices(tileIndex);
                     surroundingIndices.forEach((index) => {
@@ -648,9 +701,9 @@ export default defineComponent({
                     this.gameLost = true;
                     if (this.markedHitMine === false) {
                         this.markedHitMine = true;
-                        tileElement.className += 'Wrong';
+                        this.shownBoard[tileIndex] = 'MWrong';
                     } else {
-                        tileElement.className += 'Cross';
+                        this.shownBoard[tileIndex] = 'MCross';
                     }
                 }
                 this.hiddenTiles--;
@@ -659,46 +712,27 @@ export default defineComponent({
         revealRemainingMines(): void {
             this.hiddenBoard.forEach((tile, index) => {
                 if (tile === 'M' && this.shownBoard[index] === 'H') {
-                    const tileElement = document.querySelector<HTMLDivElement>(
-                        `[tile="${index}"]`,
-                    ) as HTMLDivElement;
-                    tileElement.classList.remove('hiddenTile');
                     if (!this.gameLost) {
-                        tileElement.classList.add('tileF');
+                        this.shownBoard[index] = 'F';
                     } else {
-                        tileElement.classList.add('tileM');
+                        this.shownBoard[index] = 'M';
                     }
                 } else if (tile !== 'M' && this.shownBoard[index] === 'F') {
-                    const tileElement = document.querySelector<HTMLDivElement>(
-                        `[tile="${index}"]`,
-                    ) as HTMLDivElement;
-                    tileElement.classList.remove('tileF');
-                    tileElement.classList.add('tileMCross');
+                    this.shownBoard[index] = 'MCross';
                 }
             });
         },
         flagTile(clickedIndex: number): void {
             if (!this.gameLost) {
                 if (this.shownBoard[clickedIndex] === 'H') {
-                    const tileElement = document.querySelector<HTMLDivElement>(
-                        `[tile="${clickedIndex}"]`,
-                    ) as HTMLDivElement;
-                    tileElement.classList.remove('hiddenTile');
-                    tileElement.classList.add('tileF');
                     this.shownBoard[clickedIndex] = 'F';
                     this.minesLeft--;
                     this.hiddenTiles--;
                 } else if (this.shownBoard[clickedIndex] === 'F') {
-                    const tileElement = document.querySelector<HTMLDivElement>(
-                        `[tile="${clickedIndex}"]`,
-                    ) as HTMLDivElement;
-                    tileElement.classList.remove('tileF');
-                    tileElement.classList.add('hiddenTile');
                     this.shownBoard[clickedIndex] = 'H';
                     this.minesLeft++;
                     this.hiddenTiles++;
                 }
-                this.printMinesLeft();
             }
         },
         exploreTile(clickedIndex: number): void {
@@ -789,9 +823,11 @@ export default defineComponent({
                 this.masterButtonClass = 'masterButtonWin';
                 this.minesLeft = 0;
                 this.saveScore();
-                this.printMinesLeft();
                 this.gameEnd();
             }
+        },
+        recordSeconds(): void {
+            this.secondsSinceStart = this.$dayjs().diff(this.firstClickTime, 's') + 1;
         },
         gameEnd(): void {
             this.gameOver = true;
@@ -800,9 +836,6 @@ export default defineComponent({
         },
         saveScore(): void {
             let difficultyData = this.$cookies.get(this.currentDifficulty);
-            if (difficultyData) {
-                difficultyData = JSON.parse(difficultyData);
-            }
             if (!Array.isArray(difficultyData)) {
                 difficultyData = [];
             }
@@ -845,8 +878,6 @@ export default defineComponent({
             this.hiddenTiles = this.xLength * this.yLength;
             clearInterval(this.timeInterval);
             this.resetMasterButton();
-            this.printTime();
-            this.printMinesLeft();
             this.resetButtons();
         },
     },

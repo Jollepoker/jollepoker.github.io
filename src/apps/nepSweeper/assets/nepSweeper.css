@@ -115,11 +115,11 @@
     height: 32px;
 }
 
-.gameSprite1.hiddenTile {
+.gameSprite1.tileH {
     background-position: 0 -39px;
 }
 
-.gameSprite1.hiddenTile.pressed {
+.gameSprite1.tileH.pressed {
     background-position: 0 -23px;
 }
 
@@ -323,11 +323,11 @@
     height: 64px;
 }
 
-.gameSprite2.hiddenTile {
+.gameSprite2.tileH {
     background-position: 0 -78px;
 }
 
-.gameSprite2.hiddenTile.pressed {
+.gameSprite2.tileH.pressed {
     background-position: 0 -46px;
 }
 
