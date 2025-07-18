@@ -289,6 +289,20 @@
             min-height: 35px;
             margin: 0 1em 1em 0;
             align-self: center;
+
+            &.nepSchedule-wideEmote {
+                width: 8vw;
+                max-width: 120px;
+                min-width: 75px;
+            }
+
+            &.nepSchedule-bigEmote {
+                scale: 130%;
+            }
+
+            &.nepSchedule-reverse {
+                transform: scaleX(-1);
+            }
         }
 
         & .nepSchedule-streamComment {

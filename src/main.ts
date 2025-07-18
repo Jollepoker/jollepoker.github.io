@@ -10,6 +10,7 @@ import weekOfYear from 'dayjs/plugin/weekOfYear';
 import duration from 'dayjs/plugin/duration';
 import isBetween from 'dayjs/plugin/isBetween';
 import locale from 'dayjs/locale/en-gb';
+import VueCookies from 'vue-cookies';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -18,7 +19,7 @@ dayjs.extend(duration);
 dayjs.extend(isBetween);
 dayjs.locale(locale);
 
-const app = createApp(NepApp).use(router);
+const app = createApp(NepApp).use(router).use(VueCookies, { expires: '399d', path: '/' });
 app.config.globalProperties.$dayjs = dayjs;
 
 declare module 'vue' {
