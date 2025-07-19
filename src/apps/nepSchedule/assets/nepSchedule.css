@@ -352,12 +352,16 @@
     }
 }
 
-.nepSchedule-noStreamsWrapper {
+.nepSchedule-nepDisplayWrapper {
     width: 100%;
     user-select: none;
     pointer-events: none;
     margin-top: 0.5em;
     position: relative;
+
+    &.withStreams {
+        display: none;
+    }
 
     & .nepSchedule-noStreamsMessageWrapper {
         display: flex;
@@ -373,12 +377,12 @@
         z-index: 1;
     }
 
-    & .nepSchedule-noStreamsNep {
+    & .nepSchedule-nepDisplayNep {
         display: none;
     }
 
     @media screen and (min-height: 500px) {
-        & .nepSchedule-noStreamsNep {
+        & .nepSchedule-nepDisplayNep {
             display: block;
             position: fixed;
             overflow: hidden;
@@ -403,7 +407,7 @@
             }
         }
 
-        & .nepSchedule-noStreamsTable {
+        & .nepSchedule-nepDisplayTable {
             position: fixed;
             bottom: 0;
             right: 0;
@@ -440,7 +444,7 @@
         }
     }
 
-    .nepSchedule-noStreamsWrapper {
+    .nepSchedule-nepDisplayWrapper {
         & .nepSchedule-noStreamsMessageWrapper {
             width: 50%;
             min-width: 511px;
@@ -490,12 +494,16 @@
         }
     }
 
-    .nepSchedule-noStreamsWrapper {
+    .nepSchedule-nepDisplayWrapper {
+        &.withStreams {
+            display: block;
+        }
+
         & .nepSchedule-noStreamsMessageWrapper {
             margin: -2.5% auto 0 auto;
         }
 
-        & .nepSchedule-noStreamsNep {
+        & .nepSchedule-nepDisplayNep {
             & img {
                 right: 6vw;
                 bottom: min(6vw, 400px);
@@ -504,7 +512,7 @@
             }
         }
 
-        & .nepSchedule-noStreamsTable {
+        & .nepSchedule-nepDisplayTable {
             background-position: bottom 2vh right -15vw;
             background-size: max(60vw, 1200px);
         }
@@ -520,7 +528,7 @@
         grid-template-rows: 28.5% 28.5% 28.5%;
     }
 
-    .nepSchedule-noStreamsWrapper {
+    .nepSchedule-nepDisplayWrapper {
         & .nepSchedule-noStreamsMessageWrapper {
             margin: -2% auto 0 auto;
         }
@@ -536,7 +544,7 @@
         grid-template-rows: 29% 29% 29%;
     }
 
-    .nepSchedule-noStreamsWrapper {
+    .nepSchedule-nepDisplayWrapper {
         & .nepSchedule-noStreamsMessageWrapper {
             margin: -1% auto 0 auto;
         }

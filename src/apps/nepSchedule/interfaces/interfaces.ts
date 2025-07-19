@@ -7,6 +7,8 @@ export interface NepScheduleData {
     nepTimezone: string;
     streamsThisWeek: NepScheduleJsonData[];
     preLoadedAssets: Map<string, HTMLImageElement>;
+    appTickInterval?: number;
+    checkIfLiveInterval?: number;
 }
 
 export interface NepStreamData {
@@ -46,7 +48,7 @@ export interface NepScheduleJsonLayoutData {
     reverse?: boolean;
 }
 
-export interface NoStreamNepData {
+export interface NepDisplayData {
     switchInterval?: number;
     isLeaving: boolean;
     nepImage?: string;

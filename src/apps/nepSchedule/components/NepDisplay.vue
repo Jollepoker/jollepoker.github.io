@@ -1,25 +1,29 @@
 <template>
-    <div class="nepSchedule-noStreamsWrapper">
-        <div class="nepSchedule-noStreamsMessageWrapper">
+    <div class="nepSchedule-nepDisplayWrapper" :class="{ withStreams: showWithStreams }">
+        <div v-if="!showWithStreams" class="nepSchedule-noStreamsMessageWrapper">
             <span class="nepSchedule-noStreamsMessage">{{ noStreamsMessage }}</span>
         </div>
-        <div class="nepSchedule-noStreamsNep">
+        <div class="nepSchedule-nepDisplayNep">
             <img :class="{ 'nepSchedule-leaving': isLeaving }" :src="nepImage" :key="nepImage" />
         </div>
-        <div class="nepSchedule-noStreamsTable"></div>
+        <div class="nepSchedule-nepDisplayTable"></div>
     </div>
 </template>
 
 <script lang="ts">
 import { Dayjs } from 'dayjs';
 import { defineComponent } from 'vue';
-import type { NoStreamNepData } from '@/apps/nepSchedule/interfaces/interfaces';
+import type { NepDisplayData } from '@/apps/nepSchedule/interfaces/interfaces';
 
 export default defineComponent({
-    name: 'NepNoStreams',
+    name: 'NepDisplay',
     props: {
         targetDate: {
             type: Dayjs,
+            required: true,
+        },
+        showWithStreams: {
+            type: Boolean,
             required: true,
         },
     },
@@ -29,7 +33,7 @@ export default defineComponent({
             isLeaving: false,
             nepImage: undefined,
             preloadedImages: [],
-        } as NoStreamNepData;
+        } as NepDisplayData;
     },
     computed: {
         noStreamsMessage(): string {

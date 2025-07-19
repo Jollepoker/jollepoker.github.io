@@ -17,7 +17,11 @@
             :streamData="stream"
         />
     </div>
-    <NepNoStreams v-else :targetDate="targetDate" />
+    <NepDisplay
+        v-if="streamsThisWeek.length < 5"
+        :targetDate="targetDate"
+        :showWithStreams="streamsThisWeek.length > 0"
+    />
 </template>
 
 <script lang="ts">
@@ -29,7 +33,7 @@ import type {
 import scheduleData from '@/apps/nepSchedule/data/schedule.json';
 import NepStream from '@/apps/nepSchedule/components/NepStream.vue';
 import NepWeekSwitcher from '@/apps/nepSchedule/components/NepWeekSwitcher.vue';
-import NepNoStreams from '@/apps/nepSchedule/components/NepNoStreams.vue';
+import NepDisplay from '@/apps/nepSchedule/components/NepDisplay.vue';
 import { Dayjs } from 'dayjs';
 import '@/apps/nepSchedule/assets/nepSchedule.css';
 
@@ -38,7 +42,7 @@ export default defineComponent({
     components: {
         NepStream,
         NepWeekSwitcher,
-        NepNoStreams,
+        NepDisplay,
     },
     data() {
         return {
