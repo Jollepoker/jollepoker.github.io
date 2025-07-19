@@ -6,13 +6,11 @@
             v-model="currentZoomLevel"
             @change="handleZoomSelect"
         >
-            <option
-                v-for="zoomSetting in zoomLevels"
-                :key="zoomSetting.name"
-                :value="zoomSetting.name"
-            >
-                {{ zoomSetting.name }}
-            </option>
+            <template v-for="(zoomSetting, index) in mediaZoomLevels" :key="index">
+                <option :value="zoomSetting.name">
+                    {{ zoomSetting.name }}
+                </option>
+            </template>
         </select>
         <select
             name="nepSweeper-difficultySelect"
@@ -45,7 +43,7 @@
         <button
             name="nepSweeper-leaderBoardButton"
             id="nepSweeper-leaderBoardButton"
-            @click="openLeaderBoard"
+            @click="toggleLeaderBoard"
         >
             leaderboard
         </button>
@@ -122,7 +120,18 @@
             <div :class="gameSpriteClass" class="bottomRightCornerBorder"></div>
         </div>
     </div>
-    <div v-if="leaderBoardOpen" id="nepSweeper-leaderBoardWrapper"></div>
+    <div v-if="leaderBoardOpen" id="nepSweeper-leaderBoardWrapper">
+        <div class="nepSweeper-leaderBoardScoresWrapper">
+            <div
+                v-for="(difficulty, index) in difficulties"
+                :key="index"
+                class="nepSweeper-leaderBoardDifficultyWrapper"
+            >
+                <h2 class="nepSweeper-leaderBoardDifficultyTitle">{{ difficulty.name }}</h2>
+                <NepDifficultyScores :difficulty="difficulty.name" />
+            </div>
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -135,9 +144,13 @@ import type {
     NepSweeperSpriteSheet,
     NepSweeperZoomLevel,
 } from '@/apps/nepSweeper/interfaces/interfaces';
+import NepDifficultyScores from './components/NepDifficultyScores.vue';
 
 export default defineComponent({
     name: 'NepSweeper',
+    components: {
+        NepDifficultyScores,
+    },
     data() {
         return {
             xLength: 30,
@@ -200,17 +213,36 @@ export default defineComponent({
                 },
             ] as NepSweeperSpriteSheet[],
             zoomLevels: [
-                { name: '100%', scale: 1 },
-                { name: '150%', scale: 1.5 },
-                { name: '200%', scale: 2 },
-                { name: '300%', scale: 3 },
+                { name: '100%', scale: 1, minMedia: '' },
+                {
+                    name: '150%',
+                    scale: 1.5,
+                    minMedia: '(min-width: 1270px) and (min-height: 720px)',
+                },
+                {
+                    name: '200%',
+                    scale: 2,
+                    minMedia: '(min-width: 1500px) and (min-height: 900px)',
+                },
+                {
+                    name: '250%',
+                    scale: 2.5,
+                    minMedia: '(min-width: 1750px) and (min-height: 1044px)',
+                },
+                {
+                    name: '300%',
+                    scale: 3,
+                    minMedia: '(min-width: 2000px) and (min-height: 1280px)',
+                },
             ] as NepSweeperZoomLevel[],
             translateZoomToScale: new Map<number, number>([
                 [0.5, 100],
                 [0.75, 66],
                 [1, 50],
+                [1.25, 40],
                 [1.5, 33],
                 [2, 24.5],
+                [2.5, 20.5],
                 [3, 16.7],
             ]),
             leaderBoardOpen: false,
@@ -218,6 +250,11 @@ export default defineComponent({
         } as NepSweeperData;
     },
     computed: {
+        mediaZoomLevels(): NepSweeperZoomLevel[] {
+            return this.zoomLevels.filter(
+                (zoomLevel) => window.matchMedia(zoomLevel.minMedia).matches,
+            );
+        },
         gameSpriteClass(): string {
             return `gameSprite${this.currentSpriteSheetZoomScale}`;
         },
@@ -475,7 +512,6 @@ export default defineComponent({
             this.resetBoard();
         },
         setZoomLevel(zoomLevel: string, spriteSheetName: string): void {
-            console.log(zoomLevel);
             if (!zoomLevel) {
                 zoomLevel = this.currentZoomLevel;
             }
@@ -493,14 +529,6 @@ export default defineComponent({
                     '--nepSweeper-zoomLevel',
                     `scale(${zoomScale}) translate(-${this.translateZoomToScale.get(zoomScale)}%, -${this.translateZoomToScale.get(zoomScale)}%)`,
                 );
-                if (this.currentSpriteSheetZoomScale == 1) {
-                    root.style.setProperty('--nepSweeper-menuZoomLevel', 'scale(1)');
-                } else {
-                    root.style.setProperty(
-                        '--nepSweeper-menuZoomLevel',
-                        'scale(2) translate(25%, -25%)',
-                    );
-                }
                 this.$cookies.set('nepSweeperZoom', newZoomLevel.name);
                 this.resetBoard();
             }
@@ -768,8 +796,8 @@ export default defineComponent({
                 this.mines = this.hiddenTiles - 1;
             }
         },
-        openLeaderBoard(): void {
-            this.leaderBoardOpen = true;
+        toggleLeaderBoard(): void {
+            this.leaderBoardOpen = !this.leaderBoardOpen;
         },
         closeLeaderBoard(): void {
             this.leaderBoardOpen = false;
@@ -863,7 +891,7 @@ export default defineComponent({
         createScoreObject(): NepSweeperScoreObject {
             return {
                 time: this.secondsSinceStart,
-                date: this.$dayjs(),
+                date: this.$dayjs().format('MMM DD YYYY HH:mm:ss'),
             } as NepSweeperScoreObject;
         },
         resetBoard(): void {

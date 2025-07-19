@@ -47,9 +47,10 @@ export interface NepSweeperSpriteSheet {
 export interface NepSweeperZoomLevel {
     name: string;
     scale: number;
+    minMedia: string;
 }
 
 export interface NepSweeperScoreObject {
     time: number;
-    date: Dayjs;
+    date: string;
 }
