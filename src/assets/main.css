@@ -1,0 +1,273 @@
+:root {
+    --checker-background-height: 100px;
+    --checker-background-width: 100px;
+}
+
+@-webkit-keyframes checker-bg-scrolling {
+    0% {
+        background-position: var(--checker-background-width) var(--checker-background-height);
+    }
+}
+@-moz-keyframes checker-bg-scrolling {
+    0% {
+        background-position: var(--checker-background-width) var(--checker-background-height);
+    }
+}
+@-o-keyframes checker-bg-scrolling {
+    0% {
+        background-position: var(--checker-background-width) var(--checker-background-height);
+    }
+}
+@keyframes checker-bg-scrolling {
+    0% {
+        background-position: var(--checker-background-width) var(--checker-background-height);
+    }
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+#nep-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 57px 84px 57px 84px;
+    height: 100%;
+    width: 133.33333333vh;
+    min-width: 100%;
+    min-height: 75vw;
+    filter: blur(5px);
+}
+
+#nep-eyeWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    overflow: hidden;
+    pointer-events: none;
+
+    & #nep-eye {
+        width: 100%;
+        min-height: 110px;
+        object-fit: none;
+        object-position: top center;
+        pointer-events: none;
+    }
+}
+
+#nep-siteWrapper {
+    padding-top: 84px;
+
+    &::before {
+        content: '';
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        border-image-source: url(/assets/images/site/frameJustTop.webp);
+        border-image-slice: 65 0 0 0;
+        border-image-width: 65px 0 0 0;
+        border-image-repeat: repeat;
+        border-style: solid;
+        pointer-events: none;
+    }
+}
+
+.nep-linkWrapper {
+    & a {
+        width: 100%;
+        height: 5vh;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
+    & .nep-twitter {
+        background-image: url(/assets/images/site/twitterlogo.webp);
+
+        &:hover {
+            background-image: url(/assets/images/site/twitterlogohover.webp);
+        }
+    }
+
+    & .nep-twitch {
+        background-image: url(/assets/images/site/twitchlogo.webp);
+
+        &:hover {
+            background-image: url(/assets/images/site/twitchlogohover.webp);
+        }
+    }
+
+    & .nep-youtube {
+        background-image: url(/assets/images/site/youtubelogo.webp);
+
+        &:hover {
+            background-image: url(/assets/images/site/youtubelogohover.webp);
+        }
+    }
+
+    & .nep-discord {
+        background-image: url(/assets/images/site/discordlogo.webp);
+
+        &:hover {
+            background-image: url(/assets/images/site/discordlogohover.webp);
+        }
+    }
+}
+
+#nep-contentWrapper {
+    & header {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        min-height: 100px;
+        height: 15vh;
+
+        & #nep-logo {
+            max-height: max(100px, 14vh);
+            max-width: 100%;
+            aspect-ratio: 1.98 / 1;
+            justify-self: center;
+            align-self: center;
+        }
+
+        & .nep-linkWrapper {
+            display: grid;
+            grid-template-rows: 50% 50%;
+            grid-template-columns: 50% 50%;
+            width: 100%;
+            height: 100%;
+
+            & a {
+                justify-self: center;
+                align-self: center;
+                height: 85%;
+                width: 85%;
+                align-self: center;
+            }
+
+            & a:hover {
+                filter: drop-shadow(0px 0px 10px #f9eca1);
+            }
+        }
+    }
+
+    & main {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
+
+.mikanColour {
+    color: #de9056;
+}
+
+.maikaColour {
+    color: #81c9cf;
+}
+
+.kikiColour {
+    color: #678b63;
+}
+
+.chaiColour {
+    color: #cf3946;
+}
+
+.irinaColour {
+    color: #f3a6aa;
+}
+
+@media screen and (min-width: 600px) {
+    #nep-contentWrapper {
+        & header {
+            margin: 0 auto;
+            width: 600px;
+        }
+    }
+}
+
+@media screen and (min-width: 920px) and (min-height: 780px) {
+    #nep-siteWrapper {
+        padding: 57px 84px;
+        overflow: hidden;
+        max-height: 100vh;
+        box-sizing: border-box;
+
+        &::before {
+            border-image-source: url(/assets/images/site/frameNoTopDecor.webp);
+            border-image-slice: 321 321 106 325;
+            border-image-width: 321px 321px 106px 325px;
+        }
+
+        &::after {
+            content: '';
+            position: fixed;
+            right: -130px;
+            bottom: -130px;
+            z-index: 1001;
+            background-image: url(/assets/images/site/sunflower.webp);
+            width: 422px;
+            height: 415px;
+        }
+    }
+
+    #nep-contentWrapper {
+        & header {
+            grid-template-columns: 25% minmax(50%, 600px) 25%;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            height: 100px;
+            width: auto;
+            margin: 0;
+
+            & #nep-logo {
+                align-self: baseline;
+                justify-self: right;
+                margin-top: 1vh;
+                max-height: min(14vh, 9vw, 200px);
+            }
+
+            & .nep-linkWrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                justify-self: center;
+                align-items: end;
+                max-width: 600px;
+                height: 90px;
+
+                & a {
+                    align-self: auto;
+                    height: 50%;
+                    width: 50%;
+                }
+            }
+        }
+
+        & main {
+            height: calc(90vh - 115px);
+            grid-row-start: 2;
+            grid-row-end: 3;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1420px) and (min-height: 780px) {
+    #nep-siteWrapper::before {
+        border-image-source: url(/assets/images/site/frame.webp);
+    }
+}

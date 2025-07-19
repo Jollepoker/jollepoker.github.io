@@ -1,103 +1,25 @@
-<!-- Developed, hosted and managed by Jollepoker -->
-<!DOCTYPE html>
-    <head>
-        <title>neppienep's weekly schedule</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Stream schedule for everyone's favourite bunny vtuber Neppienep">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="neppienep.info" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="stylesheet" href="./assets/styling/nextnepStyle.css?v=2.817">
-        <script src="./assets/scripts/nepSchedule.js?v=2.817" type="text/javascript"></script>
-        <script src="./assets/scripts/featuredart.js?v=2.817" type="text/javascript"></script>
-    </head>
-    <body>
-        <header>
-            <img src="./assets/images/ScheduleLogo.webp" alt="Neppienep Weekly Schedule Logo" />
-            <div>
-                <div id="nepClock-scheduleDate">
-                    <span id="nepClock-monday-date">
-                        <span class="nepClock-streamMonth"></span>
-                        <span class="nepClock-streamDay"></span>
-                    </span>
-                    <span class="nepClock-dateSeparator"></span>
-                    <span id="nepClock-sunday-date">
-                        <span class="nepClock-streamMonth"></span>
-                        <span class="nepClock-streamDay"></span>
-                    </span>
-                </div>
-                <p>All times are listed in your current timezone (<span id="nepClock-timeZone"></span>)</p>
-                <div class="nepClock-links">
-                    <a class="twitch" title="twitch" href="https://twitch.tv/neppienep"></a>
-                    <a class="twitter" title="twitter" href="https://x.com/neppie_nep"></a>
-                    <a class="youtube" title="youtube" href="https://youtube.com/@neppienep"></a>
-                    <a class="discord" title="discord" href="https://discord.gg/SbHQGPppqb"></a>
-                </div>
-            </div>
-        </header>
-        <div id="nepClockApp">
-            <section id="nepClock-schedule">
-                <section id="nepClock-monday" class="nepClock-weekDayWrapper">
-                    <div class="nepClock-weekDay"><h3>mon</h3></div>
-                    <div class="nepClock-weekDaySchedule">
-                        <div class="nepClock-scheduleContent"></div>
-                    </div>
-                </section>
-                <section id="nepClock-tuesday" class="nepClock-weekDayWrapper">
-                    <div class="nepClock-weekDay"><h3>tue</h3></div>
-                    <div class="nepClock-weekDaySchedule">
-                        <div class="nepClock-scheduleContent"></div>
-                    </div>
-                </section>
-                <section id="nepClock-wednesday" class="nepClock-weekDayWrapper">
-                    <div class="nepClock-weekDay"><h3>wed</h3></div>
-                    <div class="nepClock-weekDaySchedule">
-                        <div class="nepClock-scheduleContent"></div>
-                    </div>
-                </section>
-                <section id="nepClock-thursday" class="nepClock-weekDayWrapper">
-                    <div class="nepClock-weekDay"><h3>thu</h3></div>
-                    <div class="nepClock-weekDaySchedule">
-                        <div class="nepClock-scheduleContent"></div>
-                    </div>
-                </section>
-                <section id="nepClock-friday" class="nepClock-weekDayWrapper">
-                    <div class="nepClock-weekDay"><h3>fri</h3></div>
-                    <div class="nepClock-weekDaySchedule">
-                        <div class="nepClock-scheduleContent"></div>
-                    </div>
-                </section>
-                <section id="nepClock-saturday" class="nepClock-weekDayWrapper">
-                    <div class="nepClock-weekDay"><h3>sat</h3></div>
-                    <div class="nepClock-weekDaySchedule">
-                        <div class="nepClock-scheduleContent"></div>
-                    </div>
-                </section>
-                <section id="nepClock-sunday" class="nepClock-weekDayWrapper">
-                    <div class="nepClock-weekDay"><h3>sun</h3></div>
-                    <div class="nepClock-weekDaySchedule">
-                        <div class="nepClock-scheduleContent"></div>
-                    </div>
-                </section>
-            </section>
-         <section id="nepClock-featuredArt">
-             <div class="arrow-left"></div>
-             <div class="arrow-right"></div>
-             <div class="image-wrapper">
-                 <a href="#">
-                     <img src="#" />
-                 </a>
-             </div>
-             <a class="credit" href="#">art: placeholder</a>
-         </section>
-        </div>
-        <script src="./assets/scripts/nepSweeper.js?v=2.817" defer></script>
-        <script src="./assets/scripts/nextNep.js?v=2.817" defer></script>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>neppienep's weekly schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Stream schedule for everyone's favourite vtuber Neppienep" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="neppienep.info" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div id="nepApp"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
