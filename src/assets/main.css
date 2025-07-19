@@ -190,6 +190,20 @@
     color: #f3a6aa;
 }
 
+@media screen and (max-width: 450px) and (max-height: 450px) {
+    #nep-eyeWrapper {
+        display: none;
+    }
+
+    #nep-siteWrapper {
+        padding-top: 0;
+
+        &::before {
+            border: none;
+        }
+    }
+}
+
 @media screen and (min-width: 600px) {
     #nep-contentWrapper {
         & header {

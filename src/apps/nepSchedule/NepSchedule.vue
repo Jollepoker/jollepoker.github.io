@@ -131,7 +131,7 @@ export default defineComponent({
                         !this.preLoadedAssets.has(layoutConfig.image)
                     ) {
                         const img = new Image();
-                        img.src = `assets/images/${layoutConfig.type === 'titleLogo' ? 'titleImages' : 'twitchemotes'}/${layoutConfig.image}`;
+                        img.src = `assets/images/${layoutConfig.type === 'titleLogo' ? 'titleimages' : 'twitchemotes'}/${layoutConfig.image}`;
                         this.preLoadedAssets.set(layoutConfig.image, img);
                     }
                 });
