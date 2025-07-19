@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from 'vue-router';
+import { createWebHashHistory, createRouter } from 'vue-router';
 import NepSchedule from '@/apps/nepSchedule/NepSchedule.vue';
 import NepSweeper from '@/apps/nepSweeper/NepSweeper.vue';
 
@@ -7,6 +7,6 @@ const routes = [
     { path: '/nepsweeper', name: 'NepSweeper', component: NepSweeper },
 ];
 
-const router = createRouter({ history: createWebHistory(), routes });
+const router = createRouter({ history: createWebHashHistory(), routes });
 
 export default router;
