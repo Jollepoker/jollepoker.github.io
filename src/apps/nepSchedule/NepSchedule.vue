@@ -48,6 +48,8 @@ export default defineComponent({
             nepTimezone: 'Europe/London',
             streamsThisWeek: [],
             preLoadedAssets: new Map<string, HTMLImageElement>(),
+            appTickInterval: undefined,
+            checkIfLiveInterval: undefined,
         } as NepScheduleData;
     },
     watch: {
@@ -73,9 +75,13 @@ export default defineComponent({
     },
     beforeMount() {
         this.loadStreamsForTargetDate();
-        setInterval(this.checkIfLive, 120000);
-        setInterval(this.appTick, 1000);
+        this.checkIfLiveInterval = setInterval(this.checkIfLive, 120000);
+        this.appTickInterval = setInterval(this.appTick, 1000);
         this.checkIfLive();
+    },
+    unmounted() {
+        clearInterval(this.appTickInterval);
+        clearInterval(this.checkIfLiveInterval);
     },
     methods: {
         async loadStreamsForTargetDate(): Promise<void> {

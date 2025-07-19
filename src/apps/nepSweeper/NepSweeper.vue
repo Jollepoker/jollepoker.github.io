@@ -530,7 +530,6 @@ export default defineComponent({
                     `scale(${zoomScale}) translate(-${this.translateZoomToScale.get(zoomScale)}%, -${this.translateZoomToScale.get(zoomScale)}%)`,
                 );
                 this.$cookies.set('nepSweeperZoom', newZoomLevel.name);
-                this.resetBoard();
             }
         },
         setSpriteSheet(spriteSheetName: string): void {

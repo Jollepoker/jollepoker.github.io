@@ -15,12 +15,12 @@
         >
             <div class="nepSchedule-streamHeaderWrapper">
                 <h3 class="nepSchedule-streamDay">{{ getStreamDay() }}</h3>
+                <img v-if="streamData.discord" src="/assets/images/site/discordlogo.webp" />
                 <NepStreamCountdown
-                    v-if="(soonLive || streamData.liveDate) && !streamData.hideDate"
+                    v-else-if="(soonLive || streamData.liveDate) && !streamData.hideDate"
                     :now="now"
                     :streamData="streamData"
                 />
-                <img v-else-if="streamData.discord" src="/assets/images/site/discordlogo.webp" />
                 <div v-if="streamTime" class="nepSchedule-streamTime">
                     {{ streamTime }}
                 </div>
@@ -78,7 +78,11 @@
                     v-html="hoverContent.text"
                 ></div>
             </div>
-            <a v-if="streamData.liveDate" target="_blank" :href="streamUrl"></a>
+            <a
+                v-if="streamData.liveDate && !streamData.discord && !streamData.canceled"
+                target="_blank"
+                :href="streamUrl"
+            ></a>
         </div>
     </div>
 </template>
