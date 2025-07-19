@@ -4059,5 +4059,92 @@
         "text": "Rodan (1956) & The Mysterians (1957)"
       }
     ]
+  },
+  {
+    "time": "2025-06-30T12:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "ds.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class=\"chaiColour\">chai</span> & <span class=\"kikiColour\">kiki</span>"
+      }
+    ]
+  },
+  {
+    "time": "2025-07-01T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "rEmote",
+        "image": "30/nepuCool.webp"
+      },
+      {
+        "type": "titleLogo",
+        "image": "elderscrollsoblivion.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-07-02T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "finalfantasy2-pr.webp"
+      },
+      {
+        "type": "comment",
+        "text": "to the north!"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/nepuSalute.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-07-03T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-07-04T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "lEmote",
+        "image": "30/nepuBait.webp"
+      },
+      {
+        "type": "titleLogo",
+        "image": "lakemastersex.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-07-05T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "lEmote",
+        "image": "30/nepuYay.webp"
+      },
+      {
+        "type": "title",
+        "text": "3 year anniversary!*"
+      },
+      {
+        "type": "rEmote",
+        "reverse": true,
+        "image": "30/nepuYay.webp"
+      },
+      {
+        "type": "hover",
+        "text": "New hair! A cover! games with you & 10pm mario party 8 w/ <span class='kikiColour'>kiki</span> + <span class='chaiColour'>chai</span>"
+      }
+    ]
   }
 ]
