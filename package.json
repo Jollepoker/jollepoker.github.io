@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" -- && copy CNAME dist\\CNAME",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "build": "run-p type-check \"build-only {@}\" -- && copy CNAME dist\\CNAME && copy \"exposed.html\" dist\\\"exposed.html\"",
+    "deploy": "run-p build && git add -f dist/. && git commit -m \"update dist\" && git subtree push --prefix dist origin gh-pages",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
