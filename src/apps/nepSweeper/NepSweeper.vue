@@ -183,13 +183,18 @@ export default defineComponent({
             ] as NepSweeperDifficulty[],
             spriteSheets: [
                 {
+                    name: '3.0',
+                    background: 'url(/assets/images/site/seamlessbackground.png) repeat',
+                    sprites: new Map<number, string>([[2, '30-2.webp']]),
+                },
+                {
                     name: 'spookyjukes',
-                    color: '#c88491',
+                    background: '#c88491',
                     sprites: new Map<number, string>([[1, 'jukessprite.png']]),
                 },
                 {
                     name: 'justanimated',
-                    color: '#c762b8',
+                    background: '#c762b8',
                     sprites: new Map<number, string>([
                         [1, 'justanimatedsprite.png'],
                         [2, 'justanimatedsprite2.webp'],
@@ -197,7 +202,7 @@ export default defineComponent({
                 },
                 {
                     name: 'minimalist',
-                    color: '#ffffff',
+                    background: '#ffffff',
                     sprites: new Map<number, string>([
                         [1, 'minimalist.png'],
                         [2, 'minimalist2.png'],
@@ -205,7 +210,7 @@ export default defineComponent({
                 },
                 {
                     name: 'original',
-                    color: '#bdbdbd',
+                    background: '#bdbdbd',
                     sprites: new Map<number, string>([
                         [1, 'original.gif'],
                         [2, 'original2.gif'],
@@ -546,7 +551,10 @@ export default defineComponent({
                     '--nepSweeper-sprite-sheet',
                     `url(/assets/images/nepsweeper/${closestSprite})`,
                 );
-                root.style.setProperty('--nepSweeper-sprite-sheet-color', newSpriteSheet.color);
+                root.style.setProperty(
+                    '--nepSweeper-sprite-sheet-background',
+                    newSpriteSheet.background,
+                );
                 this.currentSpriteSheet = newSpriteSheet.name;
                 this.$cookies.set('nepSweeperSpriteSheet', newSpriteSheet.name);
             }

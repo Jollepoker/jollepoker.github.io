@@ -41,7 +41,7 @@ export interface NepSweeperDifficulty {
 
 export interface NepSweeperSpriteSheet {
     name: string;
-    color: string;
+    background: string;
     sprites: Map<number, string>;
 }
 export interface NepSweeperZoomLevel {

@@ -1,6 +1,6 @@
 :root {
     --nepSweeper-sprite-sheet: url(/assets/images/nepsweeper/original2.gif);
-    --nepSweeper-sprite-sheet-color: #bdbdbd;
+    --nepSweeper-sprite-sheet-background: #bdbdbd;
     --nepSweeper-zoomLevel: scale(1) translate(-50%, -50%);
 }
 
@@ -42,7 +42,7 @@
 }
 
 .nepSweeper-gameContainer {
-    background-color: var(--nepSweeper-sprite-sheet-color);
+    background: var(--nepSweeper-sprite-sheet-background);
     margin: 0 auto;
 }
 
