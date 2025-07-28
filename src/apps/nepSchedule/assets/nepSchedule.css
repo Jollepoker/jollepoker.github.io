@@ -546,9 +546,9 @@
 
         & .nepSchedule-nepDisplayNep {
             & img {
-                right: 8vw;
+                right: 7vw;
                 bottom: min(2vw, 400px);
-                height: 55vh;
+                height: 60vh;
                 width: auto;
             }
         }
