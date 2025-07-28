@@ -396,7 +396,7 @@
             & img {
                 position: absolute;
                 right: 5vw;
-                bottom: min(6vw, 80px);
+                bottom: min(0vw, 80px);
                 width: min(75vw, 450px);
                 transition: bottom 1s cubic-bezier(0.175, 0.885, 0.32, 1.175);
                 animation: breathing 8s infinite;
@@ -546,9 +546,9 @@
 
         & .nepSchedule-nepDisplayNep {
             & img {
-                right: 6vw;
-                bottom: min(6vw, 400px);
-                height: 50vh;
+                right: 8vw;
+                bottom: min(2vw, 400px);
+                height: 55vh;
                 width: auto;
             }
         }
