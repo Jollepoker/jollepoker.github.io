@@ -226,7 +226,7 @@
             border-image-width: 321px 321px 106px 325px;
         }
 
-        &::after {
+        &:not(:has(#nepTwitch-embed))::after {
             content: '';
             position: fixed;
             right: -130px;

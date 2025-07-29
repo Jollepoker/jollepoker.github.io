@@ -78,11 +78,10 @@
                     v-html="hoverContent.text"
                 ></div>
             </div>
-            <a
+            <RouterLink
                 v-if="streamData.liveDate && !streamData.discord && !streamData.canceled"
-                target="_blank"
-                :href="streamUrl"
-            ></a>
+                to="/twitch"
+            ></RouterLink>
         </div>
     </div>
 </template>
