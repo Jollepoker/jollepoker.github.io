@@ -7,6 +7,7 @@ const routes = [
     { path: '/', name: 'NepSchedule', component: NepSchedule },
     { path: '/nepsweeper', name: 'NepSweeper', component: NepSweeper },
     { path: '/twitch', name: 'NepTwitch', component: NepTwitch },
+    { path: '/:pathMatch(.*)*', redirect: '/' },
 ];
 
 const router = createRouter({ history: createWebHashHistory(), routes });
