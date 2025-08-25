@@ -79,7 +79,9 @@
                 ></div>
             </div>
             <RouterLink
-                v-if="streamData.liveDate && !streamData.discord && !streamData.canceled"
+                v-if="
+                    (soonLive || streamData.liveDate) && !streamData.discord && !streamData.canceled
+                "
                 to="/twitch"
             ></RouterLink>
         </div>
