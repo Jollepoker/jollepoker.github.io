@@ -4193,6 +4193,7 @@
   },
   {
     "time": "2025-08-30T17:00:00.000+01:00",
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
