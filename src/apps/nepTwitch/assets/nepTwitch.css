@@ -3,6 +3,7 @@
     height: calc(85vh - 115px - 2em);
     min-height: 480px;
     width: 100vw;
+    margin-top: 1px;
 }
 
 .nepTwitch-backToSchedule {
@@ -30,5 +31,6 @@
         transform: translate(-50%, -50%);
         height: calc(83vh - 115px);
         width: calc(100vw - 160px);
+        margin-top: 0;
     }
 }
