@@ -82,7 +82,7 @@
                 v-if="
                     (soonLive || streamData.liveDate) && !streamData.discord && !streamData.canceled
                 "
-                to="/twitch"
+                :to="`/twitch/${streamData.streamer}`"
             ></RouterLink>
         </div>
     </div>
@@ -115,7 +115,6 @@ export default defineComponent({
     },
     data() {
         return {
-            streamUrl: 'https://twitch.tv/neppienep',
             titleLogoContent: undefined,
             titleContent: undefined,
             leftEmotes: undefined,

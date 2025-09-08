@@ -6,6 +6,7 @@ A schedule layout HAS to be accompanied with the scheduled time (Format example:
 The order of the specified components is not important for the current layout
 A schedule can also have different settings set to true for additional display effects
 However, only one setting can be used at a time.
+A schedule can have another streamer than Nep (twitch only). If nep is the streamer, no streamer should be set.
 
 These are the settings:
 discord, glitter, canceled, hideDate

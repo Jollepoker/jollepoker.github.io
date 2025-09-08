@@ -4204,5 +4204,232 @@
         "image": "20/nepuSus.webp"
       }
     ]
+  },
+  {
+    "time": "2025-09-10T15:00:00.000+01:00",
+    "streamer": "ch4ichan",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Fundraiser"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"chaiColour\">chai's</span> channel!*"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "hover",
+        "text": "<ul><li>Morning: Introduce fundraiser and ourselves!</li><li>Talk about why we became vtubers and how we met</li><li>Skribbl.io with Katastudents w/ <span class=\"mikanColour\">Mikan</span> and <span class=\"neppieColour\">Neppie</span></li><li>Exploring VRchat w/ <span class=\"mikanColour\">Mikan</span> and <span class=\"neppieColour\">Neppie</span></li><li>Vupechat w/ <span class=\"mikanColour\">Mikan</span></li><li>International Snackboxs w/ <span class=\"mikanColour\">Mikan</span></li><li>REALLY GOOD b-list youtube movies</li><li>Afterschool: Closing Remarks</li></ul>"
+      }
+    ]
+  },
+  {
+    "time": "2025-09-11T02:00:00.000+01:00",
+    "streamer": "kikipyonpyon",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Fundraiser"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"kikiColour\">kiki's</span> channel!*"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "hover",
+        "text": "<ul><li>Morning: Chat with Coffee</li><li>Stardew Valley</li><li>Tetrio</li><li>Trying American Snackbox!<li>Movie and Lunch!</li><li>Visiting MAL and Rating Anime</li><li>Just chatting with Tea</li><li>Afterschool: Closing Remarks</li></ul>"
+      }
+    ]
+  },
+  {
+    "time": "2025-09-11T15:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Fundraiser"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"neppieColour\">neppie's</span> channel!*"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "hover",
+        "text": "<ul><li>Morning: Chat with tea and brekky</li><li>Minesweeper Together</li><li>Community Art Board</li><li>Mage Arena w/ <span class=\"mikanColour\">Mikan</span> and <span class=\"chaiColour\">Chai</span></li><li>Movie and Dinner</li><li>L4D2 w/ <span class=\"mikanColour\">Mikan</span></li><li>Chocolate Kitkat Snack Box!</li><li>Afterschool: Closing Remarks</li></ul>"
+      }
+    ]
+  },
+  {
+    "time": "2025-09-12T02:00:00.000+01:00",
+    "streamer": "kikipyonpyon",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Fundraiser"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"kikiColour\">kiki's</span> channel!*"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "hover",
+        "text": "<ul><li>Morning: Chat with Coffee</li><li>Darksouls w/ <span class=\"chaiColour\">Chai</span> and <span class=\"neppieColour\">Neppie</span></li><li>Movie and Lunch</li><li>Super Bunny Man w/ <span class=\"neppieColour\">Neppie</span></li><li>Movie and Dinner</li><li>Good night - getting ready for bed ASMR</li><li>Afterschool: Closing Remarks</li></ul>"
+      }
+    ]
+  },
+  {
+    "time": "2025-09-12T15:00:00.000+01:00",
+    "streamer": "mikanthemink",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Fundraiser"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"mikanColour\">mikan's</span> channel!*"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "hover",
+        "text": "<ul><li>McDonald's w/ <span class=\"kikiColour\">Kiki</span></li><li>Champy Kirimochi (Sillygirls Cooking)</li><li>Making KB Southpark Models</li><li>Content Warning</li><li>Movie and Dinner</li><li>Roblox w/ <span class=\"neppieColour\">Neppie</span> and <span class=\"chaiColour\">Chai</span></li><li>Afterschool: Closing Remarks</li></ul>"
+      }
+    ]
+  },
+  {
+    "time": "2025-09-13T02:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Fundraiser"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"neppieColour\">neppie's</span> channel!*"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "hover",
+        "text": "<ul><li>Fortnite w/ <span class=\"chaiColour\">Chai</span></li><li>Phasmophobia w/ <span class=\"chaiColour\">Chai</span></li><li>Dinner and A Movie</li><li>Solitaire</li><li>Drawing Katabasis as Princesses</li><li>Tierlists</li><li>Afterschool: Closing Remarks</li></ul>"
+      }
+    ]
+  },
+  {
+    "time": "2025-09-13T15:00:00.000+01:00",
+    "streamer": "mikanthemink",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Fundraiser"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"mikanColour\">mikan's</span> channel!*"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "hover",
+        "text": "<ul><li>Morning coffee and donuts w/ <span class=\"chaiColour\">Chai</span> and <span class=\"kikiColour\">Kiki</span></li><li>Peak w/ Punishment Wheel</li><li>Choomburger (Sillygirls Cooking)</li><li>Manga and Chiikawa (handcam)</li><li>Mikan Game (made by a Katastudent!)</li><li>Truth or Date + Drinking</li><li>Afterschool: Closing Remarks</li></ul>"
+      }
+    ]
+  },
+  {
+    "time": "2025-09-14T02:00:00.000+01:00",
+    "streamer": "ch4ichan",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Fundraiser"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"chaiColour\">chai's</span> channel!*"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "hover",
+        "text": "<ul><li>Minecraft Minigames</li><li>Feet painting Katabasis</li><li>Peggle Time! w/ Punishment Wheel</li><li>Become Male vtuber for one hour</li><li>Movie and Dinner</li><li>Making Katabasis Mascots (Handcam)</li><li>Afterschool: Closing Remarks</li></ul>"
+      }
+    ]
+  },
+  {
+    "time": "2025-09-14T02:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Fundraiser Concert"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the Katabasis channel!"
+      }
+    ]
   }
 ]

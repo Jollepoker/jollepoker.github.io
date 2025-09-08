@@ -10,12 +10,20 @@ import { useScriptTag } from '@vueuse/core';
 import { TwitchEmbed } from '@anivire/twitch-embed-ts';
 export default defineComponent({
     name: 'NepTwitch',
-    setup() {
+    props: {
+        streamer: {
+            type: String,
+            required: false,
+            default: 'neppienep',
+        },
+    },
+    setup(props) {
+        const streamer = !props.streamer || props.streamer === '' ? 'neppienep' : props.streamer;
         useScriptTag('https://embed.twitch.tv/embed/v1.js', () => {
             new TwitchEmbed('nepTwitch-embed', {
                 width: '100%',
                 height: '100%',
-                channel: 'neppienep',
+                channel: streamer,
             });
         });
     },

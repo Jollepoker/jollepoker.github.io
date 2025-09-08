@@ -48,9 +48,10 @@ export default defineComponent({
         return {
             now: this.$dayjs(),
             targetDate: this.$dayjs(),
-            liveDate: undefined,
+            liveDates: new Map<string, Dayjs>(),
             nepTimezone: 'Europe/London',
             streamsThisWeek: [],
+            streamersThisWeek: [],
             preLoadedAssets: new Map<string, HTMLImageElement>(),
             appTickInterval: undefined,
             checkIfLiveInterval: undefined,
@@ -65,8 +66,11 @@ export default defineComponent({
                 this.targetDate = newValue;
             }
         },
-        liveDate(newValue) {
-            this.updateLiveStream(newValue);
+        liveDates: {
+            handler() {
+                this.updateLiveStream(this.liveDates);
+            },
+            deep: true,
         },
         targetDate(newValue, oldValue) {
             if (newValue.week() !== oldValue.week()) {
@@ -74,7 +78,7 @@ export default defineComponent({
             }
         },
         streamsThisWeek() {
-            this.updateLiveStream(this.liveDate);
+            this.updateLiveStream(this.liveDates);
         },
     },
     beforeMount() {
@@ -103,6 +107,18 @@ export default defineComponent({
                     timeZonedDateEndOfWeek,
                 );
             });
+            if (this.now.week === this.targetDate.week && this.now.year === this.targetDate.year) {
+                this.streamersThisWeek = [
+                    ...new Set<string>(
+                        this.streamsThisWeek
+                            .map((stream) => stream.streamer)
+                            .filter(Boolean) as string[],
+                    ),
+                ];
+                this.streamersThisWeek.push('neppienep');
+            } else {
+                this.streamersThisWeek = [];
+            }
             this.preLoadAssets();
         },
         async preLoadAssets(): Promise<void> {
@@ -140,61 +156,69 @@ export default defineComponent({
         async changeTargetDate(newDate: Dayjs): Promise<void> {
             this.targetDate = newDate;
         },
-        async updateLiveStream(newLiveDate: Dayjs | undefined): Promise<void> {
+        async updateLiveStream(newLiveDates: Map<string, Dayjs>): Promise<void> {
             this.streamsThisWeek.map((stream) => {
                 stream.liveDate = undefined;
                 return stream;
             });
 
-            if (
-                this.$dayjs.isDayjs(newLiveDate) &&
-                newLiveDate.week() === this.targetDate.week() &&
-                newLiveDate.year() === this.targetDate.year()
-            ) {
-                // Find stream most likely being the live stream
-                for (let i = this.streamsThisWeek.length - 1; i >= 0; i -= 1) {
-                    const streamTime = this.$dayjs(this.streamsThisWeek[i].time);
-                    if (
-                        this.targetDate.isBetween(
-                            streamTime.subtract(1, 'h'),
-                            streamTime.add(24, 'h'),
-                        ) &&
-                        !this.streamsThisWeek[i].canceled
-                    ) {
-                        this.streamsThisWeek[i].liveDate = newLiveDate;
-                        break;
+            newLiveDates.forEach((liveDate, streamer) => {
+                if (
+                    liveDate.week() === this.targetDate.week() &&
+                    liveDate.year() === this.targetDate.year()
+                ) {
+                    // Find stream most likely being the live stream
+                    for (let i = this.streamsThisWeek.length - 1; i >= 0; i -= 1) {
+                        if (
+                            (streamer === 'neppienep' && !this.streamsThisWeek[i].streamer) ||
+                            streamer === this.streamsThisWeek[i].streamer
+                        ) {
+                            const streamTime = this.$dayjs(this.streamsThisWeek[i].time);
+                            if (
+                                this.targetDate.isBetween(
+                                    streamTime.subtract(1, 'h'),
+                                    streamTime.add(24, 'h'),
+                                ) &&
+                                !this.streamsThisWeek[i].canceled
+                            ) {
+                                this.streamsThisWeek[i].liveDate = liveDate;
+                                break;
+                            }
+                        }
                     }
                 }
-            }
+            });
         },
         async checkIfLive(): Promise<void> {
-            const query = `query {
-                user(login: "neppienep") {
-                    stream {
-                        createdAt
+            this.streamersThisWeek.forEach(async (streamer) => {
+                const query = `query {
+                    user(login: "${streamer}") {
+                        stream {
+                            createdAt
+                        }
                     }
-                }
-            }`;
+                }`;
 
-            try {
-                const response = await fetch('https://gql.twitch.tv/gql', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Client-Id': 'kimne78kx3ncx6brgo4mv6wki5h1ko',
-                    },
-                    body: JSON.stringify({ query }),
-                });
+                try {
+                    const response = await fetch('https://gql.twitch.tv/gql', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Client-Id': 'kimne78kx3ncx6brgo4mv6wki5h1ko',
+                        },
+                        body: JSON.stringify({ query }),
+                    });
 
-                const data = await response.json();
-                if (data.data.user.stream?.createdAt && !this.liveDate) {
-                    this.liveDate = this.$dayjs(data.data.user.stream?.createdAt);
-                } else if (!data.data.user.stream?.createdAt) {
-                    this.liveDate = undefined;
+                    const data = await response.json();
+                    if (data.data.user.stream?.createdAt) {
+                        this.liveDates.set(streamer, this.$dayjs(data.data.user.stream?.createdAt));
+                    } else if (!data.data.user.stream?.createdAt) {
+                        this.liveDates.delete(streamer);
+                    }
+                } catch (error) {
+                    console.error('Error checking stream status: ', error);
                 }
-            } catch (error) {
-                console.error('Error checking stream status: ', error);
-            }
+            });
         },
         async appTick(): Promise<void> {
             this.now = this.$dayjs();

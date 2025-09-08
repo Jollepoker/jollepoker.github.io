@@ -3,9 +3,10 @@ import type { Dayjs } from 'dayjs';
 export interface NepScheduleData {
     now: Dayjs;
     targetDate: Dayjs;
-    liveDate?: Dayjs;
+    liveDates: Map<string, Dayjs>;
     nepTimezone: string;
     streamsThisWeek: NepScheduleJsonData[];
+    streamersThisWeek: string[];
     preLoadedAssets: Map<string, HTMLImageElement>;
     appTickInterval?: number;
     checkIfLiveInterval?: number;
@@ -33,6 +34,7 @@ export interface NepScheduleJsonData {
     canceled?: boolean;
     hideDate?: boolean;
     glitter?: boolean;
+    streamer?: string;
     layout: NepScheduleJsonLayoutData[];
 }
 
