@@ -80,9 +80,12 @@
             </div>
             <RouterLink
                 v-if="
-                    (soonLive || streamData.liveDate) && !streamData.discord && !streamData.canceled
+                    (soonLive || streamData.liveDate) &&
+                    !streamData.discord &&
+                    !streamData.canceled &&
+                    !streamData.noLink
                 "
-                :to="`/twitch/${streamData.streamer}`"
+                :to="`/twitch/${streamData.streamer ? streamData.streamer : 'neppienep'}`"
             ></RouterLink>
         </div>
     </div>
