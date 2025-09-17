@@ -32,6 +32,7 @@ export default defineComponent({
     mounted() {
         window.addEventListener('resize', this.setMainBackgroundHeight);
         window.addEventListener('orientationchange', this.setMainBackgroundHeight);
+        window.addEventListener('touchmove', this.setMainBackgroundHeight);
     },
     methods: {
         setMainBackgroundHeight() {
