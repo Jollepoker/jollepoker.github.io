@@ -35,16 +35,18 @@
 }
 
 #nep-background {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    padding: 57px 84px 57px 84px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
     height: 100%;
-    width: 133.33333333vh;
-    min-width: 100%;
-    min-height: 75vw;
+    width: 100%;
+    object-fit: cover;
+    outline: none;
+    padding: 0;
+    z-index: -1;
     filter: blur(5px);
 }
 
@@ -239,6 +241,8 @@
             background-image: url(/assets/images/site/sunflower.webp);
             width: 422px;
             height: 415px;
+            pointer-events: none;
+            user-select: none;
         }
     }
 

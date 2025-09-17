@@ -253,6 +253,7 @@
     border-image-outset: 17px;
     border-style: solid;
     user-select: none;
+    will-change: background-position;
 
     &.nepSchedule-canceled {
         animation: none;
@@ -411,7 +412,6 @@
             height: 100%;
             bottom: 0;
             right: 0;
-            z-index: -1;
             animation: fade-in 0.4s ease-in 0s 1 normal none;
 
             & img {
@@ -421,6 +421,7 @@
                 width: min(75vw, 450px);
                 transition: bottom 1s cubic-bezier(0.175, 0.885, 0.32, 1.175);
                 animation: breathing 8s infinite;
+                will-change: transform;
 
                 &.nepSchedule-leaving {
                     bottom: min(-50vh, -600px);
