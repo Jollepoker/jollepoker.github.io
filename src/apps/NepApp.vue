@@ -24,23 +24,3 @@
         </div>
     </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-export default defineComponent({
-    name: 'NepApp',
-    mounted() {
-        window.addEventListener('resize', this.setMainBackgroundHeight);
-        window.addEventListener('orientationchange', this.setMainBackgroundHeight);
-        window.addEventListener('touchmove', this.setMainBackgroundHeight);
-    },
-    methods: {
-        setMainBackgroundHeight() {
-            document.documentElement.style.setProperty(
-                '--main-background-height',
-                `${window.innerHeight}px`,
-            );
-        },
-    },
-});
-</script>

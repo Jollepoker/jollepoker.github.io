@@ -1,7 +1,6 @@
 :root {
     --checker-background-height: 100px;
     --checker-background-width: 100px;
-    --main-background-height: 100vh;
 }
 
 @-webkit-keyframes checker-bg-scrolling {
@@ -42,7 +41,7 @@
     right: 0;
     top: 0;
     margin: 0;
-    height: calc(var(--main-background-height, 100vh));
+    height: 100%;
     width: 100%;
     object-fit: cover;
     outline: none;
