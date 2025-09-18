@@ -1,5 +1,4 @@
 <template>
-    <img id="nep-background" src="/assets/images/site/background.webp" />
     <div id="nep-siteWrapper">
         <div id="nep-eyeWrapper">
             <img id="nep-eye" src="/assets/images/site/eye.webp" />
