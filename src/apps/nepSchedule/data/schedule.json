@@ -4471,19 +4471,6 @@
     ]
   },
   {
-    "time": "2025-09-26T16:00:00.000+01:00",
-    "layout": [
-      {
-        "type": "titleLogo",
-        "image": "madoumonogatari123.webp"
-      },
-      {
-        "type": "comment",
-        "text": "continuing 2!!"
-      }
-    ]
-  },
-  {
     "time": "2025-09-27T16:00:00.000+01:00",
     "layout": [
       {
@@ -4507,6 +4494,19 @@
       {
         "type": "comment",
         "text": "Varan the Unbelievable (1958)"
+      }
+    ]
+  },
+  {
+    "time": "2025-09-28T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "madoumonogatari123.webp"
+      },
+      {
+        "type": "comment",
+        "text": "continuing 2!!"
       }
     ]
   }
