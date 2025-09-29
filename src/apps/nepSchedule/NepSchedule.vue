@@ -18,7 +18,7 @@
         />
     </div>
     <NepDisplay
-        v-if="streamsThisWeek.length < 5"
+        v-if="streamsThisWeek.length < 3"
         :targetDate="targetDate"
         :showWithStreams="streamsThisWeek.length > 0"
     />
