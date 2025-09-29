@@ -135,12 +135,15 @@
         min-height: 100px;
         height: 15vh;
 
-        & #nep-logo {
-            max-height: max(100px, 14vh);
-            max-width: 100%;
-            aspect-ratio: 1.98 / 1;
+        & a {
             justify-self: center;
             align-self: center;
+
+            & #nep-logo {
+                max-height: max(100px, 14vh);
+                max-width: 100%;
+                aspect-ratio: 1.98 / 1;
+            }
         }
 
         & .nep-linkWrapper {
@@ -230,7 +233,9 @@
             border-image-width: 321px 321px 106px 325px;
         }
 
-        &:not(:has(#nepTwitch-embed))::after {
+        &:not(:has(#nepTwitch-embed)):not(:has(#nepSweeper-gameWrapper)):not(
+                :has(.nepSchedule-streamWrapper:nth-of-type(9))
+            )::after {
             content: '';
             position: fixed;
             right: -130px;
@@ -253,11 +258,14 @@
             width: auto;
             margin: 0;
 
-            & #nep-logo {
+            & a {
                 align-self: baseline;
                 justify-self: right;
-                margin-top: 1vh;
-                max-height: min(14vh, 9vw, 200px);
+
+                & #nep-logo {
+                    margin-top: 1vh;
+                    max-height: min(14vh, 9vw, 200px);
+                }
             }
 
             & .nep-linkWrapper {

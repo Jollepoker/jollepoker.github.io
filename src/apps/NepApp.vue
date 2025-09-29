@@ -5,7 +5,9 @@
         </div>
         <div id="nep-contentWrapper">
             <header>
-                <img id="nep-logo" src="/assets/images/site/logo.webp" />
+                <RouterLink :to="`/${$route.name === 'NepSchedule' ? 'nepsweeper' : ''}`"
+                    ><img id="nep-logo" src="/assets/images/site/logo.webp"
+                /></RouterLink>
                 <div class="nep-linkWrapper">
                     <a class="nep-twitter" title="twitter" href="https://x.com/neppie_nep"></a>
                     <a class="nep-twitch" title="twitch" href="https://twitch.tv/neppienep"></a>
