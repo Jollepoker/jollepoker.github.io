@@ -4511,5 +4511,114 @@
         "text": "and Karaoke!!"
       }
     ]
+  },
+  {
+    "time": "2025-10-19T01:00:00.000+01:00",
+    "streamer": "kikipyonpyon",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Debuts: Kiki"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"kikiColour\">Kiki's</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2025-10-19T01:30:00.000+01:00",
+    "streamer": "mikanthemink",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Debuts: Mikan"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"mikanColour\">Mikan's</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2025-10-19T02:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Debuts: Neppie"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"neppieColour\">Neppie's</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2025-10-19T02:30:00.000+01:00",
+    "streamer": "ch4ichan",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Debuts: Ch4i"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on <span class=\"chaiColour\">Ch4i's</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2025-10-19T02:30:00.000+01:00",
+    "noLink": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Debut Collab"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the Katabasis channel!"
+      }
+    ]
   }
 ]
