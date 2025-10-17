@@ -4601,7 +4601,6 @@
   },
   {
     "time": "2025-10-19T03:00:00.000+01:00",
-    "hideDate": true,
     "noLink": true,
     "layout": [
       {
@@ -4618,7 +4617,7 @@
       },
       {
         "type": "comment",
-        "text": "on the Katabasis channel!"
+        "text": "on the Katabasis channel! (Youtube!)"
       }
     ]
   }
