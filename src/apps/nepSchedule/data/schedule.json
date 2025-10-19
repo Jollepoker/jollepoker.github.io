@@ -4414,6 +4414,7 @@
   {
     "time": "2025-09-14T17:00:00.000+01:00",
     "noLink": true,
+    "noLive": true,
     "layout": [
       {
         "type": "title",
@@ -4429,7 +4430,7 @@
       },
       {
         "type": "comment",
-        "text": "on the Katabasis channel!"
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
       }
     ]
   },
@@ -4602,6 +4603,7 @@
   {
     "time": "2025-10-19T03:00:00.000+01:00",
     "noLink": true,
+    "noLive": true,
     "layout": [
       {
         "type": "title",
@@ -4617,7 +4619,30 @@
       },
       {
         "type": "comment",
-        "text": "on the Katabasis channel! (Youtube!)"
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel! (Youtube!)"
+      }
+    ]
+  },
+  {
+    "time": "2025-10-19T15:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Q&A Pop quiz collab!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel! (Youtube!)"
       }
     ]
   }

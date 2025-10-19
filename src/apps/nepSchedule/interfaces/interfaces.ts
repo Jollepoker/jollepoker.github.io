@@ -36,6 +36,7 @@ export interface NepScheduleJsonData {
     glitter?: boolean;
     streamer?: string;
     noLink?: boolean;
+    noLive?: boolean;
     layout: NepScheduleJsonLayoutData[];
 }
 

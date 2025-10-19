@@ -24,7 +24,7 @@ export default defineComponent({
     },
     computed: {
         boxText(): string {
-            let boxText = 'SOON';
+            let boxText = this.streamData.noLive ? 'LIVE?' : 'SOON';
             const streamTime = this.$dayjs(this.streamData.time);
 
             if (this.$dayjs.isDayjs(this.streamData.liveDate)) {
