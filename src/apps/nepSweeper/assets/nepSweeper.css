@@ -29,7 +29,7 @@
         border: 3px solid #dcbb89;
         border-radius: 1em;
         padding: 0.5em;
-        cursor: pointer;
+        animation: var(--animation-cursor-pointer);
     }
 
     & button {
@@ -37,7 +37,7 @@
         border: 3px solid #dcbb89;
         border-radius: 1em;
         padding: 0.5em;
-        cursor: pointer;
+        animation: var(--animation-cursor-pointer);
     }
 }
 

@@ -35,8 +35,7 @@
 
 #nep-contentWrapper {
     & main:has(.nepSchedule-scheduleWrapper) {
-        margin-bottom: 2em;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 }
 
@@ -79,7 +78,7 @@
             position: absolute;
             right: 0;
             padding: 0 min(2vw, 40px);
-            cursor: pointer;
+            animation: var(--animation-cursor-pointer);
             font-size: 2em;
 
             &:first-of-type {
@@ -100,7 +99,7 @@
         width: 15%;
 
         & .nepSchedule-weekSwitcherToday {
-            cursor: pointer;
+            animation: var(--animation-cursor-pointer);
             padding-left: 2vw;
 
             &:hover {
@@ -114,7 +113,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 30px;
+    margin-bottom: 2rem;
 
     & .nepSchedule-streamWrapper {
         height: 250px;
@@ -375,7 +374,7 @@
     width: 100%;
     user-select: none;
     pointer-events: none;
-    margin-top: 0.5em;
+    margin-top: 3em;
     position: relative;
 
     &.withStreams {
@@ -450,7 +449,7 @@
 
             & .nepSchedule-weekSwitcherArrow {
                 position: relative;
-                cursor: pointer;
+                animation: var(--animation-cursor-pointer);
                 font-size: 2em;
 
                 &:first-of-type {
@@ -471,7 +470,7 @@
             width: 25%;
 
             & .nepSchedule-weekSwitcherToday {
-                cursor: pointer;
+                animation: var(--animation-cursor-pointer);
                 padding-left: 2vw;
 
                 &:hover {
@@ -489,6 +488,7 @@
         max-width: 600px;
         margin: 0 auto;
         padding: 0.5em 1em;
+        margin-bottom: 3em;
 
         & .nepSchedule-currentWeek {
             flex-direction: row;
@@ -516,22 +516,17 @@
 }
 
 @media screen and (min-width: 920px) and (min-height: 780px) {
-    .nepSchedule-weekWrapper {
-        margin: 0 auto 4% auto;
-    }
-
     .nepSchedule-scheduleWrapper {
         display: grid;
-        height: 74vh;
-        grid-template-columns: 31.33% 31.33% 31.33%;
-        column-gap: max(2rem, 2.33%);
+        height: calc(100cqh - 7em);
+        grid-template-columns: 31.77% 31.77% 31.77%;
+        column-gap: 2.33%;
         align-content: start;
-        padding-bottom: 1rem;
-        margin-right: 2rem;
-        margin-top: 3rem;
+        padding: 0 1rem 1rem 1rem;
         scrollbar-width: none;
         overflow-x: hidden;
         overflow-y: auto;
+        width: calc(100% - 2rem);
 
         & .nepSchedule-streamWrapper {
             width: 100%;
@@ -579,14 +574,6 @@
 }
 
 @media screen and (min-width: 1420px) and (min-height: 780px) {
-    .nepSchedule-weekWrapper {
-        margin: 0 auto 3% auto;
-    }
-
-    .nepSchedule-scheduleWrapper {
-        padding: 0 1rem 1rem 1rem;
-    }
-
     .nepSchedule-nepDisplayWrapper {
         & .nepSchedule-noStreamsMessageWrapper {
             margin: -2% auto 0 auto;
@@ -595,10 +582,6 @@
 }
 
 @media screen and (min-width: 1620px) and (min-height: 780px) {
-    .nepSchedule-weekWrapper {
-        margin: 0 auto 2% auto;
-    }
-
     .nepSchedule-nepDisplayWrapper {
         & .nepSchedule-noStreamsMessageWrapper {
             margin: -1% auto 0 auto;
