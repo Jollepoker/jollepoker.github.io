@@ -21,6 +21,7 @@
     }
     100% {
         transform: translateZ(0) rotateY(0);
+        opacity: 1;
     }
 }
 
@@ -31,6 +32,27 @@
     100% {
         opacity: 1;
     }
+}
+
+.slit-vertical-enter {
+    animation: slit-in-vertical 0.4s linear 0s 1 normal none;
+}
+
+.slit-vertical-leave {
+    animation: slit-in-vertical 0.2s linear 0s 1 reverse none;
+}
+
+.slit-transition-delay {
+    transition-duration: 0;
+    transition-delay: 0.2s;
+}
+
+.fade-in {
+    animation: fade-in 0.4s ease-in 0s 1 normal none;
+}
+
+.fade-out {
+    animation: fade-in 0.4s ease-in 0s 1 reverse none;
 }
 
 #nep-contentWrapper {
@@ -120,7 +142,6 @@
         width: 85vw;
         max-width: 600px;
         margin: 50px auto 0 auto;
-        animation: slit-in-vertical 0.2s linear 0s 1 normal none;
     }
 }
 
@@ -408,7 +429,6 @@
             height: 100%;
             bottom: 0;
             right: 0;
-            animation: fade-in 0.4s ease-in 0s 1 normal none;
 
             & img {
                 position: absolute;

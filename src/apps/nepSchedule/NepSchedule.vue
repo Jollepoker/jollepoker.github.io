@@ -9,19 +9,34 @@
         </div>
         <NepWeekSwitcher :targetDate="targetDate" @changeTargetDate="changeTargetDate" />
     </div>
-    <div v-if="streamsThisWeek.length" class="nepSchedule-scheduleWrapper">
-        <NepStream
-            v-for="stream in streamsThisWeek"
-            :key="stream.time"
-            :now="now"
-            :streamData="stream"
+    <Transition
+        leave-active-class="slit-transition-delay"
+    >
+        <TransitionGroup
+            v-show="streamsThisWeek.length"
+            class="nepSchedule-scheduleWrapper"
+            tag="div"
+            enter-active-class="slit-vertical-enter"
+            leave-active-class="slit-vertical-leave"
+        >
+            <NepStream
+                v-for="stream in streamsThisWeek"
+                :key="stream.time"
+                :now="now"
+                :streamData="stream"
+            />
+        </TransitionGroup>
+    </Transition>
+    <Transition
+        enter-active-class="fade-in"
+        leave-active-class="fade-out"
+    >
+        <NepDisplay
+            v-if="streamsThisWeek.length < 3"
+            :targetDate="targetDate"
+            :showWithStreams="streamsThisWeek.length > 0"
         />
-    </div>
-    <NepDisplay
-        v-if="streamsThisWeek.length < 3"
-        :targetDate="targetDate"
-        :showWithStreams="streamsThisWeek.length > 0"
-    />
+    </Transition>
 </template>
 
 <script lang="ts">
