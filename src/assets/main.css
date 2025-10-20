@@ -184,7 +184,6 @@ a {
 
 #nep-siteWrapper {
     padding-top: 84px;
-    container: siteWrapper / size;
 
     &::before {
         content: '';
@@ -246,8 +245,6 @@ a {
 }
 
 #nep-contentWrapper {
-    container: contentWrapper / size;
-
     & header {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -287,7 +284,6 @@ a {
     }
 
     & main {
-        container: main / size;
         grid-row-start: 2;
         grid-row-end: 3;
     }
@@ -346,10 +342,11 @@ a {
 
 @media screen and (min-width: 920px) and (min-height: 780px) {
     #nep-siteWrapper {
+        container: siteWrapper / size;
         padding: 57px 84px;
         overflow: hidden;
-        height: 100vh;
         box-sizing: border-box;
+        height: 100vh;
 
         &::before {
             border-image-source: url(/assets/images/site/frameNoTopDecor.webp);
@@ -373,6 +370,7 @@ a {
         }
     }
     #nep-contentWrapper {
+        container: contentWrapper / size;
         height: 100cqh;
 
         & header {
@@ -411,6 +409,7 @@ a {
         }
 
         & main {
+            container: main / size;
             grid-row-start: 2;
             grid-row-end: 3;
             margin-bottom: 0;
