@@ -559,7 +559,7 @@
             container: streamContentHeader / inline-size;
 
             & .nepSchedule-streamTitleImage {
-                max-height: min(10vh, 170px);
+                max-height: 170px;
             }
         }
 
