@@ -310,7 +310,7 @@
         justify-content: space-around;
 
         & > * {
-            margin-bottom: 1em;
+            margin-bottom: 0.75em;
         }
 
         & .nepSchedule-emote-left,
@@ -340,6 +340,7 @@
         }
 
         & .nepSchedule-streamComment {
+            font-size: min(2em,5vw);
             align-content: center;
             text-align: center;
         }
@@ -561,10 +562,6 @@
             & .nepSchedule-streamTitleImage {
                 max-height: 170px;
             }
-        }
-
-        & .nepSchedule-streamComment {
-            font-size: 1vw;
         }
     }
 
