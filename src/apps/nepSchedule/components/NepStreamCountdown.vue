@@ -1,6 +1,6 @@
 <template>
     <fieldset class="nepSchedule-liveBox">
-        <legend v-if="streamData.liveDate" class="nepSchedule-live">LIVE</legend>
+        <legend v-if="streamData.liveDate && !streamData.noLive" class="nepSchedule-live">LIVE</legend>
         <span class="nepSchedule-liveBoxContent">{{ boxText }}</span>
     </fieldset>
 </template>

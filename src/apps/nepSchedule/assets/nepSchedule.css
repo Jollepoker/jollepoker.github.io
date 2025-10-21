@@ -36,6 +36,7 @@
 #nep-contentWrapper {
     & main:has(.nepSchedule-scheduleWrapper) {
         margin-bottom: 2em;
+        overflow-x: hidden;
     }
 }
 
@@ -121,10 +122,6 @@
         max-width: 600px;
         margin: 50px auto 0 auto;
         animation: slit-in-vertical 0.2s linear 0s 1 normal none;
-    }
-
-    & .nepSchedule-streamWrapper:first-child {
-        margin: 0 auto;
     }
 }
 
@@ -525,30 +522,29 @@
 
     .nepSchedule-scheduleWrapper {
         display: grid;
-        grid-template-rows: 28% 28% 28%;
-        grid-template-columns: 31.6% 31.6% 31.6%;
-        column-gap: 3%;
-        row-gap: 4%;
-        max-width: 97%;
-        height: 94%;
-        margin: 0 1%;
+        height: 74vh;
+        grid-template-columns: 31.33% 31.33% 31.33%;
+        column-gap: max(2rem, 2.33%);
+        align-content: start;
+        padding-bottom: 1rem;
+        margin-right: 2rem;
+        margin-top: 3rem;
+        scrollbar-width: none;
+        overflow-x: hidden;
+        overflow-y: auto;
 
         & .nepSchedule-streamWrapper {
-            height: 100%;
             width: 100%;
-            max-width: unset;
-            margin: 0;
+            max-width: none;
         }
     }
 
     .nepSchedule-streamContentWrapper {
         & .nepSchedule-streamContentHeader {
-            & .nepSchedule-streamTitle {
-                font-size: 2vw;
-            }
+            container: streamContentHeader / inline-size;
 
             & .nepSchedule-streamTitleImage {
-                max-height: 10vh;
+                max-height: min(10vh, 170px);
             }
         }
 
@@ -588,7 +584,7 @@
     }
 
     .nepSchedule-scheduleWrapper {
-        grid-template-rows: 28.5% 28.5% 28.5%;
+        padding: 0 1rem 1rem 1rem;
     }
 
     .nepSchedule-nepDisplayWrapper {
@@ -601,10 +597,6 @@
 @media screen and (min-width: 1620px) and (min-height: 780px) {
     .nepSchedule-weekWrapper {
         margin: 0 auto 2% auto;
-    }
-
-    .nepSchedule-scheduleWrapper {
-        grid-template-rows: 29% 29% 29%;
     }
 
     .nepSchedule-nepDisplayWrapper {
