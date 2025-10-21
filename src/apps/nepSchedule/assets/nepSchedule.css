@@ -341,7 +341,7 @@
         }
 
         & .nepSchedule-streamComment {
-            font-size: min(2em,5vw);
+            font-size: min(1.5em,5vw);
             align-content: center;
             text-align: center;
         }
