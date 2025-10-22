@@ -16,7 +16,7 @@ export default defineComponent({
                 window.location.href = "https://discord.gg/6W8zcgQVH6";
                 break;
             default:
-                window.location.href = "https://discord.gg/SbHQGPppqb";
+                window.location.href = "https://discord.gg/cC4jNz8utg";
         }
     },
 });
