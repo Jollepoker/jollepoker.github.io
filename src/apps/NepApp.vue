@@ -17,6 +17,8 @@
                         href="https://youtube.com/@neppienep"
                     ></a>
                     <a class="nep-discord" title="discord" href="https://discord.gg/SbHQGPppqb"></a>
+                    <a class="nep-katabasis-discord" title="katabasis discord" href="https://discord.gg/FHTzjrFJrH"></a>
+                    <a class="nep-katabasis" title="katabasis website" href="https://katabasis.moe/"></a>
                 </div>
             </header>
             <main>

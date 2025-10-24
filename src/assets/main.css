@@ -243,6 +243,22 @@ a {
             background-image: url(/assets/images/site/discordlogohover.webp);
         }
     }
+
+    & .nep-katabasis-discord {
+        background-image: url(/assets/images/site/discordlogokatabasis.webp);
+
+        &:hover {
+            background-image: url(/assets/images/site/discordlogokatabasishover.webp);
+        }
+    }
+
+    & .nep-katabasis {
+        background-image: url(/assets/images/site/katabasislogo.webp);
+
+        &:hover {
+            background-image: url(/assets/images/site/katabasislogohover.webp);
+        }
+    }
 }
 
 #nep-contentWrapper {
@@ -266,7 +282,7 @@ a {
         & .nep-linkWrapper {
             display: grid;
             grid-template-rows: 50% 50%;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 33% 33% 33%;
             width: 100%;
             height: 100%;
 
