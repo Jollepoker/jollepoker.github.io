@@ -271,6 +271,7 @@
     border-image-repeat: stretch;
     border-image-outset: 17px;
     border-style: solid;
+    border-radius: 20px;
     user-select: none;
     will-change: background-position;
 
