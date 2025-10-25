@@ -115,6 +115,8 @@
 > *The general hangout place!*
 #rooftop
 > *The rooftop is where the cool kids hang out and post memes!*
+#pats-and-prayers
+> *Do you wish to pat, pray or just offer good wishes to the Katabasis members? You can do that here!*
 #granny-forum
 > *Wish your topic of choice had it's own channel? Try making a thread here!*
 #the-arcade
