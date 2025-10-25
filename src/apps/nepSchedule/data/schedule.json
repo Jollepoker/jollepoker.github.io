@@ -4673,7 +4673,7 @@
     "layout": [
       {
         "type": "titleLogo",
-        "image": "parasiteeve.webp"
+        "image": "isopod.webp"
       }
     ]
   },
@@ -4714,6 +4714,7 @@
   },
   {
     "time": "2025-10-24T16:00:00.000+01:00",
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
@@ -4723,6 +4724,7 @@
   },
   {
     "time": "2025-10-25T00:00:00.000+01:00",
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
