@@ -4764,8 +4764,8 @@
     "time": "2025-10-26T16:00:00.000+01:00",
     "layout": [
       {
-        "type": "title",
-        "text": "Make a DOOM map with me!"
+        "type": "titleLogo",
+        "image": "kinkispiritualaffairsbureau.webp"
       }
     ]
   },
