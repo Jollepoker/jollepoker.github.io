@@ -4771,7 +4771,7 @@
   },
   {
     "time": "2025-10-26T22:00:00.000+00:00",
-    "discord": true,
+    "discordKb": true,
     "layout": [
       {
         "type": "title",

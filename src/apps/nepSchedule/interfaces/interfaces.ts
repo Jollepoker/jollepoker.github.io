@@ -31,6 +31,7 @@ export interface NepScheduleJsonData {
     time: string;
     liveDate?: Dayjs;
     discord?: boolean;
+    discordKb?: boolean;
     canceled?: boolean;
     hideDate?: boolean;
     glitter?: boolean;

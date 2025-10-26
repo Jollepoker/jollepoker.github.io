@@ -9,7 +9,7 @@ However, only one setting can be used at a time.
 A schedule can have another streamer than Nep (twitch only). If nep is the streamer, no streamer should be set.
 
 These are the settings:
-discord, glitter, canceled, hideDate, noLink
+discord, discordKb, glitter, canceled, hideDate, noLink
 
 There are no issues in saving mutliple weeks worth of schedule, no matter if the weeks are in the past or the future.
 
