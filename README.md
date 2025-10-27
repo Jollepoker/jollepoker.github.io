@@ -37,3 +37,9 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Deploy to gh-pages
+
+```sh
+npm run deploy
+```
