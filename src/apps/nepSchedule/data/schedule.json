@@ -4791,5 +4791,120 @@
         "image": "parasiteeve.webp"
       }
     ]
+  },
+  {
+    "time": "2025-10-28T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "splatterhouse.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Splatterhouse 2 & 3"
+      }
+    ]
+  },
+  {
+    "time": "2025-10-29T19:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "l4d2.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class=\"katabasisColour\">Katabasis</span>"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-10-30T00:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "ASMR...."
+      },
+      {
+        "type": "comment",
+        "text": "roleplay... .... ....."
+      }
+    ]
+  },
+  {
+    "time": "2025-10-30T19:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "fortnite.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class=\"chaiColour\">Ch4i</span>!!!!!!"
+      }
+    ]
+  },
+  {
+    "time": "2025-10-31T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "HALLOWEEN PARTY!!!"
+      },
+      {
+        "type": "comment",
+        "text": "🎃👻🕷️🧛‍♂️🧟‍♀️🐺🌕"
+      }
+    ]
+  },
+  {
+    "time": "2025-10-31T22:00:00.000+00:00",
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Scary movies in discord!!!"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-01T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "yomawarinightalone.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-02T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "isopod.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-02T23:00:00.000+00:00",
+    "discordKb": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "KB Discord Movie Night"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      }
+    ]
   }
 ]
