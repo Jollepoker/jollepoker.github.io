@@ -4876,6 +4876,27 @@
     ]
   },
   {
+    "time": "2025-11-01T13:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "marioparty2.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class=\"katabasisColour\">Katabasis</span>"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      }
+    ]
+  },
+  {
     "time": "2025-11-01T17:00:00.000+00:00",
     "layout": [
       {
