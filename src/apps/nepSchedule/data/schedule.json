@@ -4945,6 +4945,7 @@
   },
   {
     "time": "2025-11-04T14:00:00.000+00:00",
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
@@ -4961,11 +4962,7 @@
     "layout": [
       {
         "type": "titleLogo",
-        "image": "peak.webp"
-      },
-      {
-        "type": "comment",
-        "text": "w/ <span class=\"katabasisColour\">KATABASIS!</span> + batsu!"
+        "image": "tetriseffect.webp"
       }
     ]
   },
@@ -4974,7 +4971,11 @@
     "layout": [
       {
         "type": "titleLogo",
-        "image": "tetriseffect.webp"
+        "image": "peak.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class=\"katabasisColour\">KATABASIS!</span> + batsu!"
       }
     ]
   },
