@@ -4929,5 +4929,18 @@
         "image": "30/katabasis.webp"
       }
     ]
+  },
+  {
+    "time": "2025-11-04T00:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "umevsmp.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Minecraft with 85+ VTubers!"
+      }
+    ]
   }
 ]
