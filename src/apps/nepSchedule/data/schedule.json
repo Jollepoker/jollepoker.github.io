@@ -4931,7 +4931,16 @@
     ]
   },
   {
-    "time": "2025-11-04T01:00:00.000+00:00",
+    "time": "2025-11-03T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "parasiteeve.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-04T14:00:00.000+00:00",
     "layout": [
       {
         "type": "titleLogo",
@@ -4939,7 +4948,70 @@
       },
       {
         "type": "comment",
-        "text": "Minecraft with 85+ VTubers!"
+        "text": "w/ <span class=\"katabasisColour\">KATABASIS!</span>"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-05T14:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "peak.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class=\"katabasisColour\">KATABASIS!</span> + batsu!"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-05T19:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "tetriseffect.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-06T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "madoumonogatari123.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-07T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-07T22:00:00.000+00:00",
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Monsters Movie Night!"
+      },
+      {
+        "type": "comment",
+        "text": "Varan (1958)"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-09T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
       }
     ]
   }
