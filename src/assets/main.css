@@ -218,12 +218,28 @@ a {
         &:hover {
             background-image: url(/assets/images/site/twitterlogohover.webp);
         }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            background-image: url(/assets/images/site/twitterlogohover.webp);
+        }
     }
 
     & .nep-twitch {
         background-image: url(/assets/images/site/twitchlogo.webp);
 
         &:hover {
+            background-image: url(/assets/images/site/twitchlogohover.webp);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
             background-image: url(/assets/images/site/twitchlogohover.webp);
         }
     }
@@ -234,12 +250,28 @@ a {
         &:hover {
             background-image: url(/assets/images/site/youtubelogohover.webp);
         }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            background-image: url(/assets/images/site/youtubelogohover.webp);
+        }
     }
 
     & .nep-discord {
         background-image: url(/assets/images/site/discordlogo.webp);
 
         &:hover {
+            background-image: url(/assets/images/site/discordlogohover.webp);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
             background-image: url(/assets/images/site/discordlogohover.webp);
         }
     }
@@ -250,12 +282,28 @@ a {
         &:hover {
             background-image: url(/assets/images/site/discordlogokatabasishover.webp);
         }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            background-image: url(/assets/images/site/discordlogokatabasishover.webp);
+        }
     }
 
     & .nep-katabasis {
         background-image: url(/assets/images/site/katabasislogo.webp);
 
         &:hover {
+            background-image: url(/assets/images/site/katabasislogohover.webp);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
             background-image: url(/assets/images/site/katabasislogohover.webp);
         }
     }
