@@ -5034,5 +5034,78 @@
         "image": "utawarerumonopreludetothefallen.webp"
       }
     ]
+  },
+  {
+    "time": "2025-11-10T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "madoumonogatari123.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-11T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-12T19:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gwebu.webp"
+      },
+      {
+        "type": "comment",
+        "text": "3D Modelling Gwebu"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-13T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "parasiteeve.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-14T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-15T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-15T22:00:00.000+00:00",
+    "hideDate": true,
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Monster Movie Night: Atragon (1963)!"
+      },
+      {
+        "type": "comment",
+        "text": "After Utawarerumono!"
+      }
+    ]
   }
 ]
