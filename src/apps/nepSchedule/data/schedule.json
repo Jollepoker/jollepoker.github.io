@@ -5087,6 +5087,7 @@
   },
   {
     "time": "2025-11-15T17:00:00.000+00:00",
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
@@ -5095,7 +5096,7 @@
     ]
   },
   {
-    "time": "2025-11-15T22:00:00.000+00:00",
+    "time": "2025-11-16T22:00:00.000+00:00",
     "hideDate": true,
     "discord": true,
     "layout": [
@@ -5105,7 +5106,7 @@
       },
       {
         "type": "comment",
-        "text": "After Utawarerumono!"
+        "text": "Sometime on Sunday!"
       }
     ]
   }
