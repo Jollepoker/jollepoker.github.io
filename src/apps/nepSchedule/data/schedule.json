@@ -5099,6 +5099,7 @@
     "time": "2025-11-16T22:00:00.000+00:00",
     "hideDate": true,
     "discord": true,
+    "canceled": true,
     "layout": [
       {
         "type": "title",
