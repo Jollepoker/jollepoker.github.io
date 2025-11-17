@@ -5110,5 +5110,95 @@
         "text": "Sometime on Sunday!"
       }
     ]
+  },
+  {
+    "time": "2025-11-17T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Idol Practice!!! (karaoke!)"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/nepuCheer.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-18T11:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gwebu.webp"
+      },
+      {
+        "type": "comment",
+        "text": "3D Modelling! (early!!!)"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-18T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "parasiteeve.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-19T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-20T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "madoumonogatari123.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Madou Monogatari 3 (PC-98)"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-21T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-21T22:00:00.000+00:00",
+    "hideDate": true,
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Monster Movie Night: Atragon (1963)!"
+      },
+      {
+        "type": "comment",
+        "text": "After Utawaremono!"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-22T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
   }
 ]
