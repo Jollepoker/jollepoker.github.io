@@ -21,7 +21,9 @@
                     v-else-if="
                         (soonLive || streamData.liveDate) &&
                         !streamData.hideDate &&
-                        !streamData.canceled
+                        !streamData.canceled &&
+                        !streamData.discord &&
+                        !streamData.discordKb
                     "
                     :now="now"
                     :streamData="streamData"
