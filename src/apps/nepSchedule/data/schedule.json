@@ -5170,6 +5170,7 @@
   },
   {
     "time": "2025-11-21T16:00:00.000+00:00",
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
@@ -5178,17 +5179,12 @@
     ]
   },
   {
-    "time": "2025-11-21T22:00:00.000+00:00",
-    "hideDate": true,
+    "time": "2025-11-21T21:00:00.000+00:00",
     "discord": true,
     "layout": [
       {
         "type": "title",
         "text": "Discord Monster Movie Night: Atragon (1963)!"
-      },
-      {
-        "type": "comment",
-        "text": "After Utawaremono!"
       }
     ]
   },
