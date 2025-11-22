@@ -5184,7 +5184,7 @@
     "layout": [
       {
         "type": "title",
-        "text": "Discord Monster Movie Night: Atragon (1963)!"
+        "text": "Discord Hangout"
       }
     ]
   },
@@ -5194,6 +5194,21 @@
       {
         "type": "titleLogo",
         "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-21T22:00:00.000+00:00",
+    "hideDate": true,
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Monster Movie Night: Atragon (1963)!"
+      },
+      {
+        "type": "comment",
+        "text": "After Persona 4 Golden!"
       }
     ]
   }
