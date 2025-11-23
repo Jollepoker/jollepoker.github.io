@@ -565,6 +565,11 @@
             & .nepSchedule-streamTitleImage {
                 max-height: 170px;
             }
+
+            & .nepSchedule-streamTitleImage:first-child:nth-last-child(2),
+            & .nepSchedule-streamTitleImage:first-child:nth-last-child(2) ~ .nepSchedule-streamTitleImage {
+                max-height: 85px;
+            }
         }
     }
 
