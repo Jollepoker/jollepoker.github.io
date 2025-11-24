@@ -5311,8 +5311,8 @@
     "noLive": true,
     "layout": [
       {
-        "type": "title",
-        "text": "Tetrio"
+        "type": "titleLogo",
+        "image": "tetrio.webp"
       },
       {
         "type": "comment",
