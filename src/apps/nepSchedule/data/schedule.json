@@ -5234,7 +5234,7 @@
       },
       {
         "type": "comment",
-        "text": "PS1"
+        "text": "Sega Saturn/Arcade version"
       }
     ]
   },
@@ -5302,6 +5302,21 @@
       {
         "type": "comment",
         "text": "After Persona 4 Golden!"
+      }
+    ]
+  },
+  {
+    "time": "2025-11-29T16:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Tetrio"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel with the silly girls!"
       }
     ]
   }
