@@ -5284,11 +5284,12 @@
     ]
   },
   {
-    "time": "2025-11-29T16:00:00.000+00:00",
+    "time": "2025-11-29T18:00:00.000+00:00",
+    "discord": true,
     "layout": [
       {
-        "type": "titleLogo",
-        "image": "persona4golden.webp"
+        "type": "title",
+        "image": "Discord hangout"
       }
     ]
   },
@@ -5301,7 +5302,7 @@
       },
       {
         "type": "comment",
-        "text": "After Persona 4 Golden!"
+        "text": "After hangout"
       }
     ]
   },
