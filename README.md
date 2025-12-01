@@ -5,6 +5,13 @@ Schedule webpage for vtuber Neppienep
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Extenstions for VSCode:
+* Javascript and Typescript Nightly
+* ESLint
+* Fix All JSON
+* Vue (Official)
+* Prettier - Code formatter
+* GitLens — Git supercharged
 
 ## Type Support for `.vue` Imports in TS
 

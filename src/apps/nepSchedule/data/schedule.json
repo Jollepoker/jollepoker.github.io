@@ -5328,5 +5328,78 @@
         "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
       }
     ]
+  },
+  {
+    "time": "2025-12-02T20:00:00.000+00:00",
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "tetriscardcaptorsakura.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-03T20:00:00.000+00:00",
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-04T20:00:00.000+00:00",
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "metalgearsolid2.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-05T20:00:00.000+00:00",
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Showing you my artbooks!"
+      },
+      {
+        "type": "comment",
+        "text": "(handcam)"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-05T22:00:00.000+00:00",
+    "discord": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Monster Movie Night!*"
+      },
+      {
+        "type": "comment",
+        "text": "After stream!"
+      },
+      {
+        "type": "hover",
+        "text": "Frankenstein vs. Baragon (1965)"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-06T20:00:00.000+00:00",
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      }
+    ]
   }
 ]
