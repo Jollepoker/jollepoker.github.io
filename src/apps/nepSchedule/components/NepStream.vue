@@ -20,7 +20,7 @@
                 <NepStreamCountdown
                     v-else-if="
                         (soonLive || streamData.liveDate) &&
-                        !streamData.hideDate &&
+                        ((streamData.liveDate && streamData.hideDate) || !streamData.hideDate) &&
                         !streamData.canceled
                     "
                     :now="now"
