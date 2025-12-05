@@ -5355,8 +5355,8 @@
     "hideDate": true,
     "layout": [
       {
-        "type": "titleLogo",
-        "image": "metalgearsolid2.webp"
+        "type": "title",
+        "text": "Twitter space"
       }
     ]
   },
