@@ -5365,12 +5365,8 @@
     "hideDate": true,
     "layout": [
       {
-        "type": "title",
-        "text": "Showing you my artbooks!"
-      },
-      {
-        "type": "comment",
-        "text": "(handcam)"
+        "type": "titleLogo",
+        "image": "metalgearsolid2.webp"
       }
     ]
   },
