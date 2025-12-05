@@ -5363,6 +5363,7 @@
   {
     "time": "2025-12-05T16:00:00.000+00:00",
     "hideDate": true,
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
@@ -5392,6 +5393,7 @@
   {
     "time": "2025-12-06T16:00:00.000+00:00",
     "hideDate": true,
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
