@@ -5400,5 +5400,127 @@
         "image": "utawarerumonopreludetothefallen.webp"
       }
     ]
+  },
+  {
+    "time": "2025-12-15T21:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "KataChristmas Debuts!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-16T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "magicaltetrischallenge.webp"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-17T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "vrchat.webp"
+      },
+      {
+        "type": "comment",
+        "text": "/w Christmas Nep!"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-18T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Retro Christmas Demos!!"
+      },
+      {
+        "type": "comment",
+        "text": "Christmas Lemmings & Christmas NIGHTS into Dreams"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-19T23:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "roblox.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-20T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Making Straightface Decorations!"
+      },
+      {
+        "type": "comment",
+        "text": "Handcam!!!"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-20T22:00:00.000+00:00",
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Movie Night!"
+      },
+      {
+        "type": "comment",
+        "text": "Parasite Eve (1997)"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-20T22:00:00.000+00:00",
+    "discordKb": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Mystery Christmas Movie!"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> Discord server!"
+      }
+    ]
   }
 ]
