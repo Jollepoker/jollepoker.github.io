@@ -5447,7 +5447,7 @@
     ]
   },
   {
-    "time": "2025-12-18T17:00:00.000+00:00",
+    "time": "2025-12-18T20:00:00.000+00:00",
     "layout": [
       {
         "type": "title",
@@ -5461,8 +5461,6 @@
   },
   {
     "time": "2025-12-19T23:00:00.000+00:00",
-    "noLink": true,
-    "noLive": true,
     "layout": [
       {
         "type": "titleLogo",
@@ -5478,7 +5476,7 @@
       },
       {
         "type": "comment",
-        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+        "text": "on all <span class=\"katabasisColour\">Katabasis</span> girl channels!"
       }
     ]
   },
