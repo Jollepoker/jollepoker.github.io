@@ -5497,14 +5497,15 @@
   {
     "time": "2025-12-20T22:00:00.000+00:00",
     "discord": true,
+    "hideDate": true,
     "layout": [
       {
         "type": "title",
-        "text": "Discord Movie Night!"
+        "text": "Discord Movie Night: Parasite Eve (1997)!"
       },
       {
         "type": "comment",
-        "text": "Parasite Eve (1997)"
+        "text": "After handcam!!"
       }
     ]
   },
