@@ -5603,5 +5603,77 @@
         "image": "milanosoddjobcollection.webp"
       }
     ]
+  },
+  {
+    "time": "2025-12-30T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "tetrio.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Tetris Tuesday!!!"
+      }
+    ]
+  },
+  {
+    "time": "2025-12-31T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "New Years Eve Party!"
+      },
+      {
+        "type": "comment",
+        "text": "+ special announcement"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-01T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Drawing together & Resolutions!!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-02T23:59:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "3DIO ASMR: i'm testing triggers!"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-03T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-03T22:00:00.000+00:00",
+    "discord": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Movie Night!*"
+      },
+      {
+        "type": "hover",
+        "text": "Invasion of Astro-Monster (1965)"
+      },
+      {
+        "type": "comment",
+        "text": "after Persona 4!"
+      }
+    ]
   }
 ]
