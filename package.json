@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" -- && cpx CNAME dist && cpx exposed.html dist",
+    "build": "run-p type-check \"build-only {@}\" -- && cpx --dereference CNAME dist && cpx --dereference exposed.html dist",
     "deploy": "run-p build && git add -f dist/. && git commit -m \"update dist\" && git subtree push --prefix dist origin gh-pages",
     "preview": "vite preview",
     "build-only": "vite build",
