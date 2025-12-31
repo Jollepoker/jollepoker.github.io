@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" -- && copy CNAME dist\\CNAME && copy \"exposed.html\" dist\\\"exposed.html\"",
+    "build": "run-p type-check \"build-only {@}\" -- && cpx --dereference CNAME dist && cpx --dereference exposed.html dist",
     "deploy": "run-p build && git add -f dist/. && git commit -m \"update dist\" && git subtree push --prefix dist origin gh-pages",
     "preview": "vite preview",
     "build-only": "vite build",
@@ -28,6 +28,7 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.5.0",
     "@vue/tsconfig": "^0.7.0",
+    "cpx": "^1.5.0",
     "eslint": "^9.22.0",
     "eslint-plugin-vue": "~10.0.0",
     "jiti": "^2.4.2",
