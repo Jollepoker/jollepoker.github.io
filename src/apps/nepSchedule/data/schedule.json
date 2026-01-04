@@ -5698,5 +5698,77 @@
         "text": "after Persona 4!"
       }
     ]
+  },
+  {
+    "time": "2026-01-05T20:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Artbook Show & Tell Handcam"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-06T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "puyopuyotetris2.webp"
+      },
+      {
+        "type": "comment",
+        "text": "with U!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-07T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "kirbysdreamland.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-08T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-09T16:00:00.000+00:00",
+    "glitter": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "NEW OUTFIT DEBUT!!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-09T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "mahjongsoul.webp"
+      },
+      {
+        "type": "comment",
+        "text": "together!!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-10T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      }
+    ]
   }
 ]
