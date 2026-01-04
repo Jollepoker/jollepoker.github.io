@@ -1,0 +1,616 @@
+@keyframes breathing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slit-in-vertical {
+    0% {
+        transform: translateZ(-800px) rotateY(90deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translateZ(-160px) rotateY(87deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateZ(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slit-vertical-enter {
+    transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+    animation: slit-in-vertical 0.2s linear 0.2s 1 normal none;
+}
+
+.slit-vertical-leave {
+    animation: slit-in-vertical 0.2s linear 0s 1 reverse none;
+}
+
+.slit-transition-delay {
+    transition-duration: 0;
+    transition-delay: 0.2s;
+}
+
+.fade-in {
+    animation: fade-in 0.4s ease-in 0s 1 normal none;
+}
+
+.fade-out {
+    animation: fade-in 0.4s ease-in 0s 1 reverse none;
+}
+
+#nep-contentWrapper {
+    & main:has(.nepSchedule-scheduleWrapper) {
+        overflow: hidden;
+    }
+}
+
+.nepSchedule-weekWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    user-select: none;
+    margin: 0 5%;
+    padding: 0.5em 0.5em;
+    border-radius: 1em;
+    background-color: #2c1406;
+    border: 3px solid #dcbb89;
+
+    & .nepSchedule-currentWeek {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        width: 20%;
+
+        & .nepSchedule-streamDay {
+            margin-left: 0.25em;
+        }
+
+        & .nepSchedule-streamYear {
+            margin-left: 0.5em;
+        }
+    }
+
+    & .nepSchedule-weekSwitcherWrapper {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 65%;
+
+        & .nepSchedule-weekSwitcherArrow {
+            position: absolute;
+            right: 0;
+            padding: 0 min(2vw, 40px);
+            animation: var(--animation-cursor-pointer);
+            font-size: 2em;
+            transition: filter 0.1s;
+
+            &:first-of-type {
+                left: 0;
+                right: unset;
+            }
+
+            &:hover {
+                filter: drop-shadow(0px 0px 5px #f9eca1);
+            }
+        }
+    }
+
+    & .nepSchedule-weekSwitcherTodayWrapper {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        width: 15%;
+
+        & .nepSchedule-weekSwitcherToday {
+            animation: var(--animation-cursor-pointer);
+            padding-left: 2vw;
+
+            &:hover {
+                filter: drop-shadow(0px 0px 5px #f9eca1);
+            }
+        }
+    }
+}
+
+.nepSchedule-scheduleWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    & .nepSchedule-streamWrapper {
+        height: 250px;
+        width: 85vw;
+        max-width: 600px;
+        margin: 50px auto 0 auto;
+    }
+}
+
+.nepSchedule-streamWrapper,
+.nepSchedule-stream,
+.nepSchedule-streamContentWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.nepSchedule-stream {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &.nepSchedule-live {
+        box-shadow: 0px 0px 30px 10px #f9eca1;
+    }
+
+    &.nepSchedule-canceled {
+        filter: grayscale(1);
+    }
+
+    & > a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &:has(a:hover) .nepSchedule-streamContentWrapper .nepSchedule-streamHover {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.nepSchedule-streamHeaderWrapper {
+    position: absolute;
+    z-index: 1;
+    top: -1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 10%;
+
+    & > *:not(img) {
+        align-self: center;
+        align-content: center;
+        text-align: center;
+        height: 3vw;
+        width: 7vw;
+        max-height: 50px;
+        max-width: min(33%, 100px);
+        min-height: 35.5px;
+        min-width: min(33%, 75px);
+        border-radius: 1em;
+        background-color: #2c1406;
+        border: 3px solid #dcbb89;
+        user-select: none;
+    }
+
+    & img {
+        align-self: center;
+        align-content: center;
+        max-height: 50px;
+        max-width: min(33%, 100px);
+        min-height: 35.5px;
+        min-width: min(33%, 75px);
+        aspect-ratio: 132/100;
+    }
+
+    & fieldset {
+        display: flex;
+        justify-content: center;
+
+        & span {
+            align-content: center;
+        }
+    }
+
+    & fieldset:has(.nepSchedule-live) {
+        min-height: 3em;
+
+        & legend {
+            margin: 0 auto;
+            color: #dcbb89;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            user-select: none;
+            margin: 0 auto;
+            padding: 0.5em 0.5em;
+            border-radius: 1em;
+            background-color: #2c1406;
+            border: 3px solid #dcbb89;
+            text-align: center;
+            z-index: 1;
+            margin-top: -1em;
+        }
+
+        & span {
+            align-content: baseline;
+        }
+    }
+}
+
+.nepSchedule-streamContentWrapper {
+    position: relative;
+    display: grid;
+    grid-template-rows: minmax(auto, 1fr) auto;
+    box-sizing: border-box;
+    padding: 0 40px;
+    background: repeating-conic-gradient(
+        from 45deg,
+        rgba(28, 8, 3, 0.85) 0% 25%,
+        rgba(70, 25, 17, 0.85) 0% 50%
+    );
+    background-size: var(--checker-background-width) var(--checker-background-height);
+    animation: checker-bg-scrolling 1.2s infinite;
+    animation-timing-function: linear;
+    border-image-source: url(/assets/images/site/ornamentbordervertical.webp);
+    border-image-slice: 0 58;
+    border-image-width: 0 60px;
+    border-image-repeat: stretch;
+    border-image-outset: 17px;
+    border-style: solid;
+    border-radius: 20px;
+    user-select: none;
+    will-change: background-position;
+
+    &.nepSchedule-canceled {
+        animation: none;
+    }
+
+    & .nepSchedule-streamContentHeader {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        &:has(> .nepSchedule-streamTitleImage) {
+            background: radial-gradient(
+                ellipse at center,
+                rgba(220, 187, 137, 1) 0%,
+                rgba(220, 187, 137, 0.6) 50%,
+                rgba(220, 187, 137, 0) 70%
+            );
+        }
+
+        & .nepSchedule-streamTitle {
+            font-size: min(2em, 8vw);
+            text-align: center;
+        }
+
+        & .nepSchedule-streamTitleImage {
+            display: inline;
+            max-width: 100%;
+            margin: 0 auto;
+            max-height: 100px;
+            vertical-align: bottom;
+        }
+    }
+
+    & .nepSchedule-streamContentSection {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        & > * {
+            margin-bottom: 0.75em;
+        }
+
+        & .nepSchedule-emote-left,
+        & .nepSchedule-emote-right {
+            width: 4vw;
+            height: 4vw;
+            max-width: 60px;
+            max-height: 60px;
+            min-width: 35px;
+            min-height: 35px;
+            align-self: center;
+
+            &.nepSchedule-wideEmote {
+                width: 8vw;
+                max-width: 120px;
+                min-width: 75px;
+            }
+
+            &.nepSchedule-bigEmote {
+                scale: 130%;
+            }
+
+            &.nepSchedule-reverse {
+                transform: scaleX(-1);
+            }
+        }
+
+        & .nepSchedule-streamComment {
+            font-size: min(1.5em,5vw);
+            align-content: center;
+            text-align: center;
+        }
+    }
+
+    & .nepSchedule-streamHover {
+        display: block;
+        background-color: #2c1406;
+        border: 3px solid #dcbb89;
+        padding: 20px;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 80%;
+        z-index: 5;
+        border-radius: 20px;
+        justify-self: center;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+            visibility 0.2s,
+            opacity 0.2s ease-out;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -11px;
+            width: 15px;
+            height: 15px;
+            border-bottom: 3px solid #dcbb89;
+            border-right: 3px solid #dcbb89;
+            background: #2c1406;
+            left: 50%;
+            margin-left: -10px;
+            transform: rotate(45deg);
+        }
+
+        & > a {
+            pointer-events: all;
+        }
+    }
+
+    &:hover .nepSchedule-streamHover {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.nepSchedule-nepDisplayWrapper {
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+    margin-top: 3em;
+    position: relative;
+
+    &.withStreams {
+        display: none;
+    }
+
+    & .nepSchedule-noStreamsMessageWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        user-select: none;
+        margin: 0 5%;
+        padding: 0.5em 0.5em;
+        border-radius: 1em;
+        background-color: #2c1406;
+        border: 3px solid #dcbb89;
+        text-align: center;
+        z-index: 1;
+    }
+
+    & .nepSchedule-nepDisplayNep {
+        display: none;
+    }
+
+    @media screen and (min-height: 500px) {
+        & .nepSchedule-nepDisplayNep {
+            display: block;
+            position: fixed;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+
+            & img {
+                position: absolute;
+                right: 5vw;
+                bottom: min(0vw, 80px);
+                width: min(75vw, 450px);
+                transition: bottom 1s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+                animation: breathing 8s infinite;
+                will-change: transform;
+
+                &.nepSchedule-leaving {
+                    bottom: min(-50vh, -600px);
+                }
+            }
+        }
+
+        & .nepSchedule-nepDisplayTable {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(/assets/images/site/desk.webp);
+            background-position: bottom right -15vw;
+            background-repeat: no-repeat;
+            background-size: max(min(100vw, 1000px), 500px);
+            z-index: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) and (max-height: 450px) {
+    .nepSchedule-weekWrapper {
+        & .nepSchedule-weekSwitcherWrapper {
+            flex-direction: column;
+            width: 50%;
+            text-align: center;
+
+            & .nepSchedule-weekSwitcherArrow {
+                position: relative;
+                animation: var(--animation-cursor-pointer);
+                font-size: 2em;
+
+                &:first-of-type {
+                    left: 0;
+                    right: unset;
+                }
+
+                &:hover {
+                    filter: drop-shadow(0px 0px 5px #f9eca1);
+                }
+            }
+        }
+
+        & .nepSchedule-weekSwitcherTodayWrapper {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            width: 25%;
+
+            & .nepSchedule-weekSwitcherToday {
+                animation: var(--animation-cursor-pointer);
+                padding-left: 2vw;
+
+                &:hover {
+                    filter: drop-shadow(0px 0px 5px #f9eca1);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .nepSchedule-weekWrapper {
+        width: 50%;
+        min-width: 511px;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0.5em 1em;
+        margin-bottom: 3em;
+
+        & .nepSchedule-currentWeek {
+            flex-direction: row;
+            width: 25%;
+        }
+
+        & .nepSchedule-weekSwitcherWrapper {
+            width: 50%;
+        }
+
+        & .nepSchedule-weekSwitcherTodayWrapper {
+            width: 25%;
+        }
+    }
+
+    .nepSchedule-nepDisplayWrapper {
+        & .nepSchedule-noStreamsMessageWrapper {
+            width: 50%;
+            min-width: 511px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0.5em 1em;
+        }
+    }
+}
+
+@media screen and (min-width: 920px) and (min-height: 780px) {
+    .nepSchedule-scheduleWrapper {
+        display: grid;
+        height: calc(100cqh - 7em);
+        grid-template-columns: 31.77% 31.77% 31.77%;
+        column-gap: 2.33%;
+        align-content: start;
+        padding: 0 1rem 1rem 1rem;
+        scrollbar-width: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: calc(100% - 2rem);
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgb(0, 0, 0) 2%);
+
+        & .nepSchedule-streamWrapper {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    .nepSchedule-streamContentWrapper {
+        & .nepSchedule-streamContentHeader {
+            container: streamContentHeader / inline-size;
+
+            & .nepSchedule-streamTitleImage {
+                max-height: 170px;
+            }
+
+            & .nepSchedule-streamTitleImage:first-child:nth-last-child(2),
+            & .nepSchedule-streamTitleImage:first-child:nth-last-child(2) ~ .nepSchedule-streamTitleImage {
+                max-height: 85px;
+            }
+        }
+    }
+
+    .nepSchedule-nepDisplayWrapper {
+        &.withStreams {
+            display: block;
+        }
+
+        & .nepSchedule-noStreamsMessageWrapper {
+            margin: -2.5% auto 0 auto;
+        }
+
+        & .nepSchedule-nepDisplayNep {
+            & img {
+                right: 7vw;
+                bottom: min(2vw, 400px);
+                height: 60vh;
+                width: auto;
+            }
+        }
+
+        & .nepSchedule-nepDisplayTable {
+            background-position: bottom 2vh right -15vw;
+            background-size: max(60vw, 1200px);
+        }
+    }
+}
+
+@media screen and (min-width: 1420px) and (min-height: 780px) {
+    .nepSchedule-nepDisplayWrapper {
+        & .nepSchedule-noStreamsMessageWrapper {
+            margin: -2% auto 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1620px) and (min-height: 780px) {
+    .nepSchedule-nepDisplayWrapper {
+        & .nepSchedule-noStreamsMessageWrapper {
+            margin: -1% auto 0 auto;
+        }
+    }
+}
