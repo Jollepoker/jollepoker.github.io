@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" -- && cpx --dereference CNAME dist && cpx --dereference exposed.html dist",
-    "deploy": "run-p build && git add -f dist/. && git commit -m \"update dist\" && git subtree push --prefix dist origin gh-pages",
+    "deploy": "run-p build && git add -f dist/. && git commit -m \"update dist\" && git subtree split --prefix dist -b gh-pages-temp && git push origin gh-pages-temp:gh-pages --force && git branch -D gh-pages-temp",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
