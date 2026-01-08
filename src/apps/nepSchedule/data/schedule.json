@@ -5649,7 +5649,7 @@
       },
       {
         "type": "comment",
-        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel! "
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
       }
     ]
   },
@@ -5732,10 +5732,16 @@
   },
   {
     "time": "2026-01-08T19:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
     "layout": [
       {
         "type": "title",
         "text": "Youtube partner celebration!!!"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"neppieColour\">Neppienep</span> youtube channel!"
       }
     ]
   },
@@ -5745,7 +5751,7 @@
     "layout": [
       {
         "type": "title",
-        "text": "NEW OUTFIT DEBUT!!!"
+        "text": "<span class=\"neppieColour\">NEW OUTFIT DEBUT!!!</span>"
       }
     ]
   },
