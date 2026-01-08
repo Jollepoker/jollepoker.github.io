@@ -5734,8 +5734,8 @@
     "time": "2026-01-08T16:00:00.000+00:00",
     "layout": [
       {
-        "type": "titleLogo",
-        "image": "persona4golden.webp"
+        "type": "title",
+        "text": "Youtube partner celebration!!"
       }
     ]
   },
