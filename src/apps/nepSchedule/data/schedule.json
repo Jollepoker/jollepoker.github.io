@@ -5776,5 +5776,90 @@
         "image": "utawarerumonopreludetothefallen.webp"
       }
     ]
+  },
+  {
+    "time": "2026-01-13T19:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "touhou10.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-14T23:59:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "ASMR"
+      },
+      {
+        "type": "comment",
+        "text": "Japanese Onomatopoeia"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-15T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "sakurawarssegasaturn.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Sakura Wars Sega Saturn"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-16T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-16T22:00:00.000+00:00",
+    "discord": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Movie Night!*"
+      },
+      {
+        "type": "hover",
+        "text": "The War of Gargantuas (1966)"
+      },
+      {
+        "type": "comment",
+        "text": "after Persona 4!"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-17T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-18T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Handcam!!"
+      },
+      {
+        "type": "comment",
+        "text": "Making Chekis!"
+      }
+    ]
   }
 ]
