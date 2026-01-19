@@ -5805,11 +5805,11 @@
     "layout": [
       {
         "type": "titleLogo",
-        "image": "sakurawarssegasaturn.webp"
+        "image": "mahjongsoul.webp"
       },
       {
         "type": "comment",
-        "text": "Sakura Wars Sega Saturn"
+        "text": "mahjong..."
       }
     ]
   },
@@ -5877,7 +5877,29 @@
     ]
   },
   {
-    "time": "2026-01-19T16:00:00.000+00:00",
+    "time": "2026-01-19T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "3D scuffed cleaning"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-20T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "sandtris.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Tetris Tuesday"
+      } 
+    ]
+  },
+  {
+    "time": "2026-01-21T16:00:00.000+00:00",
     "layout": [
       {
         "type": "titleLogo",
@@ -5886,6 +5908,77 @@
       {
         "type": "comment",
         "text": "Sakura Wars Sega Saturn"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-22T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-23T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-23T23:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "webfishing.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "<span class=\"katabasisColour\">Katabasis</span> hangout with u!"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-24T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "agreeee.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-25T22:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "judofuri.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
       }
     ]
   }
