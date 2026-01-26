@@ -5895,7 +5895,7 @@
       {
         "type": "comment",
         "text": "Tetris Tuesday"
-      } 
+      }
     ]
   },
   {
@@ -5962,6 +5962,7 @@
   },
   {
     "time": "2026-01-25T22:00:00.000+00:00",
+    "canceled": true,
     "noLink": true,
     "noLive": true,
     "layout": [
@@ -5980,6 +5981,100 @@
       {
         "type": "comment",
         "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-26T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-27T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "tetrisnes.webp"
+      },
+      {
+        "type": "comment",
+        "text": "On the NES!"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-28T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "halflifeblueshift.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-29T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "sakurawarssegasaturn.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Sakura Wars Sega Saturn"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-30T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-30T23:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "ds.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class=\"chaiColour\">chai</span> & <span class=\"kikiColour\">kiki</span>"
+      }
+    ]
+  },
+  {
+    "time": "2026-01-31T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Watchalong: Rozen Maiden (2004)"
+      },
+      {
+        "type": "comment",
+        "text": "All 12 episodes!"
+      }
+    ]
+  },
+  {
+    "time": "2026-02-01T23:59:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "ASMR upload"
+      },
+      {
+        "type": "comment",
+        "text": "Reading Alice's Adventures in Wonderland"
       }
     ]
   }
