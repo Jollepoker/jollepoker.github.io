@@ -32,7 +32,7 @@
         leave-active-class="fade-out"
     >
         <NepDisplay
-            v-if="streamsThisWeek.length < 3"
+            v-if="streamsThisWeek.length < 3 || (windowWidth >= 2000 && windowHeight >= 780)"
             :targetDate="targetDate"
             :showWithStreams="streamsThisWeek.length > 0"
         />
@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { ref, defineComponent } from 'vue';
 import type {
     NepScheduleData,
     NepScheduleJsonLayoutData,
@@ -70,6 +70,8 @@ export default defineComponent({
             preLoadedAssets: new Map<string, HTMLImageElement>(),
             appTickInterval: undefined,
             checkIfLiveInterval: undefined,
+            windowWidth: ref(window.innerWidth),
+            windowHeight: ref(window.innerHeight),
         } as NepScheduleData;
     },
     watch: {
@@ -101,12 +103,18 @@ export default defineComponent({
         this.checkIfLiveInterval = setInterval(this.checkIfLive, 120000);
         this.appTickInterval = setInterval(this.appTick, 1000);
         this.checkIfLive();
+        window.addEventListener('resize', this.handleResize);
     },
     unmounted() {
         clearInterval(this.appTickInterval);
         clearInterval(this.checkIfLiveInterval);
+        window.removeEventListener('resize', this.handleResize);
     },
     methods: {
+        handleResize(): void {
+            this.windowWidth = window.innerWidth;
+            this.windowHeight = window.innerHeight;
+        },
         async loadStreamsForTargetDate(): Promise<void> {
             const timeZonedDateStartOfWeek = this.targetDate
                 .tz(this.nepTimezone)

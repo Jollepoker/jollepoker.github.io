@@ -424,7 +424,7 @@
         display: none;
     }
 
-    @media screen and (min-height: 500px) {
+    @media screen and (min-width: 920px) and (min-height: 780px) {
         & .nepSchedule-nepDisplayNep {
             display: block;
             position: fixed;
@@ -585,7 +585,7 @@
 
         & .nepSchedule-nepDisplayNep {
             & img {
-                right: 7vw;
+                right: 3vw;
                 bottom: min(2vw, 400px);
                 height: 60vh;
                 width: auto;
@@ -594,7 +594,7 @@
 
         & .nepSchedule-nepDisplayTable {
             background-position: bottom 2vh right -15vw;
-            background-size: max(60vw, 1200px);
+            background-size: max(55vw, 1100px);
         }
     }
 }
@@ -612,5 +612,11 @@
         & .nepSchedule-noStreamsMessageWrapper {
             margin: -1% auto 0 auto;
         }
+    }
+}
+
+@media screen and (min-width: 2000px) and (min-height: 780px) {
+    .nepSchedule-scheduleWrapper {
+        max-width: 60vw;
     }
 }

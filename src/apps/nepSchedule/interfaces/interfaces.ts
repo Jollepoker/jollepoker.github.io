@@ -1,4 +1,5 @@
 import type { Dayjs } from 'dayjs';
+import type { Ref } from 'vue';
 
 export interface NepScheduleData {
     now: Dayjs;
@@ -10,6 +11,8 @@ export interface NepScheduleData {
     preLoadedAssets: Map<string, HTMLImageElement>;
     appTickInterval?: number;
     checkIfLiveInterval?: number;
+    windowWidth: Ref;
+    windowHeight: Ref;
 }
 
 export interface NepStreamData {
