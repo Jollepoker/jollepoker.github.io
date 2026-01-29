@@ -6010,13 +6010,14 @@
     "time": "2026-01-28T16:00:00.000+00:00",
     "layout": [
       {
-        "type": "titleLogo",
-        "image": "halflifeblueshift.webp"
+        "type": "title",
+        "text": "Happy fun karaoke!!"
       }
     ]
   },
   {
     "time": "2026-01-29T16:00:00.000+00:00",
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
