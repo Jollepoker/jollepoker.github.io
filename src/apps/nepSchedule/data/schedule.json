@@ -6080,5 +6080,112 @@
         "text": "Reading Alice's Adventures in Wonderland"
       }
     ]
+  },
+  {
+    "time": "2026-02-02T17:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gorilla1.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-02-03T17:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gorilla2.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-02-04T17:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gorilla3.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-02-05T17:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gorilla4.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-02-06T17:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gorilla5.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-02-07T17:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gorilla6.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-02-08T17:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gorilla7.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-02-08T22:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "judofuri.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
   }
 ]
