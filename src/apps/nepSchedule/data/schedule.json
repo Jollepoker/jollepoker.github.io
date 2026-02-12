@@ -6239,5 +6239,18 @@
         "text": "✨ Stream 4! ✨"
       }
     ]
+  },
+  {
+    "time": "2026-02-12T21:45:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "stateofplay.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Watchalong!"
+      }
+    ]
   }
 ]
