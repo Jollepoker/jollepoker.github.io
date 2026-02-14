@@ -6254,6 +6254,29 @@
     ]
   },
   {
+    "time": "2026-02-14T15:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Four First Dates: A Katabasis Valentines"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
     "time": "2026-02-14T18:00:00.000+00:00",
     "layout": [
       {
