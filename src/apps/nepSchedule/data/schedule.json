@@ -6321,16 +6321,18 @@
     ]
   },
   {
-    "time": "2026-03-12T16:00:00.000+00:00",
+    "time": "2026-03-12T19:00:00.000+00:00",
+    "discord": true,
     "layout": [
       {
-        "type": "titleLogo",
-        "image": "utawarerumonopreludetothefallen.webp"
+        "type": "title",
+        "text": "Discord hangout"
       }
     ]
   },
   {
     "time": "2026-03-13T19:00:00.000+00:00",
+    "canceled": true,
     "layout": [
       {
         "type": "title",
@@ -6347,7 +6349,16 @@
     ]
   },
   {
-    "time": "2026-03-13T23:00:00.000+00:00",
+    "time": "2026-03-14T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "residentevilrequiem.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-03-15T23:00:00.000+00:00",
     "noLink": true,
     "noLive": true,
     "layout": [
@@ -6358,15 +6369,6 @@
       {
         "type": "comment",
         "text": "Alice's Adventures in Wonderland Ch 5-8"
-      }
-    ]
-  },
-  {
-    "time": "2026-03-14T18:00:00.000+00:00",
-    "layout": [
-      {
-        "type": "titleLogo",
-        "image": "residentevilrequiem.webp"
       }
     ]
   }
