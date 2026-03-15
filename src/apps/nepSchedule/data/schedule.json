@@ -6350,10 +6350,11 @@
   },
   {
     "time": "2026-03-14T18:00:00.000+00:00",
+    "discord": true,
     "layout": [
       {
-        "type": "titleLogo",
-        "image": "residentevilrequiem.webp"
+        "type": "title",
+        "text": "Discord hangout"
       }
     ]
   },
@@ -6361,6 +6362,7 @@
     "time": "2026-03-15T23:00:00.000+00:00",
     "noLink": true,
     "noLive": true,
+    "canceled": true,
     "layout": [
       {
         "type": "title",
