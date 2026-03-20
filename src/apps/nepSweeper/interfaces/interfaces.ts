@@ -30,6 +30,7 @@ export interface NepSweeperData {
     translateZoomToScale: Map<number, number>;
     leaderBoardOpen: boolean;
     masterButtonClass: string;
+    masterButtonPressed: boolean;
 }
 
 export interface NepSweeperDifficulty {

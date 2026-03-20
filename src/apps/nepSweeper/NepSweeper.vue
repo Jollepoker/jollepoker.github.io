@@ -48,7 +48,10 @@
             leaderboard
         </button>
     </div>
-    <div id="nepSweeper-gameWrapper">
+    <div
+        id="nepSweeper-gameWrapper"
+        @contextmenu="handlePrevent"
+    >
         <div
             class="nepSweeper-gameContainer"
             :style="{
@@ -75,6 +78,8 @@
                 :style="{ margin: masterButtonMargin }"
                 @mousedown="handleMasterButtonMouseDown"
                 @mouseup="handleMasterButtonMouseUp"
+                @mouseout="handleMasterButtonMouseOut"
+                @mouseover="handleMasterButtonMouseOver"
             ></div>
             <div :class="timeContainerClass">
                 <div :class="[gameSpriteClass, firstTimeNumberClass]"></div>
@@ -252,6 +257,7 @@ export default defineComponent({
             ]),
             leaderBoardOpen: false,
             masterButtonClass: 'masterButton',
+            masterButtonPressed: false,
         } as NepSweeperData;
     },
     computed: {
@@ -348,6 +354,9 @@ export default defineComponent({
         window.removeEventListener('mouseup', this.handleMouseUp);
     },
     methods: {
+        handlePrevent(e: MouseEvent): void {
+            e.preventDefault();
+        },
         handleKeyDown(e: KeyboardEvent): void {
             if (e.key === ' ' && this.mouseHoverTile !== undefined && !this.gameOver) {
                 if (
@@ -377,10 +386,12 @@ export default defineComponent({
                 // middle click
                 this.leftPressed = false;
                 this.rightPressed = false;
+                this.masterButtonPressed = false;
                 this.resetMasterButton();
             } else if (e.button === 0) {
                 // left click
                 this.leftPressed = false;
+                this.masterButtonPressed = false;
                 this.resetMasterButton();
             } else if (e.button === 2) {
                 // right click
@@ -481,11 +492,25 @@ export default defineComponent({
             this.setZoomLevel(this.currentZoomLevel, target.value);
             target.blur();
         },
-        handleMasterButtonMouseDown(): void {
-            this.masterButtonClass = 'masterButtonPressed';
+        handleMasterButtonMouseDown(e: MouseEvent): void {
+            if (e.button === 0 || e.button === 1) {
+                this.masterButtonPressed = true;
+                this.masterButtonClass = 'masterButtonPressed';
+            }
         },
-        handleMasterButtonMouseUp(): void {
-            this.resetBoard();
+        handleMasterButtonMouseUp(e: MouseEvent): void {
+            if (this.masterButtonClass === 'masterButtonPressed' && (e.button === 0 || e.button === 1)) {
+                this.masterButtonPressed = false;
+                this.resetBoard();
+            }
+        },
+        handleMasterButtonMouseOut(): void {
+            this.resetMasterButton();
+        },
+        handleMasterButtonMouseOver(): void {
+            if (this.masterButtonPressed) {
+                this.masterButtonClass = 'masterButtonPressed';
+            }
         },
         resetButtons(): void {
             this.resetMasterButton();
