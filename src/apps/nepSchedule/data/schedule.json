@@ -6373,5 +6373,68 @@
         "text": "Alice's Adventures in Wonderland Ch 5-8"
       }
     ]
+  },
+  {
+    "time": "2026-03-16T19:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Cat sings a song"
+      },
+      {
+        "type": "comment",
+        "text": "Listen....."
+      }
+    ]
+  },
+  {
+    "time": "2026-03-17T19:30:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "cirnoliftsaboulder.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-03-20T19:30:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Games!"
+      },
+      {
+        "type": "comment",
+        "text": "it's my turn on the neppienep computer"
+      }
+    ]
+  },
+  {
+    "time": "2026-03-21T19:30:00.000+00:00",
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord hangout"
+      }
+    ]
+  },
+  {
+    "time": "2026-03-23T20:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "residentevilrequiem.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-03-25T20:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      }
+    ]
   }
 ]
