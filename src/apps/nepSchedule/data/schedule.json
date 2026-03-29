@@ -6445,5 +6445,14 @@
         "image": "outerwilds.webp"
       }
     ]
+  },
+  {
+    "time": "2026-03-29T19:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "pikmin.webp"
+      }
+    ]
   }
 ]
