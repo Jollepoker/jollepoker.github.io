@@ -6463,5 +6463,47 @@
         "image": "mahjongsoul.webp"
       }
     ]
+  },
+  {
+    "time": "2026-04-01T15:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis April Fools"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-01T20:30:00.000+01:00",
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord hangout"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-02T16:30:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "pikmin.webp"
+      }
+    ]
   }
 ]
