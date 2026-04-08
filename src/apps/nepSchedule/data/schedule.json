@@ -6531,5 +6531,28 @@
         "text": "On the gameboy!"
       }
     ]
+  },
+  {
+    "time": "2026-04-08T11:30:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "phogs.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "with <span class=\"kikiColour\">Kiki</span> on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
   }
 ]
