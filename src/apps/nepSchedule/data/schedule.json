@@ -6554,5 +6554,23 @@
         "text": "with <span class=\"kikiColour\">Kiki</span> on the <span class=\"katabasisColour\">Katabasis</span> channel!"
       }
     ]
+  },
+  {
+    "time": "2026-04-10T15:00:00.000+00:00",
+    "hideDate": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Drawing straightfaces!!!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/nepuStraight.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/nepuRoblox.webp"
+      }
+    ]
   }
 ]
