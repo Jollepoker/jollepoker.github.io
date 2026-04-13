@@ -6560,7 +6560,7 @@
     "layout": [
       {
         "type": "title",
-        "text": "Drawing straightfaces!!!"
+        "text": "Drawing straightfaces!!"
       },
       {
         "type": "lEmote",
@@ -6569,6 +6569,140 @@
       {
         "type": "rEmote",
         "image": "30/nepuRoblox.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-13T19:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "outerwilds.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-14T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "tetrisphere.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-15T21:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "crabgame.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-16T13:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Podcast ep.4"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-16T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Drawing straightfaces!!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/nepuStraight.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/nepuRoblox.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-17T11:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "phogs.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "with <span class=\"kikiColour\">Kiki</span> on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-17T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "residentevilrequiem.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-18T22:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Tsundere Maid ASMR"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "<span class=\"katabasisColour\">Katabasis</span> ASMR relay"
       }
     ]
   }
