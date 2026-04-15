@@ -6616,6 +6616,28 @@
     ]
   },
   {
+    "time": "2026-04-15T21:00:01.000+01:00",
+    "discordKb": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Discord Hangout"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "MSpaint animation"
+      }
+    ]
+  },
+  {
     "time": "2026-04-16T13:00:00.000+01:00",
     "noLink": true,
     "noLive": true,
