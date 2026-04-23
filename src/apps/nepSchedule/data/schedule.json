@@ -6730,5 +6730,104 @@
         "text": "<span class=\"katabasisColour\">Katabasis</span> ASMR relay"
       }
     ]
+  },
+  {
+    "time": "2026-04-23T06:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "mahjongsoul.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-24T22:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "superbattlegolf.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "/w <span class=\"katabasisColour\">Katabasis</span>!"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-25T21:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis ASMR relay start!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "On Shibi Cottonbum's Youtube channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-26T00:30:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis ASMR relay: Neppie's turn"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "On Neppie's Youtube channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-04-26T05:30:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis ASMR relay: Last relay stream"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "On Kumu Cotton's Youtube channel!"
+      }
+    ]
   }
 ]
