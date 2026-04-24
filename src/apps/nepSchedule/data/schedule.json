@@ -6742,6 +6742,8 @@
   },
   {
     "time": "2026-04-24T22:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
     "layout": [
       {
         "type": "titleLogo",
@@ -6757,7 +6759,7 @@
       },
       {
         "type": "comment",
-        "text": "/w <span class=\"katabasisColour\">Katabasis</span>!"
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
       }
     ]
   },
