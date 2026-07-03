@@ -6832,5 +6832,28 @@
         "text": "On Kumu Cotton's Youtube channel!"
       }
     ]
+  },
+  {
+    "time": "2026-07-05T17:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "4th Anniversary Stream!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/nepuCheer.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/nepuCheer.webp"
+      },
+      {
+        "type": "comment",
+        "text": "New outfit + announcements!!!"
+      }
+    ]
   }
 ]
