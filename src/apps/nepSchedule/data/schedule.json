@@ -6855,5 +6855,61 @@
         "text": "New outfit + announcements!!!"
       }
     ]
+  },
+  {
+    "time": "2026-07-06T11:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "flockaround.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "with <span class=\"kikiColour\">Kiki</span> and <span class=\"mikanColour\">Mikan</span>!"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-07T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "librariantidyupthearcanelibrary.webp"
+      },
+      {
+        "type": "comment",
+        "text": "let's catch up and books!!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-10T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      },
+      {
+        "type": "comment",
+        "text": "finale!? no way..."
+      }
+    ]
+  },
+  {
+    "time": "2026-07-11T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "pikmin.webp"
+      }
+    ]
   }
 ]
