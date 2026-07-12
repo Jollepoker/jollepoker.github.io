@@ -6911,5 +6911,65 @@
         "image": "pikmin.webp"
       }
     ]
+  },
+  {
+    "time": "2026-07-13T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "touhoudanmakukagura.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Touhou Rhythm Game!"
+      }
+    ]
+  },
+  {
+    "time": "2026-07-14T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "ys2.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Prepare to guide me..."
+      }
+    ]
+  },
+  {
+    "time": "2026-07-17T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      },
+      {
+        "type": "comment",
+        "text": "finale!? hm..."
+      }
+    ]
+  },
+  {
+    "time": "2026-07-18T16:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Drawing straightfaces!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/nepuStraight.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/nepuRoblox.webp"
+      },
+      {
+        "type": "comment",
+        "text": "doing more straightface requests !!"
+      }
+    ]
   }
 ]
