@@ -6940,6 +6940,20 @@
     ]
   },
   {
+    "time": "2026-07-16T16:00:00.000+01:00",
+    "canceled": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "touhoudanmakukagura.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Touhou Rhythm Game!"
+      }
+    ]
+  },
+  {
     "time": "2026-07-17T16:00:00.000+01:00",
     "layout": [
       {
