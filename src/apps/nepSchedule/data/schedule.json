@@ -6968,6 +6968,7 @@
   },
   {
     "time": "2026-07-18T16:00:00.000+01:00",
+    "canceled": true,
     "layout": [
       {
         "type": "title",
