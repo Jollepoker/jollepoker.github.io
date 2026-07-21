@@ -157,7 +157,7 @@ a {
 #nepApp::before {
     content: '';
     position: fixed;
-    background-image: url(/assets/images/site/summerbackground.webp);
+    background-image: url(/assets/images/site/summerbackgroundvertical.webp);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -165,46 +165,11 @@ a {
     max-height: 100vh;
     max-width: 100vw;
     z-index: -1;
-    filter: blur(5px);
     transform: scale(1.05);
 }
 
 #nep-eyeWrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    overflow: hidden;
-    pointer-events: none;
-
-    & #nep-eye {
-        width: 100%;
-        min-height: 110px;
-        object-fit: none;
-        object-position: top center;
-        pointer-events: none;
-    }
-}
-
-#nep-siteWrapper {
-    padding-top: 84px;
-
-    &::before {
-        content: '';
-        position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 1000;
-        border-image-source: url(/assets/images/site/frameJustTop.webp);
-        border-image-slice: 65 0 0 0;
-        border-image-width: 65px 0 0 0;
-        border-image-repeat: repeat;
-        border-style: solid;
-        pointer-events: none;
-    }
+    display: none;
 }
 
 .nep-linkWrapper {
@@ -415,35 +380,20 @@ a {
     }
 }
 
+@media screen and (min-width: 920px) {
+    #nepApp::before {
+        background-image: url(/assets/images/site/summerbackground.webp);
+    }
+}
+
 @media screen and (min-width: 920px) and (min-height: 780px) {
     #nep-siteWrapper {
         container: siteWrapper / size;
-        padding: 57px 84px;
         overflow: hidden;
         box-sizing: border-box;
         height: 100vh;
-
-        &::before {
-            border-image-source: url(/assets/images/site/frameNoTopDecor.webp);
-            border-image-slice: 321 321 106 325;
-            border-image-width: 321px 321px 106px 325px;
-        }
-
-        &:not(:has(#nepTwitch-embed)):not(:has(#nepSweeper-gameWrapper)):not(
-                :has(.nepSchedule-streamWrapper:nth-of-type(9))
-            )::after {
-            content: '';
-            position: fixed;
-            right: -130px;
-            bottom: -130px;
-            z-index: 1002;
-            background-image: url(/assets/images/site/sunflower.webp);
-            width: 422px;
-            height: 415px;
-            pointer-events: none;
-            user-select: none;
-        }
     }
+
     #nep-contentWrapper {
         container: contentWrapper / size;
         height: 100cqh;
@@ -490,11 +440,5 @@ a {
             margin-bottom: 0;
             height: calc(100cqh - 100px);
         }
-    }
-}
-
-@media screen and (min-width: 1420px) and (min-height: 780px) {
-    #nep-siteWrapper::before {
-        border-image-source: url(/assets/images/site/frame.webp);
     }
 }

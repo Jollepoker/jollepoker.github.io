@@ -32,7 +32,7 @@
         leave-active-class="fade-out"
     >
         <NepDisplay
-            v-if="streamsThisWeek.length < 3 || (windowWidth >= 2000 && windowHeight >= 780)"
+            v-if="streamsThisWeek.length <= maxNumberOfStreamsNepDisplay || (windowWidth >= 2000 && windowHeight >= 780)"
             :targetDate="targetDate"
             :showWithStreams="streamsThisWeek.length > 0"
         />
@@ -75,6 +75,15 @@ export default defineComponent({
             windowWidth: ref(window.innerWidth),
             windowHeight: ref(window.innerHeight),
         } as NepScheduleData;
+    },
+    computed: {
+        maxNumberOfStreamsNepDisplay() {
+            const theme = this.$cookies.get('theme');
+            const themeMap: Record<string, number> = {
+                'summer': 1
+            };
+            return themeMap[theme] ?? 2;
+        }
     },
     watch: {
         now(newValue) {
