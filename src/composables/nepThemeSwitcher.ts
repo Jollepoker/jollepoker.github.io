@@ -5,13 +5,7 @@ export enum Theme {
     Summer = 'summer'
 };
 
-const themeCssUrls = import.meta.glob('/src/assets/styling/**/main.css', {
-    query: '?url',
-    import: 'default',
-    eager: true
-});
-
-const currentTheme = ref<Theme>((localStorage.getItem('theme') as Theme) || Theme.Main);
+const currentTheme = ref<Theme>(Theme.Main);
 
 export function useTheme() {
     const cookies = getCurrentInstance()?.appContext.config.globalProperties.$cookies;
@@ -29,17 +23,9 @@ export function useTheme() {
         currentTheme.value = savedTheme;
     }
 
-    const getThemeUrl = (theme: Theme): string => {
-        const path = `/src/assets/styling/${theme}/main.css`;
-
-        if (import.meta.env.PROD) {
-            const cssUrl = themeCssUrls[path];
-            if (cssUrl) {
-                return cssUrl as string;
-            }
-        }
-
-        return path;
+    const getThemeUrl = async (theme: Theme): Promise<string> => {
+        const module = await import(`@/assets/styling/${theme}/main.css?url`);
+        return module.default;
     }
 
     const removeAllPreviousCss = () => {
@@ -57,7 +43,7 @@ export function useTheme() {
 
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = getThemeUrl(theme);
+        link.href = await getThemeUrl(theme);
         link.setAttribute('data-theme', theme);
         document.head.appendChild(link);
 
