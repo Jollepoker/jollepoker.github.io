@@ -1,3 +1,7 @@
+@import './nepSchedule.css';
+@import './nepSweeper.css';
+@import './nepTwitch.css';
+
 :root {
     --checker-background-height: 100px;
     --checker-background-width: 100px;

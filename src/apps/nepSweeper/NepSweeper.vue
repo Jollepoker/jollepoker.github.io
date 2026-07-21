@@ -141,7 +141,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import '@/apps/nepSweeper/assets/nepSweeper.css';
 import type {
     NepSweeperData,
     NepSweeperDifficulty,

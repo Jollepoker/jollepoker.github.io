@@ -1,5 +1,3 @@
-import '@/assets/main.css';
-
 import { createApp } from 'vue';
 import dayjs from 'dayjs';
 import NepApp from '@/apps/NepApp.vue';

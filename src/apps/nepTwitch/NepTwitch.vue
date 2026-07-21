@@ -5,7 +5,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import '@/apps/nepTwitch/assets/nepTwitch.css';
 import { useScriptTag } from '@vueuse/core';
 import { TwitchEmbed } from '@anivire/twitch-embed-ts';
 export default defineComponent({

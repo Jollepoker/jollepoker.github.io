@@ -27,3 +27,21 @@
         </div>
     </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useTheme } from '@/composables/nepThemeSwitcher.ts';
+
+export default defineComponent({
+    name: 'NepApp',
+
+    setup() {
+        const { currentTheme, loadTheme } = useTheme();
+
+        return {
+            currentTheme,
+            loadTheme
+        }
+    }
+});
+</script>

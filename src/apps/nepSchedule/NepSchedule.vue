@@ -52,7 +52,6 @@ import NepWeekSwitcher from '@/apps/nepSchedule/components/NepWeekSwitcher.vue';
 import NepDisplay from '@/apps/nepSchedule/components/NepDisplay.vue';
 import NepPullUpDrawer from './components/NepPullUpDrawer.vue';
 import { Dayjs } from 'dayjs';
-import '@/apps/nepSchedule/assets/nepSchedule.css';
 
 export default defineComponent({
     name: 'NepSchedule',
