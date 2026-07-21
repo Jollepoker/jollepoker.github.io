@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url';
-
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueDevTools from 'vite-plugin-vue-devtools';
@@ -16,4 +15,19 @@ export default defineConfig({
     optimizeDeps: {
         include: ['vue'],
     },
+    build: {
+        cssCodeSplit: true,
+        rollupOptions: {
+            output: {
+                manualChunks: (id) => {
+                    if (id.includes('/styling/')) {
+                        const match = id.match(/\/styling\/([^/]+)/);
+                        if (match) {
+                            return `theme-${match[1]}`;
+                        }
+                    }
+                }
+            }
+        }
+    }
 });
