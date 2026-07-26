@@ -1,0 +1,1 @@
+const e="/assets/main-Djl3OXMD.css",l=Object.freeze(Object.defineProperty({__proto__:null,default:e},Symbol.toStringTag,{value:"Module"})),t="/assets/nepSchedule-DE8BBlqX.css",n=Object.freeze(Object.defineProperty({__proto__:null,default:t},Symbol.toStringTag,{value:"Module"}));export{l as m,n};
