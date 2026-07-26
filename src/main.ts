@@ -9,6 +9,7 @@ import duration from 'dayjs/plugin/duration';
 import isBetween from 'dayjs/plugin/isBetween';
 import locale from 'dayjs/locale/en-gb';
 import VueCookies from 'vue-cookies';
+import '@/assets/styling/base.css'
 
 dayjs.extend(utc);
 dayjs.extend(timezone);

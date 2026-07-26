@@ -24,21 +24,21 @@ export function useTheme() {
     }
 
     const getThemeUrl = async (theme: Theme): Promise<string> => {
-        const module = await import(`@/assets/styling/${theme}/main.css?url`);
+        const module = await import(`@/assets/styling/${theme}/${theme}.css?url`);
         return module.default;
     }
 
-    const removeAllPreviousCss = () => {
+    const removeAllPreviousThemeCss = () => {
         document.querySelectorAll('link[data-theme]').forEach(link => {
             link.remove()
         })
     }
 
     const loadTheme = async (theme: Theme): Promise<void> => {
-        removeAllPreviousCss();
+        removeAllPreviousThemeCss();
 
-        if (!Object.values(Theme).includes(currentTheme.value)) {
-            currentTheme.value = Theme.Main;
+        if (!Object.values(Theme).includes(theme)) {
+            theme = Theme.Main;
         }
 
         const link = document.createElement('link');

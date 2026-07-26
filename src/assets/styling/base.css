@@ -157,7 +157,6 @@ a {
 #nepApp::before {
     content: '';
     position: fixed;
-    background-image: url(/assets/images/site/summerbackgroundvertical.webp);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -165,7 +164,6 @@ a {
     max-height: 100vh;
     max-width: 100vw;
     z-index: -1;
-    transform: scale(1.05);
 }
 
 #nep-eyeWrapper {
@@ -377,12 +375,6 @@ a {
             margin: 0 auto;
             width: 600px;
         }
-    }
-}
-
-@media screen and (min-width: 920px) {
-    #nepApp::before {
-        background-image: url(/assets/images/site/summerbackground.webp);
     }
 }
 

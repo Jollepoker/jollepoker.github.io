@@ -1,0 +1,11 @@
+@import './nepSchedule.css';
+
+#nepApp::before {
+    background-image: url(/assets/images/site/summerbackgroundvertical.webp);
+}
+
+@media screen and (min-width: 920px) {
+    #nepApp::before {
+        background-image: url(/assets/images/site/summerbackground.webp);
+    }
+}
