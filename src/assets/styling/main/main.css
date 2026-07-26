@@ -1,5 +1,9 @@
 @import './nepSchedule.css';
 
+body {
+    box-shadow: inset 0px 0px 100px rgba(249, 236, 161, 0.3);
+}
+
 #nepApp::before {
     background-image: url(/assets/images/site/background.webp);
     filter: blur(5px);
