@@ -2,10 +2,10 @@
     & .nepSchedule-nepDisplayNep {
         justify-content: center;
         bottom: -20px;
+        right: 0;
 
         & img {
             height: 60vh;
-            right: auto;
             bottom: min(0vw, 30px);
             max-width: max(auto, 98vw);
             width: auto;
@@ -35,18 +35,6 @@
                 &.nepSchedule-leaving {
                     bottom: -50vh;
                 }
-            }
-        }
-    }
-
-    @media screen and (min-width: 920px) and (min-height: 780px) {
-        & .nepSchedule-nepDisplayNep {
-            display: flex;
-
-            & img {
-                height: 50vh;
-                right: auto;
-                bottom: min(0vw, -20px);
             }
         }
     }

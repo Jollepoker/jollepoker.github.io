@@ -1,4 +1,27 @@
 .nepSchedule-nepDisplayWrapper {
+    & .nepSchedule-nepDisplayNep {
+        bottom: 0;
+        right: 0;
+
+        & img {
+            right: 5vw;
+
+            &.nepSchedule-leaving {
+                bottom: min(-50vh, -600px);
+            }
+        }
+
+        @media screen and (min-width: 920px) and (min-height: 780px) {
+            display: block;
+
+            & img {
+                height: 60vh;
+                bottom: min(2vw, 400px);
+                width: auto;
+            }
+        }
+    }
+
     @media screen and (min-width: 920px) and (min-height: 780px) {
         & .nepSchedule-nepDisplayTable {
             display: block;
