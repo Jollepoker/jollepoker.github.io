@@ -54,11 +54,6 @@
     }
 }
 
-main:has(.nepSchedule-nepPullUpDrawerWrapper) .nepSchedule-scheduleWrapper::after {
-    content: '';
-    height: 60px;
-}
-
 @media screen and (min-width: 920px) and (min-height: 780px) {
     .nepSchedule-scheduleWrapper {
         padding: 0 3vw 1rem 3vw;
