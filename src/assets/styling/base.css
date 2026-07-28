@@ -403,7 +403,7 @@ body.themeSwitchDone::before {
                         background-position: center;
 
                         &:not(.active) {
-                            cursor: pointer;
+                            animation: var(--animation-cursor-pointer);
                             filter: brightness(75%);
                         }
 
