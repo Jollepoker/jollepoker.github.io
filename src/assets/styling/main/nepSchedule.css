@@ -41,6 +41,7 @@
 
 @media screen and (min-width: 920px) and (min-height: 780px) {
     .nepSchedule-nepPullUpDrawerWrapper {
+        width: calc(100% - 162px);
         bottom: 65px;
     }
 }

@@ -686,7 +686,7 @@ main:has(.nepSchedule-nepPullUpDrawerWrapper) .nepSchedule-scheduleWrapper::afte
     }
 
     .nepSchedule-nepPullUpDrawerWrapper {
-        width: calc(100% - 162px);
+        width: 100%;
         margin: 0 auto;
     }
 }
