@@ -51,6 +51,7 @@ import NepStream from '@/apps/nepSchedule/components/NepStream.vue';
 import NepWeekSwitcher from '@/apps/nepSchedule/components/NepWeekSwitcher.vue';
 import NepDisplay from '@/apps/nepSchedule/components/NepDisplay.vue';
 import NepPullUpDrawer from './components/NepPullUpDrawer.vue';
+import { Theme, currentTheme } from '@/composables/nepThemeSwitcher.ts';
 import { Dayjs } from 'dayjs';
 
 export default defineComponent({
@@ -78,7 +79,7 @@ export default defineComponent({
     },
     computed: {
         nepDisplayCondition() {
-            const theme = this.$cookies.get('theme');
+            const theme = currentTheme.value;
             let shouldDisplay = false;
             switch (theme) {
                 case 'summer':

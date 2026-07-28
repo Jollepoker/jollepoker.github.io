@@ -5,7 +5,7 @@ export enum Theme {
     Summer = 'summer'
 };
 
-const currentTheme = ref<Theme>(Theme.Main);
+export const currentTheme = ref<Theme>(Theme.Main);
 
 export function useTheme() {
     const cookies = getCurrentInstance()?.appContext.config.globalProperties.$cookies;

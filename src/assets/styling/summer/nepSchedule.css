@@ -1,20 +1,6 @@
 .nepSchedule-nepDisplayWrapper {
-    & .nepSchedule-nepDisplayNep {
-        justify-content: center;
-        bottom: -20px;
-        right: 0;
-
-        & img {
-            height: 60vh;
-            bottom: min(0vw, 30px);
-            max-width: max(auto, 98vw);
-            width: auto;
-            filter: drop-shadow(0px 0px 20px #f9eca1);
-
-            &.nepSchedule-leaving {
-                bottom: -60vh;
-            }
-        }
+    & .nepSchedule-nepDisplayNep img {
+        filter: drop-shadow(0px 0px 20px #f9eca1);
     }
 
     @media screen and (orientation: portrait) and (min-height: 600px) {

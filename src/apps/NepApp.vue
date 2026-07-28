@@ -22,24 +22,24 @@
                 </div>
                 <div class="nep-themeSwitcherWrapper">
                     <div class="nep-themeSwitcher">
-                        <button
-                            class="nep-themeSwitcherMain"
-                            :class="{
-                                active: currentTheme === Theme.Main
-                            }"
-                            @click="switchTheme(Theme.Main)"
-                        >
-                            🏠
-                        </button>
-                        <button
-                            class="nep-themeSwitcherSummer"
-                            :class="{
-                                active: currentTheme === Theme.Summer
-                            }"
-                            @click="switchTheme(Theme.Summer)"
-                        >
-                            ☀
-                        </button>
+                        <div class="nep-themeSwitcherButtonWrapper">
+                            <button
+                                class="nep-themeSwitcherMain"
+                                :class="{
+                                    active: currentTheme === Theme.Main
+                                }"
+                                @click="switchTheme(Theme.Main)"
+                            ></button>
+                        </div>
+                        <div class="nep-themeSwitcherButtonWrapper">
+                            <button
+                                class="nep-themeSwitcherSummer"
+                                :class="{
+                                    active: currentTheme === Theme.Summer
+                                }"
+                                @click="switchTheme(Theme.Summer)"
+                            ></button>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -53,7 +53,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { Theme, useTheme } from '@/composables/nepThemeSwitcher.ts';
-import { m } from 'vue-router/dist/router-CWoNjPRp.mjs';
 
 export default defineComponent({
     name: 'NepApp',

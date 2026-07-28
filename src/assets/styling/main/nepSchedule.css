@@ -1,28 +1,34 @@
 .nepSchedule-nepDisplayWrapper {
-    & .nepSchedule-nepDisplayNep {
-        bottom: 0;
-        right: 0;
+    & .nepSchedule-nepDisplayNep img {
+        height: 40vh;
+    }
 
-        & img {
-            right: 5vw;
-
-            &.nepSchedule-leaving {
-                bottom: min(-50vh, -600px);
-            }
-        }
-
-        @media screen and (min-width: 920px) and (min-height: 780px) {
-            display: block;
-
-            & img {
-                height: 60vh;
-                bottom: min(2vw, 400px);
-                width: auto;
-            }
+    @media screen and (orientation: portrait) and (min-height: 600px) {
+        & .nepSchedule-nepDisplayNep {
+            display: flex;
         }
     }
 
     @media screen and (min-width: 920px) and (min-height: 780px) {
+        & .nepSchedule-nepDisplayNep {
+            display: block;
+            bottom: 0;
+
+            & img {
+                right: 5vw;
+                bottom: min(2vw, 400px);
+                max-height: 60vh;
+                max-width: min(75vw, 600px);
+                width: auto;
+                height: auto;
+                object-fit: contain;
+
+                &.nepSchedule-leaving {
+                    bottom: min(-50vh, -600px);
+                }
+            }
+        }
+
         & .nepSchedule-nepDisplayTable {
             display: block;
             position: fixed;
