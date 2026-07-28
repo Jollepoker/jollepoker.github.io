@@ -56,6 +56,7 @@ export function useTheme() {
     })
 
     return {
+        Theme,
         currentTheme,
         loadTheme,
     } as const
