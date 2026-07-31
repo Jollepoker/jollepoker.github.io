@@ -401,6 +401,7 @@ body.themeSwitchDone::before {
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center;
+                        animation: var(--animation-cursor-default);
 
                         &:not(.active) {
                             animation: var(--animation-cursor-pointer);
