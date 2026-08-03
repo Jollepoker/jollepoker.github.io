@@ -58,7 +58,7 @@
         &:not(:has(#nepTwitch-embed)):not(:has(#nepSweeper-gameWrapper)):not(
                 :has(.nepSchedule-streamWrapper:nth-of-type(9))
             )::after {
-            background-image: url(/assets/images/site/sunflower.webp);
+            background-image: url(/assets/images/site/sunflowermain.webp);
         }
     }
 }

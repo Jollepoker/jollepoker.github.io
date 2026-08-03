@@ -136,6 +136,10 @@
   }
 }
 
+@keyframes sunflower-spin {
+    to { transform: rotate(360deg); }
+}
+
 * {
     font-family: 'Nunito', sans-serif;
     font-optical-sizing: auto;
@@ -502,6 +506,7 @@ body.themeSwitchDone::before {
             height: 415px;
             pointer-events: none;
             user-select: none;
+            animation: sunflower-spin 4s steps(24, end) infinite;
         }
     }
 
