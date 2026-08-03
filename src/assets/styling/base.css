@@ -489,6 +489,20 @@ body.themeSwitchDone::before {
         overflow: hidden;
         box-sizing: border-box;
         height: 100vh;
+
+        &:not(:has(#nepTwitch-embed)):not(:has(#nepSweeper-gameWrapper)):not(
+                :has(.nepSchedule-streamWrapper:nth-of-type(9))
+            )::after {
+            content: '';
+            position: fixed;
+            right: -130px;
+            bottom: -130px;
+            z-index: 1002;
+            width: 422px;
+            height: 415px;
+            pointer-events: none;
+            user-select: none;
+        }
     }
 
     #nep-contentWrapper {

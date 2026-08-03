@@ -1,5 +1,9 @@
 @import './nepSchedule.css';
 
+@keyframes sunflowerSpin {
+    to { transform: rotate(360deg); }
+}
+
 body {
     box-shadow: inset 0px 0px 100px rgba(249, 236, 161, 0.3);
     height: 100vh;
@@ -12,5 +16,16 @@ body {
 @media screen and (min-width: 920px) {
     #nepApp::before {
         background-image: url(/assets/images/site/summerbackground.webp);
+    }
+}
+
+@media screen and (min-width: 920px) and (min-height: 780px) {
+    #nep-siteWrapper {
+        &:not(:has(#nepTwitch-embed)):not(:has(#nepSweeper-gameWrapper)):not(
+                :has(.nepSchedule-streamWrapper:nth-of-type(9))
+            )::after {
+            background-image: url(/assets/images/site/sunflowersummer.webp);
+            animation: sunflowerSpin 4s steps(24, end) infinite;
+        }
     }
 }
