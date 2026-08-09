@@ -6987,5 +6987,18 @@
         "text": "doing more straightface requests !!"
       }
     ]
+  },
+  {
+    "time": "2026-08-10T00:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "bigwalk.webp"
+      },
+      {
+        "type": "comment",
+        "text": "with <span class=\"kikiColour\">Kiki</span>, <span class=\"mikanColour\">Mikan</span> and <span class=\"aruruColour\">Aruru</span>!"
+      }
+    ]
   }
 ]
