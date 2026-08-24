@@ -7066,5 +7066,18 @@
         "text": "w/ <span class=\"kikiColour\">Kiki</span> & <span class=\"mikanColour\">Mikan</span>!"
       }
     ]
+  },
+  {
+    "time": "2026-08-24T19:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Chit-chatting!"
+      },
+      {
+        "type": "comment",
+        "text": "Let me tell you about my week!"
+      }
+    ]
   }
 ]
