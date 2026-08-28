@@ -7092,5 +7092,14 @@
         "text": "with <span class=\"kikiColour\">Kiki</span>, <span class=\"mikanColour\">Mikan</span> and <span class=\"aruruColour\">Aruru</span>!"
       }
     ]
+  },
+  {
+    "time": "2026-08-28T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "zelda1.webp"
+      }
+    ]
   }
 ]
