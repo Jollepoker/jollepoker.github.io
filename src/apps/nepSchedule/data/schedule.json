@@ -7114,5 +7114,64 @@
         "text":"w/ <span class= \"kikiColour\">Kiki</span>!"
       }
     ]
+  },
+  {
+    "time": "2026-09-02T14:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Afterskool Podcast"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-03T18:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "zelda1.webp"
+      },
+      {
+        "type": "comment",
+        "text":"No Manual No Problem!"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-04T22:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "chainedtogether.webp"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
   }
 ]
