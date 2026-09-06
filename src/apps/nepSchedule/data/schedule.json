@@ -7174,5 +7174,18 @@
         "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
       }
     ]
+  },
+  {
+    "time": "2026-09-06T21:30:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Tomorrow is Monday! Hello on Sunday!"
+      },
+      {
+        "type": "comment",
+        "text":"Let's have a chill nice night!"
+      }
+    ]
   }
 ]
