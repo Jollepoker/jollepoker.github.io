@@ -7111,7 +7111,7 @@
       },
       {
         "type": "comment",
-        "text":"w/ <span class= \"kikiColour\">Kiki</span>!"
+        "text": "w/ <span class= \"kikiColour\">Kiki</span>!"
       }
     ]
   },
@@ -7147,7 +7147,7 @@
       },
       {
         "type": "comment",
-        "text":"No Manual No Problem!"
+        "text": "No Manual No Problem!"
       }
     ]
   },
@@ -7184,7 +7184,7 @@
       },
       {
         "type": "comment",
-        "text":"Let's have a chill nice night!"
+        "text": "Let's have a chill nice night!"
       }
     ]
   },
@@ -7197,7 +7197,7 @@
       },
       {
         "type": "comment",
-        "text":"lalalalalalalalalaaaa"
+        "text": "lalalalalalalalalaaaa"
       }
     ]
   },
@@ -7210,7 +7210,7 @@
       },
       {
         "type": "comment",
-        "text":"watchalong with <span class= \"kikiColour\">Kiki</span>!"
+        "text": "watchalong with <span class= \"kikiColour\">Kiki</span>!"
       }
     ]
   },
@@ -7223,7 +7223,7 @@
       },
       {
         "type": "comment",
-        "text":"i am sure this is the ending stream"
+        "text": "i am sure this is the ending stream"
       }
     ]
   },
@@ -7268,7 +7268,122 @@
       },
       {
         "type": "comment",
-        "text":"maybe I will finish two games today"
+        "text": "maybe I will finish two games today"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-14T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "zelda1.webp"
+      },
+      {
+        "type": "comment",
+        "text": "i will probably whine alot."
+      }
+    ]
+  },
+  {
+    "time": "2026-09-15T14:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Podcast ep 8"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-15T19:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Drawing Straightfaces"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/nepuStraight.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/nepuRoblox.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-16T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      },
+      {
+        "type": "comment",
+        "text": "only 100 more battles!"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-17T16:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Cosplay Contest"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-19T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "touhou6remake.webp"
+      },
+      {
+        "type": "comment",
+        "text": "A remake of the first Touhou game I played!"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-20T23:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "reanimal.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class= \"kikiColour\">Kiki</span>!"
       }
     ]
   }
