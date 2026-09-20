@@ -7376,15 +7376,11 @@
     ]
   },
   {
-    "time": "2026-09-20T23:00:00.000+01:00",
+    "time": "2026-09-20T22:30:00.000+01:00",
     "layout": [
       {
-        "type": "titleLogo",
-        "image": "reanimal.webp"
-      },
-      {
-        "type": "comment",
-        "text": "w/ <span class= \"kikiColour\">Kiki</span>!"
+        "type": "title",
+        "text": "Short chatting stream"
       }
     ]
   },
