@@ -7393,7 +7393,96 @@
       },
       {
         "type": "comment",
-        "text": "w/ <span class= \"kikiColour\">Kiki</span>!"
+        "text": "w/ <span class= \"kikiColour\">Kiki</span> & <span class= \"mikanColour\">Mikan</span>!"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-22T18:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "tetrisphere.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Tetris Tuesday! Scary 3D tetris...?"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-23T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "utawarerumonopreludetothefallen.webp"
+      },
+      {
+        "type": "comment",
+        "text": "only 100 more battles!"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-24T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "portal2.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Solo! I will be a smartie pants"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-25T23:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Special Announcement"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "& collab on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-26T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "madoumonogatarisegasaturn.webp"
+      },
+      {
+        "type": "comment",
+        "text": "On the sega saturn! (EN translation)"
+      }
+    ]
+  },
+  {
+    "time": "2026-09-27T18:00:00.000+01:00",
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Watchalong"
+      },
+      {
+        "type": "comment",
+        "text": "Godzilla vs Ebirah"
       }
     ]
   }
