@@ -7488,6 +7488,7 @@
   },
   {
     "time": "2026-09-28T18:00:00.000+01:00",
+    "canceled": true,
     "layout": [
       {
         "type": "titleLogo",
