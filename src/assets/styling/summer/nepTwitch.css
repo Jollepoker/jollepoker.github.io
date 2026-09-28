@@ -1,0 +1,7 @@
+@media screen and (min-width: 920px) and (min-height: 780px) {
+    #nepTwitch-embed {
+        bottom: -41vh;
+        height: calc(83vh - 12px);
+        width: 100vw;
+    }
+}
