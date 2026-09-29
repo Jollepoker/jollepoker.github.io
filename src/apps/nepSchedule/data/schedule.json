@@ -7587,5 +7587,19 @@
         "text": "carby my beloved :DDDD"
       }
     ]
+  },
+  {
+    "time": "2026-10-04T19:00:00.000+01:00",
+    "canceled": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "zelda1.webp"
+      },
+      {
+        "type": "comment",
+        "text": "i might sob a bit"
+      }
+    ]
   }
 ]
