@@ -655,7 +655,7 @@
 
 main:has(.nepSchedule-nepPullUpDrawerWrapper) .nepSchedule-scheduleWrapper::after {
     content: '';
-    height: 60px;
+    height: 80px;
 }
 
 main:has(.nepSchedule-nepPullUpDrawerWrapper) .nepSchedule-nepDisplayWrapper:has(.nepSchedule-noStreamsMessageWrapper)::after {
@@ -799,6 +799,11 @@ main:has(.nepSchedule-nepPullUpDrawerWrapper) .nepSchedule-nepDisplayWrapper:has
     .nepSchedule-nepPullUpDrawerWrapper {
         width: 100%;
         margin: 0 auto;
+    }
+
+    main:has(.nepSchedule-nepPullUpDrawerWrapper) .nepSchedule-scheduleWrapper::after {
+        content: '';
+        height: calc(100% + 80px);
     }
 }
 
