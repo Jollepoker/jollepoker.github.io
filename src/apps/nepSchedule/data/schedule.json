@@ -7587,5 +7587,103 @@
         "text": "carby my beloved :DDDD"
       }
     ]
+  },
+  {
+    "time": "2026-10-05T18:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "crimescenecleaner.webp"
+      },
+      {
+        "type": "comment",
+        "text": "i am the cleanest person ever!!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-06T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "deadlypremonition.webp"
+      },
+      {
+        "type": "comment",
+        "text": "twin peaks inspired bideo game?!!?"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-08T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "pocketmirrorgoldenertraum.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Can you believe I haven't played this yet"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-09T17:00:00.000+01:00",
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Watchalong"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-09T23:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "bigwalk.webp"
+      },
+      {
+        "type": "comment",
+        "text": "collab w/ <span class=\"katabasisColour\">Katabasis!</span>"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-10T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "madoumonogatarisegasaturn.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Yay Fiyaaaa Yay Fiyaaa Fiyaaaaaa"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-11T23:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Special Announcement + Q&A!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
   }
 ]
