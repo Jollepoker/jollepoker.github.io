@@ -629,11 +629,6 @@
     &:not(.is-open) {
         & .nepSchedule-nepPullUpDrawerHeaderWrapper:hover {
             filter: drop-shadow(0 -5px 5px #f9eca1);
-
-            & .nepSchedule-nepPullUpDrawerHeader {
-                height: 70px;
-                max-width: 460px;
-            }
         }
     }
 
@@ -742,6 +737,15 @@ main:has(.nepSchedule-nepPullUpDrawerWrapper) .nepSchedule-nepDisplayWrapper:has
         & .nepSchedule-nepPullUpDrawerHeaderWrapper {
             & .nepSchedule-nepPullUpDrawerHeader {
                 padding: 5px 30px;
+            }
+        }
+
+        &:not(.is-open) {
+            & .nepSchedule-nepPullUpDrawerHeaderWrapper:hover {
+                & .nepSchedule-nepPullUpDrawerHeader {
+                    height: 70px;
+                    max-width: 460px;
+                }
             }
         }
     }
