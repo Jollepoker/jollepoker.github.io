@@ -1,5 +1,6 @@
 <template>
     <div
+        ref="pullUpDrawer"
         class="nepSchedule-nepPullUpDrawerWrapper"
         :class="{ 'is-open': isOpen }"
     >
@@ -17,7 +18,10 @@
                 <h3>NEPPIE DAKIMAKURA AVAILABLE NOW!!</h3>
             </div>
         </div>
-        <div class="nepSchedule-nepPullUpDrawerBody">
+        <div
+
+            class="nepSchedule-nepPullUpDrawerBody"
+        >
             <a href="https://cuddlyoctopus.com/product/neppie-nep/" target="_blank">
                 <img src="/assets/images/site/pullUpDrawer/daki.webp" />
             </a>
@@ -34,6 +38,27 @@ export default defineComponent({
         return {
             isOpen: false,
         }
-    }
+    },
+    methods: {
+        handleOutsideClick(event: MouseEvent): void {
+            if (this.isOpen) {
+                const pullUpDrawer = this.$refs.pullUpDrawer as HTMLDivElement | undefined;
+
+                if (
+                    pullUpDrawer &&
+                    event.target instanceof Node &&
+                    (!pullUpDrawer.contains(event.target) || event.target === pullUpDrawer)
+                ) {
+                    this.isOpen = false;
+                }
+            }
+        }
+    },
+    mounted() {
+        document.addEventListener("click", this.handleOutsideClick);
+    },
+    beforeUnmount() {
+        document.removeEventListener("click", this.handleOutsideClick);
+    },
 });
 </script>
