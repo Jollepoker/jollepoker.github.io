@@ -5,7 +5,7 @@
         </div>
         <div id="nep-contentWrapper">
             <header>
-                <RouterLink :to="`/${$route.name === 'NepSchedule' ? 'nepsweeper' : ''}`"
+                <RouterLink :to="`/${$route.name === 'NepSchedule' && largeViewport ? 'nepsweeper' : ''}`"
                     ><img id="nep-logo" src="/assets/images/site/logo.webp"
                 /></RouterLink>
                 <div class="nep-linkWrapper">
@@ -59,6 +59,7 @@ export default defineComponent({
     data() {
         return {
             activeThemeChange: false,
+            largeViewport: false,
         }
     },
     setup() {
@@ -69,6 +70,13 @@ export default defineComponent({
             currentTheme,
             loadTheme
         }
+    },
+    mounted() {
+        this.updateViewport();
+        window.addEventListener('resize', this.updateViewport);
+    },
+    beforeUnmount() {
+        window.removeEventListener('resize', this.updateViewport);
     },
     methods: {
         async waitForAllImagesToLoad(): Promise<unknown[]> {
@@ -165,6 +173,9 @@ export default defineComponent({
                     }, 600);
                 }, 600);
             }
+        },
+        updateViewport() {
+            this.largeViewport = window.matchMedia('(min-width: 920px) and (min-height: 780px)').matches;
         }
     }
 });

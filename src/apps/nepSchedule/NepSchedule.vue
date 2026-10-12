@@ -212,7 +212,8 @@ export default defineComponent({
                     for (let i = this.streamsThisWeek.length - 1; i >= 0; i -= 1) {
                         if (
                             (streamer === 'neppienep' && !this.streamsThisWeek[i].streamer) ||
-                            streamer === this.streamsThisWeek[i].streamer
+                            streamer === this.streamsThisWeek[i].streamer ||
+                            streamer === this.streamsThisWeek[i].youtubeId
                         ) {
                             const streamTime = this.$dayjs(this.streamsThisWeek[i].time);
                             if (
@@ -260,6 +261,26 @@ export default defineComponent({
                     console.error('Error checking stream status: ', error);
                 }
             });
+            if (this.targetDate.week() === this.$dayjs().week() &&
+                this.targetDate.year() === this.$dayjs().year())
+            {
+                this.streamsThisWeek.forEach(async (stream) => {
+                    if (stream.youtubeId && !stream.noLive) {
+                        try {
+                            const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=liveStreamingDetails&id=${stream.youtubeId}&key=AIzaSyCuOdO2dMJl__8a82tspmgBYoqDOhhpK_8`);
+                            const data = await response.json();
+                            const details = data.items[0]?.liveStreamingDetails;
+                            if (details.actualStartTime && !details.actualEndTime) {
+                                this.liveDates.set(stream.youtubeId, this.$dayjs(details.actualStartTime));
+                            } else if (details.actualStartTime && details.actualEndTime) {
+                                this.liveDates.delete(stream.youtubeId);
+                            }
+                        } catch (error) {
+                            console.error('Error checking Youtube stream status: ', error);
+                        }
+                    }
+                });
+            }
         },
         async appTick(): Promise<void> {
             this.now = this.$dayjs();
