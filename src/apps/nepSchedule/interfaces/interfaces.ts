@@ -41,6 +41,7 @@ export interface NepScheduleJsonData {
     streamer?: string;
     noLink?: boolean;
     noLive?: boolean;
+    youtubeId?: string;
     layout: NepScheduleJsonLayoutData[];
 }
 

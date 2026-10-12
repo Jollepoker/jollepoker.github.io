@@ -89,10 +89,21 @@
                     !streamData.discord &&
                     !streamData.discordKb &&
                     !streamData.canceled &&
-                    !streamData.noLink
+                    !streamData.noLink &&
+                    !streamData.youtubeId
                 "
                 :to="`/twitch/${streamData.streamer ? streamData.streamer : 'neppienep'}`"
             ></RouterLink>
+            <a
+                v-else-if="
+                    !streamData.canceled &&
+                    !streamData.noLink &&
+                    streamData.youtubeId
+                "
+                :href="`https://youtube.com/watch?v=${streamData.youtubeId}`"
+                target="_blank"
+                rel="noopener noreferrer"
+            ></a>
         </div>
     </div>
 </template>
