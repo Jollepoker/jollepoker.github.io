@@ -7689,5 +7689,107 @@
         "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
       }
     ]
+  },
+  {
+    "time": "2026-10-12T22:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Headpat ASMR"
+      },
+      {
+        "type": "comment",
+        "text": "let me rub your head and your back!"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-13T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "deadlypremonition.webp"
+      },
+      {
+        "type": "comment",
+        "text": "dooo do dododo do do do do do doooo do"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-14T19:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "horrortolerancetest.webp"
+      },
+      {
+        "type": "comment",
+        "text": "this might be a short stream..."
+      }
+    ]
+  },
+  {
+    "time": "2026-10-15T23:00:00.000+01:00",
+    "discord": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Watchalong"
+      },
+      {
+        "type": "comment",
+        "text": "Son of Godzilla (1967)"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-16T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "cinerissomnia.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Pretty looking horror game ?"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-17T17:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "pocketmirrorgoldenertraum.webp"
+      },
+      {
+        "type": "comment",
+        "text": "For real this time!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-18T17:00:00.000+01:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Thanks2you: 1 year Katabasis anniversary concert"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
   }
 ]
