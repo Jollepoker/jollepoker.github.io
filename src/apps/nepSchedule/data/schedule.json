@@ -7708,6 +7708,7 @@
   {
     "time": "2026-10-15T23:00:00.000+01:00",
     "discord": true,
+    "canceled": true,
     "layout": [
       {
         "type": "title",
