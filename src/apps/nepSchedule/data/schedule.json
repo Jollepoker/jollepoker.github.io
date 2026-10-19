@@ -7768,5 +7768,39 @@
         "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
       }
     ]
+  },
+  {
+    "time": "2026-10-19T18:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "wynncraft.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-20T18:00:00.000+01:00",
+    "hideDate": true,
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "gorilla1.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-23T14:00:00.000+01:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "reanimal.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class= \"kikiColour\">Kiki</span>!"
+      }
+    ]
   }
 ]
