@@ -7779,14 +7779,11 @@
     ]
   },
   {
-    "time": "2026-10-20T18:00:00.000+01:00",
-    "hideDate": true,
-    "noLink": true,
-    "noLive": true,
+    "time": "2026-10-20T21:15:00.000+01:00",
     "layout": [
       {
-        "type": "titleLogo",
-        "image": "gorilla1.webp"
+        "type": "title",
+        "text": "Autumn Feeling Karaoke!"
       }
     ]
   },
