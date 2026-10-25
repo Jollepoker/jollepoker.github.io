@@ -7800,5 +7800,20 @@
         "text": "w/ <span class= \"kikiColour\">Kiki</span>!"
       }
     ]
+  },
+  {
+    "time": "2026-10-25T18:00:00.000+01:00",
+    "discord": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Discord Watchalong"
+      },
+      {
+        "type": "comment",
+        "text": "Son of Godzilla (1967)"
+      }
+    ]
   }
 ]
