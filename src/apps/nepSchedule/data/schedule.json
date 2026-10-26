@@ -7815,5 +7815,122 @@
         "text": "Son of Godzilla (1967)"
       }
     ]
+  },
+  {
+    "time": "2026-10-26T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "cinerissomnia.webp"
+      },
+      {
+        "type": "comment",
+        "text": "scary but pretty horror game?"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-27T14:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "????"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-27T19:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "tgm3.webp"
+      },
+
+      {
+        "type": "comment",
+        "text": "Tetris Tuesday: TGM3!!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-28T14:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "reanimal.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class= \"kikiColour\">Kiki</span>!"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-28T22:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "ASMR"
+      },
+      {
+        "type": "comment",
+        "text": ". . ."
+      }
+    ]
+  },
+  {
+    "time": "2026-10-29T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "pocketmirrorgoldenertraum.webp"
+      },
+      {
+        "type": "comment",
+        "text": "continuing in this large maze mansion..."
+      }
+    ]
+  },
+  {
+    "time": "2026-10-30T19:00:00.000+00:00",
+    "discord": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "SCARY MOVIES WATCHALONG"
+      },
+      {
+        "type": "comment",
+        "text": "Hellraiser, Eraserhead and The Thing (1982)"
+      }
+    ]
+  },
+  {
+    "time": "2026-10-31T18:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "HALLOWEEN SPECIAL"
+      },
+      {
+        "type": "comment",
+        "text": "the first ever sighting . . ."
+      }
+    ]
   }
 ]
