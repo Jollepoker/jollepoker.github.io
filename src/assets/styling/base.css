@@ -499,7 +499,7 @@ body.themeSwitchDone::before {
         height: 100vh;
 
         &:not(:has(#nepTwitch-embed)):not(:has(#nepSweeper-gameWrapper)):not(
-                :has(.nepSchedule-streamWrapper:nth-of-type(9))
+                :has(.nepSchedule-streamWrapper:nth-of-type(10))
             )::after {
             content: '';
             position: fixed;
