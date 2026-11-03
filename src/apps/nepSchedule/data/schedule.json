@@ -7930,5 +7930,75 @@
         "text": "the first ever sighting . . ."
       }
     ]
+  },
+  {
+    "time": "2026-11-03T16:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "bastet.webp"
+      },
+      {
+        "type": "titleLogo",
+        "image": "tetrisworlds.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-04T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "pocketmirrorgoldenertraum.webp"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-05T12:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "reanimal.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class= \"kikiColour\">Kiki</span>!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-05T20:00:00.000+00:00",
+    "hideDate": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "ASMR?"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-06T23:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "moonsweepers.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class= \"kikiColour\">Kiki</span> & <span class= \"mikanColour\">Mikan</span>!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-07T17:00:00.000+00:00",
+    "hideDate": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Handcam?"
+      }
+    ]
   }
 ]
