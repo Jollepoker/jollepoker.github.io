@@ -7989,13 +7989,11 @@
     ]
   },
   {
-    "time": "2026-11-07T17:00:00.000+00:00",
-    "hideDate": true,
-    "noLive": true,
+    "time": "2026-11-07T18:00:00.000+00:00",
     "layout": [
       {
         "type": "title",
-        "text": "Handcam?"
+        "text": "Handcam painting"
       }
     ]
   }
