@@ -7996,5 +7996,119 @@
         "text": "Handcam painting"
       }
     ]
+  },
+  {
+    "time": "2026-11-09T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "ootremake.webp"
+      },
+      {
+        "type": "comment",
+        "text": "IM SO EXCITED!!!! YAY"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T14:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Katabasis Podcast ep 10"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-10T19:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "paneldepon.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Tetris Tuesday: Panel de Pon!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-11T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "madoumonogatarisegasaturn.webp"
+      },
+      {
+        "type": "comment",
+        "text": "finally continuing peak game yaay!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-12T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "ootremake.webp"
+      },
+      {
+        "type": "comment",
+        "text": "WAITERRR MORE ZELDA PLEASEEE"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-13T23:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "devour.webp"
+      },
+      {
+        "type": "comment",
+        "text": "w/ <span class= \"mikanColour\">Mikan</span> & <span class= \"kikiColour\">Kiki</span>!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-14T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "persona4golden.webp"
+      },
+      {
+        "type": "comment",
+        "text": "i didn't forget about you"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-15T23:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "ASMR ear cleaning"
+      },
+      {
+        "type": "comment",
+        "text": "trust me with ur ears.."
+      }
+    ]
   }
 ]
