@@ -8110,5 +8110,120 @@
         "text": "trust me with ur ears.."
       }
     ]
+  },
+  {
+    "time": "2026-11-16T19:30:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Gorilla Karaoke"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-17T15:00:00.000+00:00",
+    "noLink": true,
+    "noLive": true,
+    "layout": [
+      {
+        "type": "title",
+        "text": "Auditions EXPLAINED!!!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "rEmote",
+        "image": "30/katabasis.webp"
+      },
+      {
+        "type": "comment",
+        "text": "on the <span class=\"katabasisColour\">Katabasis</span> channel!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-17T20:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Painting Handcam!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-18T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "ootremake.webp"
+      },
+      {
+        "type": "comment",
+        "text": "YAY ZELDA!!!!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-19T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "mahjongsoul.webp"
+      },
+      {
+        "type": "comment",
+        "text": "Frieren collab is here!"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-20T19:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "Playing games together!"
+      },
+      {
+        "type": "lEmote",
+        "image": "30/nepuDrunk.webp"
+      },
+      {
+        "type": "rEmote",
+        "reverse": true,
+        "image": "30/nepuDrunk.webp"
+      },
+      {
+        "type": "comment",
+        "text": "PARTY NIGHT!!! LETS DRINKKK"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-21T23:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "title",
+        "text": "ASMR Sleeping..."
+      },
+      {
+        "type": "comment",
+        "text": "get in bed with me.... zzzzzzzz"
+      }
+    ]
+  },
+  {
+    "time": "2026-11-22T17:00:00.000+00:00",
+    "layout": [
+      {
+        "type": "titleLogo",
+        "image": "ootremake.webp"
+      },
+      {
+        "type": "comment",
+        "text": "moar... I wanna play moar..."
+      }
+    ]
   }
 ]
